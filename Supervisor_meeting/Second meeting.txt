@@ -1,0 +1,8 @@
+0,18bar max CP
+
+3 parts in this project
+	->	model the system
+	->	estimate parameters (online) plug and play
+	->	use param to control, model predictive control
+	 
+need to get book: J. M. Maciejowski. Predictive Control with Constraints. Prentice-Hall, 2002.
