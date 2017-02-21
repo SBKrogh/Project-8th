@@ -1,0 +1,11 @@
+water tower = pressure defined by tank
+water tower = pressure control
+typical use, only 1 meter tower hight used to maintain almost constant pressure. 
+water quality add to problem statement
+F_res express as gravitational statement instead.
+remove eq 3.23
+newton second law -> derive tank model
+start by lokking at basic pipe model 
+tank = capacitor -> flow integrator 
+send stuff latest Wednesday the 1.
+nex meeting friday the 3. marts 
