@@ -1,6 +1,6 @@
 fig=figure(1)
 c.ngl=3.2;
-c.OD=(0:0.01:1);
+c.OD=(0:0.0001:1);
 a=c.OD.*90;
 a_min=15;
 a_max=90;
@@ -20,7 +20,7 @@ end
 
 
 end
-plot(a,Kv)
+reduce_plot(a,Kv)
 title('Belimo R2015-1-S1')
 xlabel('OD [%]') % x-axis label
 ylabel('Kv(OD)/Kvs') % y-axis label
