@@ -1,0 +1,40 @@
+Keep "valve-pump-valve" combo as one component. 
+H*q=d 
+H*q-d=0
+d=inflow / outflow vector of system -> must sum to zero
+
+Triangular tank pressure = vertical tank pressure -> only dependent on water elevation. 
+
+Add water tower expression as an additional state (differential expression)
+
+Parameter estimation.
+assume = volume of pipe is correct 
+estimate only resistance parameters
+close the tank and estimate without
+conduct steady state analysis.  
+Do not estimate on component level
+Estimation on subsystem level could have advantages. 
+
+Flow measurements should be done by estimation based on pressure measurements when valve is fully open. 
+
+Normal units:
+flow = m^3/hour
+pressure = bar
+
+
+Flow constraint of tank:
+Adjust according to end user flow.
+
+If tool can handle unlinear system, estimate unlinear model
+
+Model predictive control -> only for linear models
+
+
+To do:
+Get model predictive control book! [Mac02] J. M. Maciejowski. Predictive Control with Constraints. Prentice-Hall, 2002.
+Play with the system
+
+Next meeting:
+Wednesday at 13:00
+
+Send material: Tuesday 
