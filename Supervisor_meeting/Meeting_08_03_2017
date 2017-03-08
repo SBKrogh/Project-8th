@@ -1,0 +1,21 @@
+Corrections:
+	Pipe -> three terms -> liniar inductor, unlinear resistor, voltage source caused by gravity.
+	Collect components in table 4.2
+
+
+sudden pressure drops = air in pipes
+
+parameter estimations:
+	inertia parameters are well know -> calculate them!
+	Estimate Kv for valves -> resitance term
+	Estimate resistance for pipes by joining the unlinar termes and estimate them as one aka Kp. 
+	Estimate one resitance term for each component. 
+	Kp more or less constant -> assume not flow dependent. 
+	Tom will send pump "a" parameters. 
+	only use stedystate measurements as trasient behavior aka iniertia is assumed known. 
+
+Step:
+	Open consumers valves fully, obtain operating point.
+
+	0.3 m^3 pr. hour enduser flow operating point
+	operating point suggestion 0.09 bar. 
