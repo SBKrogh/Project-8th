@@ -12,8 +12,6 @@ f_matrix
 
 J = inertiaFunc(L,D);
 
-si = ElevationFunc(delta_z);
-
 %Setting up state-space model
 
 %Z = B_1 * J * B_1' * B_1 * F 

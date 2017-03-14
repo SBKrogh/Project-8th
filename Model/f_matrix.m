@@ -1,15 +1,8 @@
-%% Parameter for the model 
-
-% A vector containing the pressure drop for each compound have to be set up
+%% Parameter for the f vector  
 
 %Parameters that i sill need to define somewhere
-%k_v100
 %omega
 %q(n)
-%C_p(n)
-%C_v
-%si(n)
-%C_H
 
 %%% Parameters that at constant %%% 
 %Parameters for the Grundfos UPMXL GEO 25-125 180 pump 
@@ -21,6 +14,8 @@ A_h0_2 = 0.6921;
 A_h1_2 = -0.0177; 
 A_h2_2 = 0.0179; 
 
+k_v100 = 1; 
+
 %%%%% PUMPS %%%%% 
 % -a_h2*q^2 + a_h1*omega*q + a_h0*omega^2
 
@@ -30,11 +25,10 @@ e8 = ((2/k_v100^2)-A_h2_1)*q(8)*abs(q(8)) + A_h1_1*omega*q(8) + A_h0_1*omega^2;
 %Grundfos UPM2 25-60 180 pump 
 e9 = ((2/k_v100^2)-A_h2_2)*q(9)*abs(q(9)) + A_h1_2*omega*q(9) + A_h0_2*omega^2;
 e16 = ((2/k_v100^2)-A_h2_2)*q(16)*abs(q(16)) + A_h1_2*omega*q(16) + A_h0_2*omega^2;
-e24 = ((2/k_v100^2)-A_h2_2)*q(24)*abs(q(24)) + A_h1_2*omega*q(24) + A_h0_2*omega^2;
 
 %%%%% PIPES %%%%% 
 % There are one unknow in the pipe model
-% delta_p = C_p * abs(q)*q - si
+% C_p * abs(q)*q - si
 
 e2 = C_p(2) * abs(q(2))*q(2) - si(2);
 e3 = C_p(3) * abs(q(3))*q(3) - si(3);
@@ -53,17 +47,12 @@ e21 = C_p(21) * abs(q(21))*q(21) - si(21);
 e23 = C_p(23) * abs(q(23))*q(23) - si(23);
 
 %%%%% VALVES %%%%%
-%delta_p = C_v*q*abs(q)
+%C_v*q*abs(q)
 
-e13 = C_v*q(13)*abs(q(13));
-e15 = C_v*q(15)*abs(q(15));
-e20 = C_v*q(20)*abs(q(20));
-e22 = C_v*q(22)*abs(q(22));
-
-%%%%% WT %%%%% 
-%
-e25 = 1/C_H *q(25);
-
+e13 = q(13)*abs(q(13));
+e15 = q(15)*abs(q(15));
+e20 = q(20)*abs(q(20));
+e22 = q(22)*abs(q(22));
 
 % SETUP OF VECTOR % 
 
@@ -90,6 +79,4 @@ F = [e1;                %Main pump 1
     e21;                %Pipe
     e22;                %Valve
     e23;                %Pipe
-    e24;                %WT Pump
-    e25;                %WT 
     ]
