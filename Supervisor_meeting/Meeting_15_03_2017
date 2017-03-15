@@ -1,0 +1,22 @@
+kirchhofs laws -> clearify that we use equavalents not the actual voltage lav!
+clearify menaing of section "parameter estimation" -> Model for parameter estimation.
+clearify section "parameter estimation" can not follow the use of KCL and KVL
+prove equation 4.53
+clearify the origion of 4.54 something with "tilde i or j"
+
+be explicit with equations wenn possible.
+
+
+Operating point shall be obtained with tank!
+parameter estimation of the unlinear parameters can be done without the tank!
+
+
+to be sure on flow, full open or closed valve
+
+filtering FIR 5 samnples
+
+pump full speed = 1
+make sure to operate pump inside feasible region
+
+Wednesday 15:00 
+
