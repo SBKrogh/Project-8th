@@ -56,27 +56,29 @@ e22 = q(22)*abs(q(22));
 
 % SETUP OF VECTOR % 
 
-F = [e1;                %Main pump 1
-    e2;                 %Pipe
-    e3;                 %Pipe
-    e4;                 %Pipe
-    e5;                 %Pipe
-    e6;                 %Pipe
-    e7;                 %Pipe
-    e8;                 %Main pump 2
-    e9;                 %PMA1 pump
-    e10;                %Pipe
-    e11;                %Pipe
-    e12;                %Pipe
-    e13;                %Valve
-    e14;                %Pipe
-    e15;                %Valve
-    e16;                %PMA2 pump
-    e17;                %Pipe
-    e18;                %Pipe
-    e19;                %Pipe
-    e20;                %Valve
-    e21;                %Pipe
-    e22;                %Valve
-    e23;                %Pipe
+F = [
+    e2;                 %e2 - Pipe
+    e4;                 %e4 - Pipe
+    e5;                 %e5 - Pipe
+    e6;                 %e6 - Pipe
+    e11;                %e11 - Pipe
+    e21;                %e21 - Pipe
+    e23;                %e23 - Pipe
+%-------------------------------------------
+    e1;                %e1 - Main pump 1
+    e3;                 %e3 - Pipe
+    e7;                 %e7 - Pipe
+    e8;                 %e8 - Main pump 2
+    e9;                 %e9 - PMA1 pump
+    e10;                %e10 - Pipe
+    e12;                %e12 - Pipe
+    e13;                %e13 - Valve
+    e14;                %e14 - Pipe
+    e15;                %e15 - Valve
+    e16;                %e16 - PMA2 pump
+    e17;                %e17 - Pipe
+    e18;                %e18 - Pipe
+    e19;                %e19 - Pipe
+    e20;                %e10 - Valve
+    e22;                %e22 - Valve
     ]
