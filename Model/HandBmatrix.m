@@ -33,6 +33,7 @@ Bt_b = [Bt(1,1:15)+Bt(2,1:15)];
 e3 = [1;0;zeros(1,5)'];
 Bt_1 = vertcat(Bt_b,Bt_a);
 B_1 = [eye(7) Bt_1(:,1:1) e3 Bt_1(:,2:15)];
+B_1(4,:) = [zeros(1,3) 1 zeros(1,3) 0 1 1 1 1 1 0 0 1 1 0 0 0 0 0 0];
 
 % Reduced H matrix: H_1 for the parameter estimation
 H_a = H(1:17,1:23);
