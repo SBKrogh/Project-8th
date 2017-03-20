@@ -1,6 +1,7 @@
 %Transformation from flow in cords to flow in edges
 
-z = zeros(7,1);
+z0 = zeros(7,1);
+
 
 B_1_t = B_1';
 

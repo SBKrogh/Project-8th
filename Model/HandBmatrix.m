@@ -37,10 +37,10 @@ B_1(4,:) = [zeros(1,3) 1 zeros(1,3) 0 1 1 1 1 1 0 0 1 1 0 0 0 0 0 0];
 
 % Reduced H matrix: H_1 for the parameter estimation
 H_a = H(1:17,1:23);
-H_1 = [H_a(:,1:1) H_a(:,3:9) H_a(:,2) H_a(:,10:23)]
+H_1 = [H_a(:,1:1) H_a(:,3:9) H_a(:,2) H_a(:,10:23)];
 
 %Check H_1*B_1'
-check = H_1*B_1'
+check = H_1*B_1' ; 
 
 
 
