@@ -1,7 +1,8 @@
+function [out,t] = param()
 % Call zdot function ot obtain chords flows
 
 % Initial condition
-init = [0 0 0 0 0 0 0]';
+init = [1 1 1 1 4 2 3]';
 
 % Differential equation to obtain zdot vector
 [t,z] = ode45 (@zdot, [0:0.001:1], init);
@@ -33,19 +34,24 @@ end
  Theta(:,:,j) = (B_1*diag(J(:,j))*B_1')\B_1;
  
  % Obtain the pressure difference on edges
- Dp (:,j)  = ( diag(J(:,j)) * B_1' * Theta(:,:,j) + eye(23) ) * f(:,j);  
+ Dp(:,j)  = ( diag(J(:,j)) * B_1' * Theta(:,:,j) + eye(23) ) * f(:,j);  
  
+ % Split atmospheric pressure from others
  H_11 = H_1(2:end, :);
  H_10 = H_1(1,:);
  
+ % Apply the pseudo-inverse
  invH_11 = pinv(H_11');
  
+ pa = 0;
  
- p(:,j) = invH_11 * (Dp(:,j) - H_10') ;
+ % obtain pressure difference on each node
+ p(:,j) = invH_11 * (Dp(:,j) - H_10'*pa) ;
+ 
+ out = [p(2,:); p(4,:); p(5,:); p(7,:); p(10,:); p(11,:); p(15,:) ;p(16,:)];
  
 end
 
-
-
+end
 
 % Dp = ( J * B_1' * (Theta)\B_1 + eye(23) ) * f;

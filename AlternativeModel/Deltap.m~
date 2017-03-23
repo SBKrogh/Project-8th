@@ -1,7 +1,7 @@
 % Call zdot function ot obtain chords flows
 
 % Initial condition
-init = [0 0 0 0 0 0 0]';
+init = [1 1 1 1 4 2 3]';
 
 % Differential equation to obtain zdot vector
 [t,z] = ode45 (@zdot, [0:0.001:1], init);
@@ -44,6 +44,8 @@ end
  
  % obtain pressure difference on each node
  p(:,j) = invH_11 * (Dp(:,j) - H_10') ;
+ 
+ out = [p(1,:) p(2
  
 end
 
