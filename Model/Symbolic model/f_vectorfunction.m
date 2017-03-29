@@ -1,6 +1,8 @@
 clear all
 close all
 clc
+% 
+% function [dx, y] = f_vectorfunction()
 %% Build up the f function
 %Include the input to the system
 U = ones(20,8);        %This should be defined in another file and then included
@@ -14,10 +16,10 @@ valve_param
 %Define z as a vector of syms 
 syms z1 z2 z3 z4 z5 z6 z7
 z= [z1; z2; z3; z4; z5; z6; z7];
-
+k = 0;
 N = 23;
 for i = 1:N
-   f(:,i) = -pipe(Cp,i,B_1,U,z) - elev(delta_z,i,U) - valve(Cv,i,B_1,U,z) + dPpump(U,i);     
+   f(:,i) = -pipe(Cp,i,B_1,U,z,k) - elev(delta_z,i,U) - valve(Cv,i,B_1,z,k) + dPpump(U,i);     
 end
 
 %%
@@ -41,15 +43,21 @@ display('Solver finished')
 
 %% Obtain de pressure difference
 
-for i = 1:N
-   f(:,i) = -pipe(Cp,i,B_1,U,z) - elev(delta_z,i,U) - valve(Cv,i,B_1,U,z) + dPpump(U,i);     
-end
+z = [z1  z2  z3  z4  z5  z6  z7];
+k = 1;
 
-DeltaP = f;
+for j = 1:length(U)
+    
+for i = 1:N
+   f_r(:,i) = -pipe(Cp,i,B_1,U,z,k,j) - elev(delta_z,i,U) - valve(Cv,i,B_1,z,k,j) + dPpump(U,i);     
+end
+ 
+end
+DeltaP = f_r;
 
 %% Set the output 
 
-y = zeros(lenght(U),8);
+y = zeros(length(U),8);
 
 y(:,1) = DeltaP(:,8);     % Edge 1 Component C2
 y(:,2) = DeltaP(:,11);    % Edge 8 Component 16
@@ -60,3 +68,4 @@ y(:,6) = DeltaP(:,15) + DeltaP(:,14);    % Edge 13 Component 20 & Edge 12 Compon
 y(:,7) = DeltaP(:,23);    % Edge 22 Component 31
 y(:,8) = DeltaP(:,21) + DeltaP(:,22);    % Edge 19 Component 28 & Edge 20 Component 27
 
+% end
