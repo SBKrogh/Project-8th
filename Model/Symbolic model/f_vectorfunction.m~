@@ -30,17 +30,7 @@ end
 warning('off','all')
 
 for i = 1:length(U)
-    SolF(:,i) = solve(B_1*f(i,:)' == 0,z);
-    z1(i,:) = double(SolF(i).z1);
-    z2(i,:) = double(SolF(i).z2);
-    z3(i,:) = double(SolF(i).z3);
-    z4(i,:) = double(SolF(i).z4);
-    z5(i,:) = double(SolF(i).z5);
-    z6(i,:) = double(SolF(i).z6);
-    z7(i,:) = double(SolF(i).z7);
-
+    SolF = solve(B_1*f(i,:)' == 0,z);
 end
-
 warning('on','all')
-
 display('Solver finished')
