@@ -9,9 +9,8 @@ lambda2 = (repmat(lambda,length(U),1));
 
 else 
     
-lambda = Cp(i).* (abs(B_1(:,i)'*z(j,:)').*B_1(:,i)'*z(j,:)');
+lambda2 = Cp(i).* (abs(B_1(:,i)'*z(j,:)').*B_1(:,i)'*z(j,:)');
 
-lambda2 = (repmat(lambda,length(U),1));
 
 end
 

@@ -19,7 +19,7 @@ z= [z1; z2; z3; z4; z5; z6; z7];
 k = 0;
 N = 23;
 for i = 1:N
-   f(:,i) = -pipe(Cp,i,B_1,U,z,k) - elev(delta_z,i,U) - valve(Cv,i,B_1,z,k) + dPpump(U,i);     
+   f(:,i) = -pipe(Cp,i,B_1,U,z,k,j) - elev(delta_z,i,U,k) - valve(Cv,i,B_1,z,k,j) + dPpump(U,i,j,k);     
 end
 
 %%
@@ -43,17 +43,18 @@ display('Solver finished')
 
 %% Obtain de pressure difference
 
-z = [z1  z2  z3  z4  z5  z6  z7];
-k = 1;
+z = [z1  z2  z3  z4  z5  z6  z7];   % Redefine z with real values
+k = 1;  % Some flag
 
-for j = 1:length(U)
+for j = 1:length(U) 
     
 for i = 1:N
-   f_r(:,i) = -pipe(Cp,i,B_1,U,z,k,j) - elev(delta_z,i,U) - valve(Cv,i,B_1,z,k,j) + dPpump(U,i);     
+   f_r(:,i) = -pipe(Cp,i,B_1,U,z,k,j) - elev(delta_z,i,U,k) - valve(Cv,i,B_1,z,k,j) + dPpump(U,i,j,k);     
 end
- 
+
+ DeltaP (j,:) = f_r;
+
 end
-DeltaP = f_r;
 
 %% Set the output 
 
