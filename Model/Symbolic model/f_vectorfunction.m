@@ -20,12 +20,6 @@ for i = 1:N
    f(:,i) = -pipe(Cp,i,B_1,U,z) - elev(delta_z,i,U) - valve(Cv,i,B_1,U,z) + dPpump(U,i);     
 end
 
-%% 
-% z_0 = zeros(23,1);
-% 
-% sul = linsolve(f,z_0)
-
-
 %%
 warning('off','all')
 
