@@ -30,7 +30,36 @@ end
 warning('off','all')
 
 for i = 1:length(U)
-    SolF = solve(B_1*f(i,:)' == 0,z);
+    SolF(:,i) = solve(B_1*f(i,:)' == 0,z);
+    z1(i,:) = double(SolF(i).z1);
+    z2(i,:) = double(SolF(i).z2);
+    z3(i,:) = double(SolF(i).z3);
+    z4(i,:) = double(SolF(i).z4);
+    z5(i,:) = double(SolF(i).z5);
+    z6(i,:) = double(SolF(i).z6);
+    z7(i,:) = double(SolF(i).z7);
+
 end
+
 warning('on','all')
+
 display('Solver finished')
+
+%% Obtain de pressure difference
+
+for i = 1:N
+   f(:,i) = -pipe(Cp,i,B_1,U,z) - elev(delta_z,i,U) - valve(Cv,i,B_1,U,z) + dPpump(U,i);     
+end
+
+DeltaP = f;
+
+%% Set the output 
+
+y = zeros(lenght(U),8);
+
+y(:,1) = DeltaP(:,8);     % Edge 1 Component C2
+y(:,2) = DeltaP(:,11);    % Edge 8 Component 16
+y(:,3) = DeltaP(:,12) + DeltaP(:,13) + DeltaP(:,16) + DeltaP(:,17);    % Edge 9 Component 18 & Edge 10 Component 19 & Edge 14 Component 23 & Edge 15 Component 24
+y(:,4) = DeltaP(:,18) + DeltaP(:,19) + DeltaP(:,6) + DeltaP(:,23);    % Edge 16 Component 25 & Edge 17 Component 26 & Edge 21 Component 30 & Edge 22 Component 31
+y(:,5) = DeltaP(:,11);    % Edge 8 Component 16
+
