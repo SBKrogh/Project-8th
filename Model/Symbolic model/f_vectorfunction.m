@@ -1,11 +1,8 @@
-clear all
-close all
-clc
-% 
-% function [dx, y] = f_vectorfunction()
-%% Build up the f function
+function [dx, y] = f_vectorfunction(Cp,U)
+
+% Build up the f function
 %Include the input to the system
-U = ones(20,8);        %This should be defined in another file and then included
+% U = ones(20,8);        %This should be defined in another file and then included
 
 %Include all the parameter files 
 matrices
@@ -22,7 +19,7 @@ for i = 1:N
    f(:,i) = -pipe(Cp,i,B_1,U,z,k,j) - elev(delta_z,i,U,k) - valve(Cv,i,B_1,z,k,j) + dPpump(U,i,j,k);     
 end
 
-%%
+%
 warning('off','all')
 
 for i = 1:length(U)
@@ -41,7 +38,7 @@ warning('on','all')
 
 display('Solver finished')
 
-%% Obtain de pressure difference
+% Obtain de pressure difference
 
 z = [z1  z2  z3  z4  z5  z6  z7];   % Redefine z with real values
 k = 1;  % Some flag
@@ -56,7 +53,7 @@ end
 
 end
 
-%% Set the output 
+% Set the output 
 
 y = zeros(length(U),8);
 
@@ -69,4 +66,5 @@ y(:,6) = DeltaP(:,15) + DeltaP(:,14);    % Edge 13 Component 20 & Edge 12 Compon
 y(:,7) = DeltaP(:,23);    % Edge 22 Component 31
 y(:,8) = DeltaP(:,21) + DeltaP(:,22);    % Edge 19 Component 28 & Edge 20 Component 27
 
-% end
+dx = [z1  z2  z3  z4  z5  z6  z7];      % States
+end

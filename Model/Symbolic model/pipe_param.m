@@ -1,3 +1,4 @@
+pipe_param
 %Pipe parameters
 L=[
     5;                 %e2 - Pipe
@@ -53,7 +54,8 @@ D=[
     1;                 %e22 - Valve
     ];
 
-Cp = ones(1,23)';
+% Cp = ones(1,23)';
+% Set the non-pipe parameters to zero
 Cp(8) = 0;
 Cp(11) = 0;
 Cp(12) = 0;
