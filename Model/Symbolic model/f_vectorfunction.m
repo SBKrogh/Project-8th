@@ -8,7 +8,7 @@ function [dx, y] = f_vectorfunction(Cp,U)
 matrices
 elev_param
 pipe_param
-valve_param
+Cv = valve_param(U);
 
 %Define z as a vector of syms 
 syms z1 z2 z3 z4 z5 z6 z7
@@ -16,7 +16,7 @@ z= [z1; z2; z3; z4; z5; z6; z7];
 k = 0;
 N = 23;
 for i = 1:N
-   f(:,i) = -pipe(Cp,i,B_1,U,z,k,j) - elev(delta_z,i,U,k) - valve(Cv,i,B_1,z,k,j) + dPpump(U,i,j,k);     
+   f(:,i) = -pipe(Cp,i,B_1,U,z,k,[]) - elev(delta_z,i,U,k) - valve(Cv,i,B_1,z,k,[]) + dPpump(U,i,[],k);     
 end
 
 %
