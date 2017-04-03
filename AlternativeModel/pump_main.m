@@ -1,12 +1,6 @@
 %Main Pump function
-function alpha = pump_main(omega_main,i,flag,B_1,z)
+function alpha = pump_main(c,q)
 
-%Parameters for the Grundfos UPMXL GEO 25-125 180 pump 
-A_h01 = 1.2024; 
-A_h11 = 0.0098; 
-A_h21 = 0.0147; 
-kv100 = 1; 
-
-
-alpha = (((2/(kv100)^2)-A_h21)*abs(B_1(:,i)'*z).*B_1(:,i)'*z + A_h11*omega_main(i).*B_1(:,i)'*z + A_h01*omega_main(i).^2).*flag(i);
+% alpha = (((2/(c.kv100)^2)-c.Ah21) * abs(q) * q + c.Ah11 * c.omega * q + c.Ah01 * c.omega.^2);
+alpha = c.dP;
 end

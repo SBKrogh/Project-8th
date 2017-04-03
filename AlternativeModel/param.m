@@ -5,7 +5,7 @@ function [out,t] = param()
 init = [1 1 1 1 4 2 3]';
 
 % Differential equation to obtain zdot vector
-[t,z] = ode45 (@zdot, [0:0.001:1], init);
+[t,z] = ode45 (@zdot, [0:1:100], init);
 
 % Initialize parameters 
 pump_param;
