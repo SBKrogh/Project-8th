@@ -10,7 +10,7 @@
 %-----------------------------------------
     pipe.e01.L = 0;                 %e1 - Main pump 1
     pipe.e03.L = 10;                %e3 - Pipe
-    pipe.e07.L = 5;                 %e7 - Pipe
+    pipe.e07.L = 9;                 %e7 - Pipe
     pipe.e08.L = 0;                 %e8 - Main pump 2
     pipe.e09.L = 0;                 %e9 - PMA1 pump
     pipe.e10.L = 2;                 %e10 - Pipe
@@ -20,9 +20,9 @@
     pipe.e15.L = 0;                 %e15 - Valve
     pipe.e16.L = 0;                 %e16 - PMA2 pump
     pipe.e17.L = 3;                 %e17 - Pipe
-    pipe.e18.L = 0;                 %e18 - Valve
+    pipe.e18.L = 1;                 %e18 - Pipe
     pipe.e19.L = 1;                 %e19 - Pipe
-    pipe.e20.L = 1;                 %e20 - Pipe
+    pipe.e20.L = 0;                 %e20 - Valve
     pipe.e22.L = 0;                 %e22 - Valve
    
  % Pipe Diameters
@@ -35,21 +35,21 @@
    pipe.e21.D =  0.010;             %e21 - Pipe
    pipe.e23.D =  0.010;             %e23 - Pipe
 %----------------------------------------
-   pipe.e01.D =  0;                %e1 - Main pump 1
+   pipe.e01.D =  0;                 %e1 - Main pump 1
    pipe.e03.D =  0.020;             %e3 - Pipe
    pipe.e07.D =  0.020;             %e7 - Pipe
    pipe.e08.D =  0;                 %e8 - Main pump 2
    pipe.e09.D =  0;                 %e9 - PMA1 pump
    pipe.e10.D =  0.010;             %e10 - Pipe
    pipe.e12.D =  0.010;             %e12 - Pipe
-   pipe.e13.D =  0.010;             %e13 - Valve
+   pipe.e13.D =  0;                 %e13 - Valve
    pipe.e14.D =  0.010;             %e14 - Pipe
    pipe.e15.D =  0;                 %e15 - Valve
    pipe.e16.D =  0;                 %e16 - PMA2 pump
    pipe.e17.D =  0.010;             %e17 - Pipe
-   pipe.e18.D =  0;                 %e18 - Valve
+   pipe.e18.D =  0.010;             %e18 - Pipe
    pipe.e19.D =  0.010;             %e19 - Pipe
-   pipe.e20.D =  0.010;             %e20 - Pipe
+   pipe.e20.D =  0;                 %e20 - Valve
    pipe.e22.D =  0;                 %e22 - Valve
     
 
