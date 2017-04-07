@@ -4,21 +4,16 @@ clc
 close all
 pipe_param;
 
-%  pipe.e02.q0 = 0.5;
-%  pipe.e04.q0 = 0.5;
-%  pipe.e05.q0 = 0.5;
-%  pipe.e06.q0 = 0.5;
-%  pipe.e11.q0 = 0.5;
-%  pipe.e21.q0 = 0.5;
-%  pipe.e23.q0 = 0.5;
+ pipe.e02.q0 = 0.5;
+ pipe.e04.q0 = 0.5;
+ pipe.e05.q0 = 0.5;
+ pipe.e06.q0 = 0.5;
+ pipe.e11.q0 = 0.5;
+ pipe.e21.q0 = 0.5;
+ pipe.e23.q0 = 0.5;
 
-x0 = [ 0.0000
-    0.0914
-    0.0000
-    0.7466
-    0.9334
-    0.3937
-    0.0000];
+x0 = [  pipe.e02.q0;   pipe.e04.q0;  pipe.e05.q0;  pipe.e06.q0;  pipe.e11.q0;...
+     pipe.e21.q0;  pipe.e23.q0];
 
 Ts = 0.05;
 
@@ -172,7 +167,6 @@ z.Tstart = 0;
 %% setup of the ident model
 FileName      = 'zdot';       % File describing the model structure.
 Order         = [8 8 7];           % Model orders [ny nu nx].
-
 Parameters    = {[ pipe.e02.Cp;  pipe.e04.Cp;  pipe.e05.Cp; ...
      pipe.e06.Cp;  pipe.e11.Cp;  pipe.e21.Cp;  pipe.e23.Cp;  pipe.e03.Cp;  pipe.e07.Cp;...
      pipe.e10.Cp;  pipe.e12.Cp;  pipe.e14.Cp;  pipe.e17.Cp;  pipe.e18.Cp;  pipe.e19.Cp]}; % Initial parameters. Np = 15.
@@ -191,7 +185,15 @@ nlgr.InitialStates(5).Minimum = 0;
 nlgr.InitialStates(6).Minimum = 0;
 nlgr.InitialStates(7).Minimum = 0;
 
-nlgr.Algorithm.MaxIter=5;
+nlgr.InitialStates(3).Fixed = false
+nlgr.InitialStates(3).Fixed = false
+nlgr.InitialStates(3).Fixed = false
+nlgr.InitialStates(3).Fixed = false
+nlgr.InitialStates(3).Fixed = false
+nlgr.InitialStates(3).Fixed = false
+nlgr.InitialStates(3).Fixed = false
+
+nlgr.Algorithm.MaxIter=2;
 %%
 %
 % In practice, there are disturbances that affect the outputs. An
@@ -226,8 +228,8 @@ setpar(nlgr, 'Unit', {'-'});
 %  opt.InitialCondition = x0;
 % datestr(now)
 %% Estimation
-% opt = nlgreyestOptions('Display','on');
-% opt.SearchOption.MaxIter = 18;
+opt = nlgreyestOptions('Display','on');
+opt.SearchOption.MaxIter = 18;
 
 % sys = nlgreyest(z, nlgr,opt);
 nlgrF = pem(z, nlgr,'Display', 'on' , 'InitialState', x0 );
@@ -237,4 +239,4 @@ nlgrF.Name = 'New Estimation';
 % nlgr.Report.Termination
 % compare(z, nlgr, nlgrF, 'init', 'm');
 % datestr(now)
-p=nlgrF.Parameters.Value % save the new parameters
+% p=nlgrF.Parameters.Value % save the new parameters

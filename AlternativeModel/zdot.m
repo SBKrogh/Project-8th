@@ -2,6 +2,7 @@
 
 function [dx, y] = zdot(t, x, u, p, varargin)
 
+
 pump_param;
 valve_param;
 pipe_param;
@@ -25,26 +26,26 @@ matrices;
 
 q = B_1'*x;
 
-[valve, pump] = updateInputs(valve, pump, u);
+[valve, pump, q] = updateInputs(valve, pump, u, q);
 
 alpha = pumpvec(pump, q);
 lambda =  lambdavec(pipe, q);
 mu = valvevec(valve, q);
 J = inertiavec(pipe);
 
-F = lambda + mu - alpha;
+F = +lambda + mu - alpha;
 
-dx =  (B_1 * J * B_1') \ B_1 * F ;
+dx = - (B_1 * J * B_1') \ B_1 * F ;
 
 dq = B_1'* dx;
 
 
-DeltaP= (J*dq+mu+lambda-alpha);
+DeltaP = (J*dq+mu+lambda-alpha);
 
 pa = 1;
 invH_11 = pinv(H_11');
 
- % obtain pressure difference on each node
+%  obtain pressure difference on each node
 rp = invH_11 * (DeltaP - H_10'*pa) ;
 
 
@@ -57,14 +58,23 @@ rp = invH_11 * (DeltaP - H_10'*pa) ;
 % y(:,7) = DeltaP(:,23);    % Edge 22 Component 31
 % y(:,8) = DeltaP(:,21) + DeltaP(:,22);    % Edge 19 Component 28 & Edge 20 Component 27
 
-y(:,1) = rp(2) - 1;
-y(:,2) = rp(7) - 1;
-y(:,3) = rp(4) - 1;
-y(:,4) = rp(5) - 1;
-y(:,5) = rp(10) - 1;
-y(:,6) = rp(11) - 1;
-y(:,7) = rp(15) - 1;
-y(:,8) = rp(16) - 1;
+% y(:,1) = rp(2) - 1;
+% y(:,2) = rp(7) - 1;
+% y(:,3) = rp(4) - 1;
+% y(:,4) = rp(5) - 1;
+% y(:,5) = rp(10) - 1;
+% y(:,6) = rp(11) - 1;
+% y(:,7) = rp(15) - 1;
+% y(:,8) = rp(16) - 1;
+
+y(:,1) = rp(1) - 1;     % Node 2
+y(:,2) = rp(6) - 1;     % Node 7
+y(:,3) = rp(3) - 1;     % Node 4
+y(:,4) = rp(4) - 1;     % Node 5
+y(:,5) = rp(10) - 1;    % Node 11
+y(:,6) = rp(9) - 1;     % Node 10
+y(:,7) = rp(15) - 1;    % Node 16
+y(:,8) = rp(14) - 1;    % Node 15
 
 
 

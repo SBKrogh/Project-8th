@@ -103,32 +103,6 @@
    pipe.e19.kf =  0.81;             %e19 - pipe
    pipe.e20.kf =  0;                %e20 - Valve
    pipe.e22.kf =  0;                %e22 - Valve
- 
-    % e roughness 
-   pipe.e02.e =  0.01;             %e2 - pipe
-   pipe.e04.e =  0.01;        %e4 - pipe
-   pipe.e05.e =  0.01;             %e5 - pipe
-   pipe.e06.e =  0.01;        %e6 - pipe
-   pipe.e11.e =  0.007;             %e11 - pipe
-   pipe.e21.e =  0.007;             %e21 - pipe
-   pipe.e23.e =  0.007;             %e23 - pipe
-%----------------------------------------
-   pipe.e01.e =  0;                %e1 - Main pump 1
-   pipe.e03.e =  0.01;             %e3 - pipe
-   pipe.e07.e =  0.01;             %e7 - pipe
-   pipe.e08.e =  0;                %e8 - Main pump 2
-   pipe.e09.e =  0;                %e9 - PMA1 pump
-   pipe.e10.e =  0.007;             %e10 - pipe
-   pipe.e12.e =  0.007;             %e12 - pipe
-   pipe.e13.e =  0;                %e13 - Valve
-   pipe.e14.e =  0.007;             %e14 - pipe
-   pipe.e15.e =  0;                %e15 - Valve
-   pipe.e16.e =  0;                %e16 - PMA2 pump
-   pipe.e17.e =  0.007;             %e17 - pipe
-   pipe.e18.e =  0.007;             %e18 - pipe
-   pipe.e19.e =  0.007;             %e19 - pipe
-   pipe.e20.e =  0;                %e20 - Valve
-   pipe.e22.e =  0;                %e22 - Valve
 
  % Friction in the pipes
 
@@ -156,3 +130,32 @@
  pipe.e16.Cp = 0;
  pipe.e20.Cp = 0;
  pipe.e22.Cp = 0;
+ 
+    % e roughness 
+   pipe.e02.e =  0.01;             %e2 - pipe
+   pipe.e04.e =  3.11+0.51;        %e4 - pipe
+   pipe.e05.e =  1.81;             %e5 - pipe
+   pipe.e06.e =  3.63+0.51;        %e6 - pipe
+   pipe.e11.e =  7.68;             %e11 - pipe
+   pipe.e21.e =  2.10;             %e21 - pipe
+   pipe.e23.e =  2.77;             %e23 - pipe
+%----------------------------------------
+   pipe.e01.e =  0;                %e1 - Main pump 1
+   pipe.e03.e =  3.92;             %e3 - pipe
+   pipe.e07.e =  1.81;             %e7 - pipe
+   pipe.e08.e =  0;                %e8 - Main pump 2
+   pipe.e09.e =  0;                %e9 - PMA1 pump
+   pipe.e10.e =  3.57;             %e10 - pipe
+   pipe.e12.e =  1.46;             %e12 - pipe
+   pipe.e13.e =  0;                %e13 - Valve
+   pipe.e14.e =  2.55;             %e14 - pipe
+   pipe.e15.e =  0;                %e15 - Valve
+   pipe.e16.e =  0;                %e16 - PMA2 pump
+   pipe.e17.e =  2.77;             %e17 - pipe
+   pipe.e18.e =  2.26;             %e18 - pipe
+   pipe.e19.e =  0.81;             %e19 - pipe
+   pipe.e20.e =  0;                %e20 - Valve
+   pipe.e22.e =  0;                %e22 - Valve
+
+
+
