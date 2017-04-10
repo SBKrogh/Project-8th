@@ -1,7 +1,6 @@
 %% Initial Values
 clear all
 clc
-close all
 pipe_param;
 
 %  pipe.e02.q0 = 0.5;
@@ -12,12 +11,12 @@ pipe_param;
 %  pipe.e21.q0 = 0.5;
 %  pipe.e23.q0 = 0.5;
 
-x0 = [ 0.0000
-    0.0914
+x0 = [0.6867
+    0.9623
     0.0000
-    0.7466
-    0.9334
-    0.3937
+    0.0000
+    0.0000
+    0.4124
     0.0000];
 
 Ts = 0.05;
@@ -66,7 +65,7 @@ Data1 = 436;
 Data2 = 1560;
 Data3 = 2700;
 Data4 = 3960;
-Offshet = 30;
+Offshet = 40;
 
 u1 = [ u(Data1:Data1+Offshet,1)' u(Data2:Data2+Offshet,1)' u(Data3:Data3+Offshet,1)' u(Data4:Data4+Offshet,1)';...
 u(Data1:Data1+Offshet,2)' u(Data2:Data2+Offshet,2)' u(Data3:Data3+Offshet,2)' u(Data4:Data4+Offshet,2)';...
@@ -89,8 +88,8 @@ y(Data1:Data1+Offshet,8)' y(Data2:Data2+Offshet,8)' y(Data3:Data3+Offshet,8)' y(
 z = iddata(y1,u1,Ts,'Name', 'Data from Lab');
 z.InputName = {'e13Cv', 'e15Cv', 'e20Cv', 'e22Cv','e01dp', 'e08dp', 'e09dp','e12dp'};
 z.InputUnit =  {'-','-','-','-','bar', 'bar', 'bar','bar'};
-z.OutputName = { 'C04relp','c18relp','c25relp','C16relp' ...
-    'c21-22relp', 'c23relp', 'c28-29relp','c30relp'};
+z.OutputName = { 'Node 2','Node 7','Node 4','Node 5' ...
+          'Node 11', 'Node10', 'Node 16','Node 15'};
 z.OutputUnit = { 'bar','bar','bar','bar', 'bar', 'bar','bar','bar'};
 z.Tstart = 0;
 % 
@@ -191,6 +190,14 @@ nlgr.InitialStates(5).Minimum = 0;
 nlgr.InitialStates(6).Minimum = 0;
 nlgr.InitialStates(7).Minimum = 0;
 
+% nlgr.InitialStates(1).Fixed = false;
+% nlgr.InitialStates(2).Fixed = false;
+% nlgr.InitialStates(3).Fixed = false;
+% nlgr.InitialStates(4).Fixed = false;
+% nlgr.InitialStates(5).Fixed = false;
+% nlgr.InitialStates(6).Fixed = false;
+% nlgr.InitialStates(7).Fixed = false;
+
 nlgr.Algorithm.MaxIter=5;
 %%
 %
@@ -206,8 +213,8 @@ nlgr.Algorithm.MaxIter=5;
 % 3. Specify input and output names, and units.
 set(nlgr, 'InputName', {'e13Cv', 'e15Cv', 'e20Cv', 'e22Cv','e01dp', 'e08dp', 'e09dp','e12dp'},...
           'InputUnit',{ '-','-','-','-','bar', 'bar', 'bar','bar'},...
-          'OutputName', { 'C04relp','c18relp','c25relp','C16relp' ...
-          'c21-22relp', 'c23relp', 'c28-29relp','c30relp'},...
+          'OutputName', { 'Node 2','Node 7','Node 4','Node 5' ...
+          'Node 11', 'Node10', 'Node 16','Node 15'},...
           'OutputUnit', {'bar','bar','bar','bar', 'bar', 'bar','bar','bar'},...                        
           'TimeUnit', 's');
 %%
@@ -224,7 +231,7 @@ setpar(nlgr, 'Unit', {'-'});
 % present(nlgr)
 %  opt = compareOptions;
 %  opt.InitialCondition = x0;
-% datestr(now)
+ datestr(now)
 %% Estimation
 % opt = nlgreyestOptions('Display','on');
 % opt.SearchOption.MaxIter = 18;
@@ -235,6 +242,6 @@ nlgrF.Name = 'New Estimation';
 % nlgr.Report
 % fprintf('\n\nThe search termination condition:\n')
 % nlgr.Report.Termination
-% compare(z, nlgr, nlgrF, 'init', 'm');
-% datestr(now)
+compare(z, nlgr, nlgrF, 'init', 'm');
+datestr(now)
 p=nlgrF.Parameters.Value % save the new parameters

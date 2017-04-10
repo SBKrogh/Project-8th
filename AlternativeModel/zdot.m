@@ -35,7 +35,7 @@ J = inertiavec(pipe);
 
 F = +lambda + mu - alpha;
 
-dx = - (B_1 * J * B_1') \ B_1 * F ;
+dx =  (B_1 * J * B_1') \ B_1 * (-F) ;
 
 dq = B_1'* dx;
 
