@@ -4,25 +4,25 @@ function [valve, pump, q] = updateInputs(valve, pump, u, q)
 valve.e13.Cv = Cvalue(u(:,1));
 
 if valve.e13.Cv == 0
-    valve.e13.Cv = 0.0001;
+    valve.e13.Cv = 0.01;
 end
 
 valve.e15.Cv = Cvalue(u(:,2));
 
 if valve.e15.Cv == 0
-    valve.e15.Cv = 0.0001;
+    valve.e15.Cv = 0.01;
 end
 
 valve.e20.Cv = Cvalue(u(:,3));
 
 if valve.e20.Cv == 0
-    valve.e20.Cv = 0.0001;
+    valve.e20.Cv = 0.01;
 end
 
 valve.e22.Cv = Cvalue(u(:,4));
 
 if valve.e22.Cv == 0
-    valve.e22.Cv = 0.0001;
+    valve.e22.Cv = 0.01;
 end
 
 % Update Pumps
