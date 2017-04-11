@@ -3,27 +3,27 @@ function [valve, pump, q] = updateInputs(valve, pump, u, q)
 % Update Valves 
 valve.e13.Cv = Cvalue(u(:,1));
 
-if valve.e13.Cv < .40
-    valve.e13.Cv = 0.01;
-end
+% if valve.e13.Cv < .40
+%     valve.e13.Cv = 0.01;
+% end
 
 valve.e15.Cv = Cvalue(u(:,2));
 
-if valve.e15.Cv < .40
-    valve.e15.Cv = 0.01;
-end
+% if valve.e15.Cv < .40
+%     valve.e15.Cv = 0.01;
+% end
 
 valve.e20.Cv = Cvalue(u(:,3));
 
-if valve.e20.Cv < .40
-    valve.e20.Cv = 0.01;
-end
+% if valve.e20.Cv < .40
+%     valve.e20.Cv = 0.01;
+% end
 
 valve.e22.Cv = Cvalue(u(:,4));
 
-if valve.e22.Cv < .40
-    valve.e22.Cv = 0.01;
-end
+% if valve.e22.Cv < .40
+%     valve.e22.Cv = 0.01;
+% end
 
 % Update Pumps
 pump.e01.dP = u(:,5);
