@@ -43,28 +43,11 @@ close all
 f = linspace(0,1,length(data(:,3)));
 x = data_mean;
 x_f = fft(x);
-
-% By visual inspection. 17, 177
-%x_f(17) = 0
-%x_f(177) = 0
-plot(mag2db(abs(x_f)))
+plot(abs(x_f))
+% By visual inspection. 
 
 figure
 x_t = ifft(x_f);
-
-p = 20;
-a = aryule(x_t,p);
-
-freqz(1,a)
-
-
-
-
-figure
-
-
-plot(x)
-hold on
 plot(x_t)
 
 
