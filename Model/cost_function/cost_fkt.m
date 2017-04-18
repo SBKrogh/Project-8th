@@ -23,12 +23,29 @@ x_f = fft(x);
 
 % By visual inspection. x = 15, 155 is peak of fft 
 
-theta = angle(x_f(15));
+theta = [angle(x_f(2)) angle(x_f(15)) angle(x_f(29)) angle(x_f(6)) angle(x_f(8)) angle(x_f(10))];
 %angle(x_f(155));
 %fz = 
 
+
+x_f(2) = 0;
+x_f(168) = 0;
+
 x_f(15) = 0;    % Erase peroidisity
 x_f(155) = 0;   % Erase peroidisity
+
+x_f(29) = 0;
+x_f(141) = 0;
+
+x_f(6) = 0;
+x_f(164) = 0;
+
+x_f(8) = 0;
+x_f(162) = 0;
+
+x_f(10) = 0;
+x_f(160) = 0;
+
 
 % plot(mag2db(abs(x_f)))
 
@@ -72,11 +89,18 @@ y = filter(10,phi,x);
 A = 2820 / (168/2); % Amplitude of cosine peroridicity - A*cos(2*pi*f*t + theta) 
 fz = (15/168) ;%2.48*10^-5; %1/(15/168); 
 t = (1:1:168);
-per = A * cos(2*pi*fz*t + theta); % Peoridisity
+per1 = A * cos(2*pi*fz*t + theta(1)); % Peoridisity
+per2 = A * cos(2*pi*fz*t + theta(2));
+per3 = A * cos(2*pi*fz*t + theta(3));
+per4 = A * cos(2*pi*fz*t + theta(4));
+per5 = A * cos(2*pi*fz*t + theta(5));
+per6 = A * cos(2*pi*fz*t + theta(6));
 
-plot(per+y)
+
+
+plot(per1+per2+per3+per4+per5+per6+y)
 hold on 
 plot(data_mean)
 figure
-plot(abs(fft((per+y))))
+plot(abs(fft((per1+per2+per3+per4+per5+per6+y))))
 fit(t',data(:,3),'smoothingspline')
