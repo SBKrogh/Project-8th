@@ -86,15 +86,27 @@ x = randn(1,168);
 % end
 y = filter(10,phi,x);
 
-A = 2820 / (168/2); % Amplitude of cosine peroridicity - A*cos(2*pi*f*t + theta) 
-fz = (15/168) ;%2.48*10^-5; %1/(15/168); 
+A1 = 2820 / (168/2); % Amplitude of cosine peroridicity - A*cos(2*pi*f*t + theta) 
+A2 = 2820 / (155/2);
+A3 = 2820 / (141/2);
+A4 = 2820 / (164/2);
+A5 = 2820 / (162/2);
+A6 = 2820 / (160/2);
+
+fz1 = (15/168) ;%2.48*10^-5; %1/(15/168);
+fz2 = (15/155) ;
+fz3 = (15/141) ;
+fz4 = (15/164) ;
+fz5 = (15/162) ;
+fz6 = (15/160) ;
+
 t = (1:1:168);
-per1 = A * cos(2*pi*fz*t + theta(1)); % Peoridisity
-per2 = A * cos(2*pi*fz*t + theta(2));
-per3 = A * cos(2*pi*fz*t + theta(3));
-per4 = A * cos(2*pi*fz*t + theta(4));
-per5 = A * cos(2*pi*fz*t + theta(5));
-per6 = A * cos(2*pi*fz*t + theta(6));
+per1 = A2 * cos(2*pi*fz2*t + theta(1)); % Peoridisity
+per2 = A1 * cos(2*pi*fz1*t + theta(2));
+per3 = A3 * cos(2*pi*fz3*t + theta(3));
+per4 = A4 * cos(2*pi*fz4*t + theta(4));
+per5 = A5 * cos(2*pi*fz5*t + theta(5));
+per6 = A6 * cos(2*pi*fz6*t + theta(6));
 
 
 
