@@ -1,11 +1,9 @@
 %% Build up the f function
-
 function [dx, y] = zdot(t, x, u, p, varargin)
-
 
 pump_param;
 valve_param;
-pipe_param;
+pipe_param2;
 matrices;
 
  pipe.e02.Cp = p(1);

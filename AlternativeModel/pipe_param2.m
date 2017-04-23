@@ -130,29 +130,29 @@
    pipe.e20.e =  0;                %e20 - Valve
    pipe.e22.e =  0;                %e22 - Valve
 
-% % Friction in the pipes
-
- pipe.e02.Cp = calcFric(pipe.e02);
- pipe.e04.Cp = calcFric(pipe.e04);
- pipe.e05.Cp = calcFric(pipe.e05);
- pipe.e06.Cp = calcFric(pipe.e06);
- pipe.e11.Cp = calcFric(pipe.e11);
- pipe.e21.Cp = calcFric(pipe.e21);
- pipe.e23.Cp = calcFric(pipe.e23);
- pipe.e03.Cp = calcFric(pipe.e03);
- pipe.e07.Cp = calcFric(pipe.e07);
- pipe.e10.Cp = calcFric(pipe.e10);
- pipe.e12.Cp = calcFric(pipe.e12);
- pipe.e14.Cp = calcFric(pipe.e14);
- pipe.e17.Cp = calcFric(pipe.e17);
- pipe.e18.Cp = calcFric(pipe.e18);
- pipe.e19.Cp = calcFric(pipe.e19);
-%----------------------------------------
- pipe.e01.Cp = 0;
- pipe.e08.Cp = 0;
- pipe.e09.Cp = 0;
- pipe.e13.Cp = 0;
- pipe.e15.Cp = 0;
- pipe.e16.Cp = 0;
- pipe.e20.Cp = 0;
- pipe.e22.Cp = 0;
+%  % Friction in the pipes
+% 
+%  pipe.e02.Cp = calcFric(pipe.e02);
+%  pipe.e04.Cp = calcFric(pipe.e04);
+%  pipe.e05.Cp = calcFric(pipe.e05);
+%  pipe.e06.Cp = calcFric(pipe.e06);
+%  pipe.e11.Cp = calcFric(pipe.e11);
+%  pipe.e21.Cp = calcFric(pipe.e21);
+%  pipe.e23.Cp = calcFric(pipe.e23);
+%  pipe.e03.Cp = calcFric(pipe.e03);
+%  pipe.e07.Cp = calcFric(pipe.e07);
+%  pipe.e10.Cp = calcFric(pipe.e10);
+%  pipe.e12.Cp = calcFric(pipe.e12);
+%  pipe.e14.Cp = calcFric(pipe.e14);
+%  pipe.e17.Cp = calcFric(pipe.e17);
+%  pipe.e18.Cp = calcFric(pipe.e18);
+%  pipe.e19.Cp = calcFric(pipe.e19);
+% %----------------------------------------
+%  pipe.e01.Cp = 0;
+%  pipe.e08.Cp = 0;
+%  pipe.e09.Cp = 0;
+%  pipe.e13.Cp = 0;
+%  pipe.e15.Cp = 0;
+%  pipe.e16.Cp = 0;
+%  pipe.e20.Cp = 0;
+%  pipe.e22.Cp = 0;

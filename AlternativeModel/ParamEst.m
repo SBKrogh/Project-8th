@@ -29,7 +29,6 @@ x0 = [0.146279274973641
    0.000275506277596];
 
 Ts = 0.05;
-
 %% load data from the lab
 load('data.mat');
 % u(5:end) = 10^5*u(5:end);
