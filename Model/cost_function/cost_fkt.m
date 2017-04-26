@@ -6,6 +6,14 @@ clc;
 data = load('data_v2.csv'); % Data
 data_mean = data(:,3) - mean(data(:,3)); % Mean substracted from data 
 % 
+
+plot(data(:,3))
+grid on 
+xlabel('Hour')
+ylabel('Electrical price [kr/kWh]')
+
+
+
 % atc = autocorr(data_mean); % Autocorrelation of data
 %  
 % y_gamma = atc(2:length(atc)); % Used in Yule walker 
