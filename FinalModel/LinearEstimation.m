@@ -69,6 +69,8 @@ opt.SearchOption.MaxIter = 2000;
 linear_estimation = greyest(z, linear_model, opt);
 [linear_b_est,dlinear_b_est] = getpvec(linear_estimation,'free');
 
-figure
-compare(z, linear_model, linear_estimation);
+% figure
+% compare(z, linear_model, linear_estimation);
+
+datestr(now)
 
