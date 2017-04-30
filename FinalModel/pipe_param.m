@@ -159,4 +159,6 @@
  
  %----------Pump---------
  pipe.e24.Ah22 = 0.0179;
+ pipe.e25.radius = 0.30;
+ pipe.e25.area = pi * pipe.e25.radius^2;
 

@@ -1,27 +1,26 @@
 function [ a, B, C, D ] = Initialization( par, Ts )
 %INITIALIZATION Summary of this function goes here
 %   Detailed explanation goes here
+matrices;
 valve_param;
 pipe_param;
-matrices;
 
 
-zo = [1 1 1 1 1 1 1 1]';
-
-[ lambdaD, lambdaC, pipe ] = Pipes( pipe, B_1, zo, par );
-[ mu_S_D, mu_S_C, valve ] = Valves_States( valve, B_1, zo, par );
-[ mu_I_D, mu_I_C, valve ] = Valves_Inputs( valve, B_1, zo, par);
-[ C1, C2 ] = Output( lambdaC, mu_I_C, mu_S_C, B_1, zo);
+[ lambdaD, lambdaC ] = Pipes_Tr( par );
+[ gammaD, gammaC] = Tower_Tr( par );
+[ mu_S_D, mu_S_C ] = Valves_States_Tr( par );
+[ mu_I_D, mu_I_C ] = Valves_Inputs_Tr( par );
+[ C1, C2 ] = Output( lambdaC, mu_I_C, mu_S_C, B_1);
 [ alpha_S ] = Pumps( B_1 );
+WTconstant = (pipe.e25.area)/(1000*9.8);
 
-
-A = B_1 * (lambdaD + mu_S_D) * B_1';
+A = B_1 * (lambdaD + mu_S_D + gammaD) * B_1';
 
 B1 = B_1 * mu_I_D *B_1' + alpha_S;
 
 B2 = B_0;
 
-H = - pinv(H_0) * H_1 * B_1';
+H = - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
 
 B = - H * (A\B1);
 

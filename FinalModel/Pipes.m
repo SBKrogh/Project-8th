@@ -19,8 +19,6 @@ lambda(19) = 2 * c.e19.Cp * abs(B1(:,19)' * zo);
 lambda(20) = 2 * c.e20.Cp * abs(B1(:,20)' * zo);
 lambda(21) = 2 * c.e21.Cp * abs(B1(:,21)' * zo);
 
-% Insert the connection of the WT
-lambda(24) = 2 * c.e24.Ah22 * B1(:,24)' * zo;
 
 lambdaC = lambda/(10^5*3600^2);
 lambdaD = diag(lambda)/(10^5*3600^2);
