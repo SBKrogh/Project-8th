@@ -63,7 +63,7 @@ Parameters = { [pipe.lambda(1); pipe.lambda(2); pipe.lambda(3); pipe.lambda(4); 
 linear_model = idgrey('Initialization', Parameters, 'c');
 
 opt = greyestOptions('InitialState','zero', 'Display','on','SearchMethod', 'gn');
-opt.SearchOption.MaxIter = 100;
+opt.SearchOption.MaxIter = 2000;
 
 
 linear_estimation = greyest(z, linear_model, opt);
