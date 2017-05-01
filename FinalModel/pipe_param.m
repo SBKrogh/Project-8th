@@ -1,6 +1,6 @@
-% Pipe Lengths 
+ % Pipe Lengths 
 
-    pipe.e02.L = 5;                 %e2 - Pipe
+    pipe.e02.L = 5 + 0.33;                 %e2 - Pipe
     pipe.e04.L = 20;                %e4 - Pipe
     pipe.e05.L = 10;                %e5 - Pipe
     pipe.e06.L = 20;                %e6 - Pipe
@@ -24,6 +24,7 @@
     pipe.e19.L = 1;                 %e19 - Pipe
     pipe.e20.L = 0;                 %e20 - Valve
     pipe.e22.L = 0;                 %e22 - Valve
+    pipe.e24.L = 0;                 %e24 - WT connection
    
  % Pipe Diameters
 
@@ -51,6 +52,7 @@
    pipe.e19.D =  0.010;             %e19 - Pipe
    pipe.e20.D =  0;                 %e20 - Valve
    pipe.e22.D =  0;                 %e22 - Valve
+   pipe.e24.D =  0;                 %e24 - WT connection
     
 % Elevation
    pipe.e02.Z =  0;             %e2 - pipe
@@ -77,6 +79,7 @@
    pipe.e19.Z =  0;             %e19 - pipe
    pipe.e20.Z =  0;             %e20 - Valve
    pipe.e22.Z =  0;             %e22 - Valve
+   pipe.e24.Z =  0;             %e24 - WT connection
    
    % Kf values 
    pipe.e02.kf =  4.42;             %e2 - pipe
@@ -103,12 +106,13 @@
    pipe.e19.kf =  0.81;             %e19 - pipe
    pipe.e20.kf =  0;                %e20 - Valve
    pipe.e22.kf =  0;                %e22 - Valve
+   pipe.e24.kf =  0;                %e24 - WT connection
  
     % e roughness 
-   pipe.e02.e =  0.00001;             %e2 - pipe
-   pipe.e04.e =  0.00001;        %e4 - pipe
-   pipe.e05.e =  0.00001;             %e5 - pipe
-   pipe.e06.e =  0.00001;        %e6 - pipe
+   pipe.e02.e =  0.00001;              %e2 - pipe
+   pipe.e04.e =  0.00001;              %e4 - pipe
+   pipe.e05.e =  0.00001;              %e5 - pipe
+   pipe.e06.e =  0.00001;              %e6 - pipe
    pipe.e11.e =  0.000007;             %e11 - pipe
    pipe.e21.e =  0.000007;             %e21 - pipe
    pipe.e23.e =  0.000007;             %e23 - pipe
@@ -129,6 +133,7 @@
    pipe.e19.e =  0.000007;             %e19 - pipe
    pipe.e20.e =  0;                %e20 - Valve
    pipe.e22.e =  0;                %e22 - Valve
+   pipe.e24.e =  0;                %e24 - WT connection
 
 % % Friction in the pipes
 
@@ -156,9 +161,10 @@
  pipe.e16.Cp = 0;
  pipe.e20.Cp = 0;
  pipe.e22.Cp = 0;
+ pipe.e24.Cp = 0;
  
- %----------Pump---------
+ %----------WT connection---------
  pipe.e24.Ah22 = 0.0179;
  pipe.e25.radius = 0.30;
- pipe.e25.area = pi * pipe.e25.radius^2;
+ pipe.e25.area = pi * (pipe.e25.radius)^2;
 
