@@ -1,0 +1,71 @@
+
+section 4.1.3
+- state full pump power eq from master thesis and simplify from that where efficiency is constant.   
+"The energy used for running the pump" -> energy = power
+
+
+section 5
+eq 5.1 -> min u but no u in cost function
+eq 5.1 delta p_i needs to be function of time ex: delta p_i(k)
+eq 5.2 is continuous dynamic-> need discrete version
+discretize everything for implementation anyway 
+
+
+fig 5.1 remove CP_ref we do not have reference tracking, instead power minimization.
+fig 5.2 remove sum - put predicted model outputs directly in the optimizer.
+only apply u(k|k) -> MPC receding horizon 
+
+
+for periodic systems, general strategy to end at same state as begun is good.
+tank level at time k = tank level at time k+horizon
+
+"solving predictive control problems" - blue book is next step
+we do not have a standard problem -> need to adapt method to our problem.
+buzzword -> weighted norm ||x||^2 = x'x   x'Ix
+
+CVX = cheating
+
+
+section 5.2.2
+constraints given by eq 5.2 to 5.6 and not section 5.2.2
+change notation in 5.2.2 it is bad "Carsten"
+" The constraints matrices are given by"  - no 
+
+
+
+flow exchange in the tank -> leave out the constant based on time left.
+
+treat valve position as measured disturbance -> same principle as the price.
+
+MPC -> only 2 inputs, the rest are measured disturbance
+when making a discrete model -> smaller sampling time than feed forward. 
+Not a problem for optimization "Carsten"
+Sample time of MPC must be longer than settling time of inner controller
+rewrite constraints to be in u which is the variable we want to optimize.
+
+
+PI - control design
+- linearized version of pump model or Ziegler-Nichols heuristic tuning method. 
+
+
+Linearization:
+eq 4.90
+eq 4.91
+not neglecting anything - just taking the operating point so f(x_bar) is zero
+we need to know -> the function needs to be continuously differentiable.
+
+eq 4.92 -> we need the constant term to be a good approximation
+
+under picture 4.9  
+rewrite section
+
+Fix notation concerning u and valve / OD
+fix notation on H
+
+eq 4.105 dimension do not fix -> split up OD and u or derive according to u
+
+
+
+
+
+
