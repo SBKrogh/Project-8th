@@ -20,8 +20,8 @@ lambda(20) = par(14);
 lambda(21) = par(15);
 
 
-lambdaC = lambda/(10^5*3600^2);
-lambdaD = diag(lambda)/(10^5*3600^2);
+lambdaC = lambda;
+lambdaD = diag(lambda);
 
 
 end

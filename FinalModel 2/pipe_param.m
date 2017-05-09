@@ -1,6 +1,6 @@
  % Pipe Lengths 
 
-    pipe.e02.L = 5 + 0.33;                 %e2 - Pipe
+    pipe.e02.L = 5 + 0.3;           %e2 - Pipe
     pipe.e04.L = 20;                %e4 - Pipe
     pipe.e05.L = 10;                %e5 - Pipe
     pipe.e06.L = 20;                %e6 - Pipe
@@ -10,7 +10,7 @@
 %-----------------------------------------
     pipe.e01.L = 0;                 %e1 - Main pump 1
     pipe.e03.L = 10;                %e3 - Pipe
-    pipe.e07.L = 9;                 %e7 - Pipe
+    pipe.e07.L = 5 + 4;             %e7 - Pipe
     pipe.e08.L = 0;                 %e8 - Main pump 2
     pipe.e09.L = 0;                 %e9 - PMA1 pump
     pipe.e10.L = 2;                 %e10 - Pipe
@@ -24,7 +24,7 @@
     pipe.e19.L = 1;                 %e19 - Pipe
     pipe.e20.L = 0;                 %e20 - Valve
     pipe.e22.L = 0;                 %e22 - Valve
-    pipe.e24.L = 0;                 %e24 - WT connection
+    pipe.e25.L = 1.5;               %e25 - WT connection
    
  % Pipe Diameters
 
@@ -52,7 +52,7 @@
    pipe.e19.D =  0.010;             %e19 - Pipe
    pipe.e20.D =  0;                 %e20 - Valve
    pipe.e22.D =  0;                 %e22 - Valve
-   pipe.e24.D =  0;                 %e24 - WT connection
+   pipe.e25.D =  0.015;             %e25 - WT connection
     
 % Elevation
    pipe.e02.Z =  0;             %e2 - pipe
@@ -61,7 +61,7 @@
    pipe.e06.Z =  0;             %e6 - pipe
    pipe.e11.Z =  0;             %e11 - pipe
    pipe.e21.Z =  0;             %e21 - pipe
-   pipe.e23.Z =  0.5;             %e23 - pipe
+   pipe.e23.Z =  0.5;           %e23 - pipe
 %----------------------------------------
    pipe.e01.Z =  0;             %e1 - Main pump 1
    pipe.e03.Z =  0;             %e3 - pipe
@@ -79,13 +79,13 @@
    pipe.e19.Z =  0;             %e19 - pipe
    pipe.e20.Z =  0;             %e20 - Valve
    pipe.e22.Z =  0;             %e22 - Valve
-   pipe.e24.Z =  0;             %e24 - WT connection
+   pipe.e25.Z =  0.85;          %e25 - WT connection
    
    % Kf values 
    pipe.e02.kf =  4.42;             %e2 - pipe
-   pipe.e04.kf =  3.11+0.51;        %e4 - pipe
+   pipe.e04.kf =  3.11 + 0.51;      %e4 - pipe
    pipe.e05.kf =  1.81;             %e5 - pipe
-   pipe.e06.kf =  3.63+0.51;        %e6 - pipe
+   pipe.e06.kf =  3.63 + 0.51;      %e6 - pipe
    pipe.e11.kf =  7.68;             %e11 - pipe
    pipe.e21.kf =  2.10;             %e21 - pipe
    pipe.e23.kf =  2.77;             %e23 - pipe
@@ -106,7 +106,7 @@
    pipe.e19.kf =  0.81;             %e19 - pipe
    pipe.e20.kf =  0;                %e20 - Valve
    pipe.e22.kf =  0;                %e22 - Valve
-   pipe.e24.kf =  0;                %e24 - WT connection
+   pipe.e25.kf =  5.5;             %e25 - WT connection
  
     % e roughness 
    pipe.e02.e =  0.00001;              %e2 - pipe
@@ -117,23 +117,23 @@
    pipe.e21.e =  0.000007;             %e21 - pipe
    pipe.e23.e =  0.000007;             %e23 - pipe
 %----------------------------------------
-   pipe.e01.e =  0;                %e1 - Main pump 1
-   pipe.e03.e =  0.00001;             %e3 - pipe
-   pipe.e07.e =  0.00001;             %e7 - pipe
-   pipe.e08.e =  0;                %e8 - Main pump 2
-   pipe.e09.e =  0;                %e9 - PMA1 pump
-   pipe.e10.e =  0.000007;             %e10 - pipe
-   pipe.e12.e =  0.000007;             %e12 - pipe
-   pipe.e13.e =  0;                %e13 - Valve
-   pipe.e14.e =  0.000007;             %e14 - pipe
-   pipe.e15.e =  0;                %e15 - Valve
-   pipe.e16.e =  0;                %e16 - PMA2 pump
-   pipe.e17.e =  0.000007;             %e17 - pipe
-   pipe.e18.e =  0.000007;             %e18 - pipe
-   pipe.e19.e =  0.000007;             %e19 - pipe
-   pipe.e20.e =  0;                %e20 - Valve
-   pipe.e22.e =  0;                %e22 - Valve
-   pipe.e24.e =  0;                %e24 - WT connection
+   pipe.e01.e =  0;                %    e1 - Main pump 1
+   pipe.e03.e =  0.00001;               %e3 - pipe
+   pipe.e07.e =  0.00001;               %e7 - pipe
+   pipe.e08.e =  0;                     %e8 - Main pump 2
+   pipe.e09.e =  0;                     %e9 - PMA1 pump
+   pipe.e10.e =  0.000007;              %e10 - pipe
+   pipe.e12.e =  0.000007;              %e12 - pipe
+   pipe.e13.e =  0;                     %e13 - Valve
+   pipe.e14.e =  0.000007;              %e14 - pipe
+   pipe.e15.e =  0;                     %e15 - Valve
+   pipe.e16.e =  0;                     %e16 - PMA2 pump
+   pipe.e17.e =  0.000007;              %e17 - pipe
+   pipe.e18.e =  0.000007;              %e18 - pipe
+   pipe.e19.e =  0.000007;              %e19 - pipe
+   pipe.e20.e =  0;                     %e20 - Valve
+   pipe.e22.e =  0;                     %e22 - Valve
+   pipe.e25.e =  0.00001;               %e25 - WT connection
 
 % % Friction in the pipes
 
@@ -152,6 +152,7 @@
  pipe.e17.Cp = calcFric(pipe.e17);
  pipe.e18.Cp = calcFric(pipe.e18);
  pipe.e19.Cp = calcFric(pipe.e19);
+ pipe.e25.Cp = calcFric(pipe.e25);
 %----------------------------------------
  pipe.e01.Cp = 0;
  pipe.e08.Cp = 0;
@@ -161,10 +162,10 @@
  pipe.e16.Cp = 0;
  pipe.e20.Cp = 0;
  pipe.e22.Cp = 0;
- pipe.e24.Cp = 0;
  
  %----------WT connection---------
  pipe.e24.Ah22 = 0.0179;
- pipe.e25.radius = 0.30;
- pipe.e25.area = pi * (pipe.e25.radius)^2;
+ %---------- WT ---------
+ pipe.e26.radius = 0.32;
+ pipe.e26.area = pi * (pipe.e26.radius)^2;
 

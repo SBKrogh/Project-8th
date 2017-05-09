@@ -32,12 +32,12 @@ B = [eye(8) Bt];
 
 B_1 = B(:,1:end-1);
 B_0 = B(:,end);
-% %Check H_1*B_1'
-% check = H*B';
-% % if check == 0
+
+%Check H_1*B_1'
+% check = H_1*B_1';
+% if check == 0
 %     disp('correct')
 % end
-
 
 
 

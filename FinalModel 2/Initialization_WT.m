@@ -1,36 +1,32 @@
-function [ a, B, C, D ] = Initialization( par, Ts )
+function [ a, B, C, D] = Initialization_WT( par, Ts ) %#ok<INUSD>
 %INITIALIZATION Summary of this function goes here
 %   Detailed explanation goes here
 matrices;
 valve_param;
 pipe_param;
 
-
-[ lambdaD, lambdaC ] = Pipes_Tr( par );
-[ gammaD, gammaC] = Tower_Tr( par );
-[ mu_S_D, mu_S_C ] = Valves_States_Tr( par );
-[ mu_I_D, mu_I_C ] = Valves_Inputs_Tr( par );
-[ C1, C2 ] = Output( lambdaC, mu_I_C, mu_S_C, B_1);
+[ lambdaD ] = Pipes_Tr( par );
+[ gammaD, gammaC] = Tower_Tr( par ); %#ok<ASGLU>
+[ mu_S_D ] = Valves_States_Tr( par );
+[ mu_I_D ] = Valves_Inputs_Tr( par );
 [ alpha_S ] = Pumps( B_1 );
-WTconstant = (pipe.e25.area)/(1000*9.8*3600^2);
+WTconstant = (pipe.e26.area)/(1000*9.8);
 
 A =  B_1 * (lambdaD + mu_S_D + gammaD) * B_1';
 
-B1 =  (B_1 * mu_I_D * B_1' - alpha_S);
+B1 =  (B_1 * mu_I_D - alpha_S);
 
 B2 =  B_0;
 
 H = - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
 
-B = - H * (A\B1);
+B = - H * (A \ B1);
 
-a = - H * (A\B2);
+a = - H * (A \ B2);
 
-C = - C1 * ( A\B2 );
+C = 1 ; %+ (par(25));
 
-D = ( C2 - C1 * ( A \ B1 ) );
-
-
+D = zeros(1,8);
 
 end
 % 
