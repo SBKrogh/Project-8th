@@ -26,9 +26,9 @@ end
 
 %immse(data,data_new')
 
-plot(data_new(1:60))
+%plot(data_new(1:60))
 hold on
-plot(data(1:60))
+plot(data(1:168))
 legend('SMA','Actually price')
 grid on
 xlabel('Hour')

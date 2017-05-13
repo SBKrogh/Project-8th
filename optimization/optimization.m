@@ -1,7 +1,7 @@
 %Solve a quadratic programming problem
 
 %Variabels that we need to sort out.
-% lamda1 lamda2 lamda3 Gamma psi d_bar u_hat u_bar theta delta_p_0 u_max. 
+% lamda1 lamda2 lamda3 Gamma psi d_bar u_hat u_bar theta delta_p_0. 
 %
 
 %%%%%%%%%%%%%%%%%% Generel QP %%%%%%%%%%%%%%%%%%
