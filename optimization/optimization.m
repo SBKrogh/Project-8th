@@ -22,7 +22,7 @@ u_y_high = (C_bar*Gamma)'*(y_high-C_bar*theta*delta_p_0-C_bar*psi*d_bar);
 % State constraint
 % u_bar = Gamma'*(x_bar-theta*delta_p_0-psi*d_bar)
 x_low = ;
-x_high = ;
+x_high = 0.16;
 
 u_x_low = Gamma'*(x_low-theta*delta_p_0-psi*d_bar);
 u_x_high = Gamma'*(x_high-theta*delta_p_0-psi*d_bar);
