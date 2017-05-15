@@ -87,4 +87,30 @@ for i = 1:n:N
     end
     l = l + 1 ;
 end
+%%
+m = size(Cd);
+m = m(1);
+Theta = Cd;
 
+for i = 1:Hp-1
+    Theta(i + m: i + m + 1,  i + 1 ) = Cd;
+    m = m + 1;
+end
+
+n = length(Dd);
+Omega = Dd;
+
+for i = 1:Hp-1
+    Omega(i + n: i + n + 1, i + n : i + n + 1) = Dd;
+    n = n + 1;
+end
+
+n = length(Kd);
+m = size(Kd);
+m = m(1);
+Pi = Kd;
+
+for i = 1:Hp-1
+    Pi(i + m: i + m + 1, 1 + i*n :  i*n +n ) = Kd;
+    m = m + 1;
+end
