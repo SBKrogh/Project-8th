@@ -1,5 +1,6 @@
 clear;
 load('data.mat');
+run('../Model/cost_function/mean_curve.m');
 matrices;
 trock;
 
@@ -13,18 +14,11 @@ G_2(2,11) = 1;                  % Main pump 2 edge 11
 
 Hp = 24;
 
+Lambda_1 = - G_2 * B_1' * inv(M_c) * N_c;
 
-M = pinv(S) * Ac * pinv(B_0);
+Lambda_2 = - G_2 * B_1' * inv(M_c) * Q_c;
 
-N = pinv(S) * Bc;
-
-Q = pinv(S) * Ec;
-
-Lambda_1 = - G_2 * B_1' * N;
-
-Lambda_2 = - G_2 * B_1' * Q;
-
-Lambda_3 = - G_2 * B_1' * M;
+Lambda_3 = - G_2 * B_1' * inv(M_c) * B_0;
 
 %%
 n = length(Lambda_1);
