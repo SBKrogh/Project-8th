@@ -41,4 +41,4 @@ Kd = [ sysd.D(2,1:4); sysd.D(4,1:4) ];
 
 WTconstant = (pi * (0.32)^2)/(1000*9.8);
 
-S =  - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
+%S =  - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
