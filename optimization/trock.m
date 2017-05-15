@@ -17,7 +17,7 @@ Ds = [ linear_b_est(14) linear_b_est(15) linear_b_est(16) linear_b_est(17) linea
 
 sys = ss(As,Bs,Cs,Ds);
 
-Ts = 0.05;
+Ts = 600;
 
 sysd = c2d(sys, Ts);
 

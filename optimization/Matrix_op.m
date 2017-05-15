@@ -1,5 +1,5 @@
 clear;
-% run('../Model/cost_function/mean_curve.m');
+load('data.mat');
 matrices;
 trock;
 
