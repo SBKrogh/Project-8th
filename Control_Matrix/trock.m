@@ -28,3 +28,11 @@ Cc = [ Cd(2); Cd(4) ];
 Dc = [ Dd(2,5); Dd(4,6) ];
 
 Kc = [ Dd(2,1:4); Dd(4,1:4) ];
+
+
+
+%% Time constant WT
+
+
+
+
