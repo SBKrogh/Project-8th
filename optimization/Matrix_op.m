@@ -1,5 +1,6 @@
 clear;
 load('data.mat');
+% run('../Model/cost_function/mean_curve.m');
 matrices;
 trock;
 
@@ -53,7 +54,8 @@ end
 Phi = zeros(24,1);
 
 % State matrix
-for i = 1:Hp
+Phi(1) = 1;
+for i = 2:Hp
     Phi(i) = Ad^i;
 end
 
@@ -64,9 +66,9 @@ N = n * Hp;
 
 M = Hp;
 
-k = 1;
-
-for i = 1:n:N
+k = 2;
+Gamma = zeros(24,48);
+for i = 3:n:N
     for j = k:M 
         Gamma(j,i:i+n-1) = Ad^(j-k) * Bd;
     end
@@ -74,13 +76,14 @@ for i = 1:n:N
 end
 
 % Disturbance Matrix
-l = 1;
+l = 2;
 
 n = length(Ed);
 
 N = n * Hp;
+Psi = zeros(24,96);
 
-for i = 1:n:N
+for i = 5:n:N
     for j = l:M 
         Psi(j,i:i+n-1) = Ad^(j-l) * Ed; %#ok<*SAGROW>
     end
