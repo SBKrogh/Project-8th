@@ -50,8 +50,8 @@ end
 Phi = zeros(24,1);
 
 % State matrix
-Phi(1) = 1;
-for i = 2:Hp
+% Phi(1) = 1;
+for i = 1:Hp
     Phi(i) = Ad^i;
 end
 
@@ -62,7 +62,7 @@ N = n * Hp;
 
 M = Hp;
 
-k = 2;
+k = 1;
 Gamma = zeros(24,48);
 for i = 1:n:N
     for j = k:M 
@@ -72,7 +72,7 @@ for i = 1:n:N
 end
 
 % Disturbance Matrix
-l = 2;
+l = 1;
 
 n = length(Ed);
 
