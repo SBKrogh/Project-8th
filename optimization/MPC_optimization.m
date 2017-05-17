@@ -57,7 +57,7 @@ u_high = 1;
 %%%%%%%%%%%%%%%%%% Setting up the QP %%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-H_wrong = (Lambda_A+Lambda_C*Gamma); 
+H_wrong = (Lambda_A + Lambda_C*Gamma); 
 H = (H_wrong+H_wrong')./2;
 f = U_bar_hp'*(Lambda_A+Lambda_C*Gamma)+d_hp'*(Lambda_B+Lambda_C*Psi)'+delta_p_0*(Lambda_C*Phi)'+q_bar_p_hp';
 
@@ -74,6 +74,11 @@ options = optimoptions('quadprog','Display','iter-detailed')
    quadprog(H_wrong,f,[],[],[],[],lb,ub,[],options);
 
 u_hp,cost
+
+%Checking positive definiteness:
+
+r1 = randn(48,1);
+r2 = randn(8,1);
 
 %%
 

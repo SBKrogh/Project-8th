@@ -7,7 +7,7 @@ M = [ linear_b_est(1)  linear_b_est(2) linear_b_est(3) linear_b_est(4) linear_b_
     
      linear_b_est(2)  linear_b_est(9) linear_b_est(10) linear_b_est(11) linear_b_est(12) linear_b_est(13) linear_b_est(14) linear_b_est(15);
      
-     linear_b_est(3)  linear_b_est(10) linear_b_est(56) linear_b_est(16) linear_b_est(17) linear_b_est(18) linear_b_est(19) linear_b_est(20);
+     linear_b_est(3)  linear_b_est(10) linear_b_est(109) linear_b_est(16) linear_b_est(17) linear_b_est(18) linear_b_est(19) linear_b_est(20);
      
      linear_b_est(4)  linear_b_est(11) linear_b_est(16) linear_b_est(21) linear_b_est(22) linear_b_est(23) linear_b_est(24) linear_b_est(25);
      
