@@ -4,10 +4,6 @@ load('data.mat');
 matrices;
 trock;
 
-G_1 = zeros(e,2);               % Mapping matrix for pumps
-G_1(9,2) = 1;                   % Main pump 1 edge 1
-G_1(11,2) = 1;                  % Main pump 2 edge 11
-
 G_2 = zeros(2,e);               % Mapping matrix for pumps
 G_2(1,9) = 1;                   % Main pump 1 edge 1
 G_2(2,11) = 1;                  % Main pump 2 edge 11
@@ -81,9 +77,9 @@ l = 2;
 n = length(Ed);
 
 N = n * Hp;
-Psi = zeros(24,96);
+Psi = zeros(24,48);
 
-for i = 5:n:N
+for i = 3:n:N
     for j = l:M 
         Psi(j,i:i+n-1) = Ad^(j-l) * Ed; %#ok<*SAGROW>
     end

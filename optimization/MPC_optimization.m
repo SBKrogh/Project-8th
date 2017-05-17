@@ -15,9 +15,9 @@ trock;                  %Load system matrices
 
 delta_p_0 = 0.002;
 
-d_hp = 0.05*ones(96,1);
-U_bar_hp = 0.2*ones(48,1);
-q_bar_p_hp = 1.4*ones(48,1);
+d_hp = 0.05*90*ones(48,1);      % Small signal deviation of the Valves OD
+U_bar_hp = 0.2*ones(48,1);      % Input pressure to ring pumps operating point
+q_bar_p_hp = 1.4*ones(48,1);    % Flow operating point of the ring pumps
 
 
 %%%%%%%%%%%%%%%%%% Generel QP %%%%%%%%%%%%%%%%%%
@@ -27,12 +27,15 @@ q_bar_p_hp = 1.4*ones(48,1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Output constraint
-y_low = -0.0755*ones(48,1);
-y_high = 0.0245*ones(48,1);
+y_low = -0.0755*ones(48,1);         % Lower bound small deviation for Pressure PMA
+y_high = 0.0245*ones(48,1);         % Upper bound small deviation for Pressure PMA
+
+% Pressure operating point of the PMA end-users
 y_bar = [0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;
         0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;
         0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;
-        0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991];
+        0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991];    
+
 
 y1 = y_low - y_bar - Theta*Phi*delta_p_0-(Theta*Psi+Pi)*d_hp;
 y2 = y_high - y_bar - Theta*Phi*delta_p_0-(Theta*Psi+Pi)*d_hp;
@@ -72,6 +75,26 @@ options = optimoptions('quadprog','Display','iter-detailed')
 
 u_hp,cost
 
+%%
+
+
+% 
+% H = H(1:2,1:2);
+% 
+% theta = (0:0.01:2*pi);
+% 
+% x = [cos(theta); sin(theta)];
+% 
+% r = sqrt(diag(x'*H(1:2,1:2)*x));
+% 
+% m = -0.5*inv(H) * f(1,1:2);
+% 
+% c = (x + 0.5 * inv(H) * f)' * H * (x + 0.5 * inv(H) * f) - 0.25 * f' * inv(H) * f;
+% 
+% cbar = sqrt(c + 0.25 * f' * inv(H) * f);
+% 
+% plot(m(1) + x(1,:).\r'*cbar,...
+%     m(2) + x(2,:).\r'*cbar, '--r')
 
 
 
@@ -81,19 +104,4 @@ u_hp,cost
 %x = ([1:1:48])';
 %
 %
-%plot(x'*H*x+f*x)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%plot(x'*H(1:2,1:2)*x+f(1,1:2)*x)
