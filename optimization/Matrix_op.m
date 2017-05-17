@@ -14,11 +14,11 @@ G_2(2,11) = 1;                  % Main pump 2 edge 11
 
 Hp = 24;
 
-Lambda_1 = - G_2 * B_1' * inv(M_c) * N_c;
+Lambda_1 = - G_2 * B_1' * (M_c \ N_c);
 
-Lambda_2 = - G_2 * B_1' * inv(M_c) * Q_c;
+Lambda_2 = - G_2 * B_1' * (M_c \ Q_c);
 
-Lambda_3 = - G_2 * B_1' * inv(M_c) * B_0;
+Lambda_3 = - G_2 * B_1' * (M_c \ B_0);
 
 %%
 n = length(Lambda_1);
