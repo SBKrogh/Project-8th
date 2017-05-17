@@ -71,7 +71,7 @@ ub = u_high*ones(48,1);
 
 options = optimoptions('quadprog','Display','iter-detailed')
 [u_hp,cost,output,lambda] = ...
-   quadprog(H,f,[],[],[],[],lb,ub,[],options);
+   quadprog(H_wrong,f,[],[],[],[],lb,ub,[],options);
 
 u_hp,cost
 

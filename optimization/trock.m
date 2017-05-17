@@ -12,7 +12,7 @@ sys = ss(As,Bs,Cs,Ds);
 
 Ts = 600;
 
-sysd = c2d(sys, Ts);
+sysd = c2d(sys, Ts,'Tustin');
 
 % State-Space matrices for control in continous
 % Ac = As;
