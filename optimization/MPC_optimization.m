@@ -21,7 +21,7 @@ q_bar_p_hp = 1.4*ones(48,1);
 
 
 %%%%%%%%%%%%%%%%%% Generel QP %%%%%%%%%%%%%%%%%%
-% 0.5*x'H*x+f*x
+% 0.5*x'H*x+f'*x
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Constraint %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -29,7 +29,10 @@ q_bar_p_hp = 1.4*ones(48,1);
 % Output constraint
 y_low = -0.0755*ones(48,1);
 y_high = 0.0245*ones(48,1);
-y_bar = 0.1555*ones(48,1);
+y_bar = [0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;
+        0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;
+        0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;
+        0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991 ;0.1562; 0.0991];
 
 y1 = y_low - y_bar - Theta*Phi*delta_p_0-(Theta*Psi+Pi)*d_hp;
 y2 = y_high - y_bar - Theta*Phi*delta_p_0-(Theta*Psi+Pi)*d_hp;
@@ -63,9 +66,9 @@ ub = u_high*ones(48,1);
 
 %options = optimoptions('Display','iter-detailed');%quadprog
 
-options = optimoptions('quadprog')
+options = optimoptions('quadprog','Display','iter-detailed')
 [u_hp,cost,output,lambda] = ...
-   quadprog(H,f,A,b,[],[],lb,ub,[],options);
+   quadprog(H,f,[],[],[],[],lb,ub,[],options);
 
 u_hp,cost
 
