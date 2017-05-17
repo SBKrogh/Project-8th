@@ -64,7 +64,7 @@ M = Hp;
 
 k = 2;
 Gamma = zeros(24,48);
-for i = 3:n:N
+for i = 1:n:N
     for j = k:M 
         Gamma(j,i:i+n-1) = Ad^(j-k) * Bd;
     end
@@ -79,7 +79,7 @@ n = length(Ed);
 N = n * Hp;
 Psi = zeros(24,48);
 
-for i = 3:n:N
+for i = 1:n:N
     for j = l:M 
         Psi(j,i:i+n-1) = Ad^(j-l) * Ed; %#ok<*SAGROW>
     end
