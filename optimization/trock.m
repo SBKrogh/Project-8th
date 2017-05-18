@@ -31,7 +31,7 @@ Ad = sysd.A;
 Bd = [ sysd.B(5) sysd.B(6) ];
 
 Ed = [ sysd.B(2) sysd.B(4)] ;
-
+ 
 Cd = [ sysd.C(2); sysd.C(4) ];
 
 Dd = [ sysd.D(2,5) sysd.D(2,6); sysd.D(4,5) sysd.D(4,6) ];
