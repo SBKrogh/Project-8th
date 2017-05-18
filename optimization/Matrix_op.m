@@ -62,7 +62,7 @@ N = n * Hp;
 
 M = Hp;
 
-k = 1;
+k = 2;
 Gamma = zeros(24,48);
 for i = 1:n:N
     for j = k:M 
@@ -72,7 +72,7 @@ for i = 1:n:N
 end
 
 % Disturbance Matrix
-l = 1;
+l = 2;
 
 n = length(Ed);
 
