@@ -57,7 +57,7 @@ u_high = 1;
 %%%%%%%%%%%%%%%%%% Setting up the QP %%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-R = (Lambda_A + Lambda_C*Gamma); 
+R = 2*(Lambda_A + Lambda_C*Gamma); 
 
 f = U_bar_hp'*(Lambda_A+Lambda_C*Gamma)+d_hp'*(Lambda_B+Lambda_C*Psi)'+delta_p_0*(Lambda_C*Phi)'+q_bar_p_hp';
 
