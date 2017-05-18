@@ -38,7 +38,10 @@ Dd = [ sysd.D(2,5) sysd.D(2,6); sysd.D(4,5) sysd.D(4,6) ];
 
 Kd = [ sysd.D(2,2) sysd.D(2,4); sysd.D(4,2) sysd.D(4,4) ];
 
+E_new = Ed*pinv(Kd);     
 
 WTconstant = (pi * (0.32)^2)/(1000*9.8);
 
 %S =  - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
+
+save('sysd.mat','Ad','Bd','E_new','Cd','Dd','Ts')
