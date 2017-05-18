@@ -46,7 +46,8 @@ B2 =  B_0;
 
 H = - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
 
-As = - H * (M \ B2);
+%As = - H * (M \ B2);
+As = -0.0001;
 
 Bs = - H * (M \ N);
 
