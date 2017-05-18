@@ -3,32 +3,32 @@ function [ M , N, As, Bs, Cs, Ds ] = mat_est
 load('est_trock_f.mat')
 matrices;
 
-M = [ linear_b_est(1)  linear_b_est(2) linear_b_est(3) linear_b_est(4) linear_b_est(5) linear_b_est(6) linear_b_est(7) linear_b_est(8);
+M = [ linear_b_est(1)  linear_b_est(2)    0   0   linear_b_est(3)  0   0   0;
     
-     linear_b_est(2)  linear_b_est(9) linear_b_est(10) linear_b_est(11) linear_b_est(12) linear_b_est(13) linear_b_est(14) linear_b_est(15);
+     linear_b_est(2)  linear_b_est(4)  linear_b_est(5)  0   linear_b_est(6)  linear_b_est(7)  0   linear_b_est(8);
      
-     linear_b_est(3)  linear_b_est(10) linear_b_est(56) linear_b_est(16) linear_b_est(17) linear_b_est(18) linear_b_est(19) linear_b_est(20);
+     0       linear_b_est(5)  linear_b_est(9) linear_b_est(10) 0 linear_b_est(11) linear_b_est(12) linear_b_est(13);
      
-     linear_b_est(4)  linear_b_est(11) linear_b_est(16) linear_b_est(21) linear_b_est(22) linear_b_est(23) linear_b_est(24) linear_b_est(25);
+     0      0       linear_b_est(10) linear_b_est(14) linear_b_est(15) 0 linear_b_est(16) linear_b_est(17);
      
-     linear_b_est(5)  linear_b_est(12) linear_b_est(17) linear_b_est(22) linear_b_est(26) linear_b_est(27) linear_b_est(28) linear_b_est(29);
+     linear_b_est(3)  linear_b_est(6)     0   linear_b_est(15) linear_b_est(18) 0       0         0;
      
-     linear_b_est(6)  linear_b_est(13) linear_b_est(18) linear_b_est(23) linear_b_est(27) linear_b_est(30) linear_b_est(31) linear_b_est(32);
+     0      linear_b_est(7)      linear_b_est(11) 0       0   linear_b_est(19) 0 linear_b_est(20);
      
-     linear_b_est(7)  linear_b_est(14) linear_b_est(19) linear_b_est(24) linear_b_est(28) linear_b_est(31) linear_b_est(33) linear_b_est(34);
+     0       0          linear_b_est(12) linear_b_est(16) 0   0   linear_b_est(21) linear_b_est(22);
      
-     linear_b_est(8)  linear_b_est(15) linear_b_est(20) linear_b_est(25) linear_b_est(29) linear_b_est(32) linear_b_est(34) linear_b_est(35)];
+     0      linear_b_est(8)      linear_b_est(13) linear_b_est(17) 0 linear_b_est(20) linear_b_est(22) linear_b_est(23)];
  
     
 N = [ 0   0   0   0   1   0   0   0 ;
-    0   linear_b_est(36)    0   0   0   0   1   0;
-    0   linear_b_est(37)    linear_b_est(38)    0   0   0 -1 1;
-    0   0 linear_b_est(39)  0   0   1   0   1;
+    0   linear_b_est(24)    0   0   0   0   1   0;
+    0   linear_b_est(25)    linear_b_est(26)    0   0   0 -1 1;
+    0   0 linear_b_est(27)  0   0   1   0   1;
     0   0   0   0   0   1    0  0 ;
-    linear_b_est(40)    linear_b_est(41)    0   0   0   0   0   0;
-    0   0   linear_b_est(42) linear_b_est(43)   0   0   0   0;
-    0 linear_b_est(44)  linear_b_est(45)    0   0   0   0   0];
-    
+    linear_b_est(28)    linear_b_est(29)    0   0   0   0   0   0;
+    0   0   linear_b_est(30) linear_b_est(31)   0   0   0   0;
+    0 linear_b_est(32)  linear_b_est(33)    0   0   0   0   0];
+
 C1 = [ linear_b_est(46)  linear_b_est(47) linear_b_est(48) linear_b_est(49) linear_b_est(50) linear_b_est(51) linear_b_est(52) linear_b_est(53);
     linear_b_est(54)  linear_b_est(55) linear_b_est(56) linear_b_est(57) linear_b_est(58) linear_b_est(59) linear_b_est(60) linear_b_est(61);
     linear_b_est(62)  linear_b_est(63) linear_b_est(64) linear_b_est(65) linear_b_est(66) linear_b_est(67) linear_b_est(68) linear_b_est(69);
