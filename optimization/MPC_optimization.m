@@ -81,7 +81,7 @@ options = optimoptions('quadprog','Display','iter-detailed')
    quadprog(R1,f,[],[],[],[],lb,ub,[],options);
 
 
-
+fval,lambda
 u_hp,exitflag,output
 
 
