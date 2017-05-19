@@ -46,15 +46,15 @@ WTconstant = ((pi*0.32^2)/(1000*9.8))*(10^5);
 
 B2 =  B_0;
 
-H = - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
+H =  (1/WTconstant) * pinv(H_0) * H_1 * B_1';
 
-As = - H * (M \ B2);
+As =  H * (M \ B2);
 % As = -0.0001;
 
 Bs = - H * (M \ N);
 
-Cs =  [- C1 * ( M \ B2 ); 1];
+Cs =  [ C1 * ( M \ B2 ); 1];
 
-Ds =  [C2 - C1 * ( M \ N ); zeros(1,8)];
+Ds =  [C2 + C1 * ( M \ N ); zeros(1,8)];
 
 end
