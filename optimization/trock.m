@@ -10,7 +10,7 @@ Q_c =[ N(:,2) N(:,4)];
 
 sys = ss(As,Bs,Cs,Ds);
 
-Ts = 600;
+Ts = 0.1;
 
 sysd = c2d(sys, Ts,'Tustin');
 
