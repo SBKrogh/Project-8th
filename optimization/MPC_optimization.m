@@ -60,7 +60,7 @@ R2=(R-R')/2;
 f = U_bar_hp'*(Lambda_A+Lambda_C*Gamma)+d_hp'*(Lambda_B+Lambda_C*Psi)'+delta_p_0*(Lambda_C*Phi)'+q_bar_p_hp';
 
 %CONSTRAINTS FOR Y AND X
-A = [-L_y; L_y; -Gamma;Gamma];
+A = [-L_y; L_y; -Gamma; Gamma];
 b = [y1; y2; delta_p_wt_1; delta_p_wt_2];
 
 %CONSTRAINTS FOR Y
