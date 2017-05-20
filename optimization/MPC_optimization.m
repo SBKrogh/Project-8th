@@ -10,7 +10,8 @@ clc
 % Variabels that we use in the Matrix_op.m file
 % Lambda_A Lambda_B Lambda_C Gamma Psi Phi Theta Omega Pi 
 Matrix_op;
-trock;                  %Load system matrices
+trock;%Load system matrices
+load('Disturbance_Plot.mat');
 
 delta_p_0 = 0.05;      %small-signal initial WT pressure measurement
 
@@ -98,3 +99,5 @@ title('u_{hp2}')
 subplot(3,1,3)       % add second plot in 2 x 1 grid
 stairs([0:23], data(1:24))       % plot using + markers
 title('Energy price')
+
+t = 0:Ts:Ts*(length(Data_OD)-1);
