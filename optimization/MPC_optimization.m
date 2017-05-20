@@ -74,15 +74,22 @@ b = [y1; y2; delta_p_wt_1; delta_p_wt_2];
 lb = u_low*ones(48,1);
 ub = u_high*ones(48,1);
 
-%options = optimoptions('Display','iter-detailed');%quadprog
+options = optimoptions('quadprog','Algorithm','interior-point-convex','Display','iter-detailed')
+[u_hp,fval,exitflag,output,lambda] = quadprog(R1,f,[],[],[],[],lb,ub,[],options);
 
-options = optimoptions('quadprog','Display','iter-detailed')
-[u_hp,fval,exitflag,output,lambda] = ...
-   quadprog(R1,f,[],[],[],[],lb,ub,[],options);
-
-
-fval,lambda
+%fval,lambda
 u_hp,exitflag,output
+
+
+%FOR TESTING:
+controlsignal = u_hp;
+figure
+subplot(2,1,1)       % add first plot in 2 x 1 grid
+stairs([0:47], controlsignal)
+title('u_{hp}')
+subplot(2,1,2)       % add second plot in 2 x 1 grid
+stairs([0:47], data(1:48))       % plot using + markers
+title('Price_{e}')
 
 
 

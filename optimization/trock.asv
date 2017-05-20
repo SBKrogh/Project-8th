@@ -10,7 +10,7 @@ Q_c =[ N(:,2) N(:,4)];
 
 sys = ss(As,Bs,Cs,Ds);
 
-Ts = 0.6557;
+Ts = 0.6557;  %Rethink this %
 
 sysd = c2d(sys, Ts,'zoh');
 
