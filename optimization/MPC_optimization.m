@@ -84,13 +84,17 @@ u_hp,exitflag,output
 
 %FOR TESTING:
 controlsignal = u_hp;
+
+u_hp1 = u_hp(1:2:length(u_hp))
+u_hp2 = u_hp(2:2:length(u_hp))
+
 figure
-subplot(2,1,1)       % add first plot in 2 x 1 grid
-stairs([0:47], controlsignal)
-title('u_{hp}')
-subplot(2,1,2)       % add second plot in 2 x 1 grid
-stairs([0:47], data(1:48))       % plot using + markers
-title('Price_{e}')
-
-
-
+subplot(3,1,1)       % add first plot in 2 x 1 grid
+stairs([0:23], u_hp1)
+title('u_{hp1}')
+subplot(3,1,2)       % add second plot in 2 x 1 grid
+stairs([0:23], u_hp2)       % plot using + markers
+title('u_{hp2}')
+subplot(3,1,3)       % add second plot in 2 x 1 grid
+stairs([0:23], data(1:24))       % plot using + markers
+title('Energy price')
