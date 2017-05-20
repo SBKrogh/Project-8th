@@ -74,6 +74,7 @@ b = [y1; y2; delta_p_wt_1; delta_p_wt_2];
 lb = u_low*ones(48,1);
 ub = u_high*ones(48,1);
 
+%trust-region-reflective
 options = optimoptions('quadprog','Algorithm','interior-point-convex','Display','iter-detailed')
 [u_hp,fval,exitflag,output,lambda] = quadprog(R1,f,[],[],[],[],lb,ub,[],options);
 
