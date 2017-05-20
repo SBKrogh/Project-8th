@@ -100,4 +100,5 @@ subplot(3,1,3)       % add second plot in 2 x 1 grid
 stairs([0:23], data(1:24))       % plot using + markers
 title('Energy price')
 
+
 t = 0:Ts:Ts*(length(Data_OD)-1);
