@@ -38,6 +38,9 @@ Dd = [ sysd.D(2,5) sysd.D(2,6); sysd.D(4,5) sysd.D(4,6) ];
 
 Kd = [ sysd.D(2,2) sysd.D(2,4); sysd.D(4,2) sysd.D(4,4) ];
 
+co = ctrb(sysd);
+Controllability = rank(co);
+
 E_new = Ed*pinv(Kd);     
 
 WTconstant = (pi * (0.32)^2)/(1000*9.8);
