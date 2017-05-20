@@ -10,7 +10,7 @@ Q_c =[ N(:,2) N(:,4)];
 
 sys = ss(As,Bs,Cs,Ds);
 
-Ts = 0.6557;  %Note: Rethink this %
+Ts = 6.4385;  %Note: Rethink this %
 
 sysd = c2d(sys, Ts,'zoh');
 
@@ -43,7 +43,7 @@ Controllability = rank(co);
 
 E_new = Ed*pinv(Kd);     
 
-WTconstant = (pi * (0.32)^2)/(1000*9.8);
+%WTconstant = (pi * (0.32)^2)/(1000*9.8);
 
 %S =  - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
 
