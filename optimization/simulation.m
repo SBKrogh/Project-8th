@@ -7,7 +7,8 @@ load('inputdata');      %U is definded here
 
 d_hat = [1;1;1;1];      %Define the disturbance as a constant, just for now
 x0 = 0;
-t = [1:Ts:Ts*length(U)];
+U = ones(64000,2) * 0.01;
+t = 0:Ts:Ts*(length(U)-1);
 
 %Standard setup for ss with disturbance 
 %x[k+1]=Ax[k]+Bu[k]+Ke[k]
@@ -15,7 +16,10 @@ t = [1:Ts:Ts*length(U)];
 
 E_new = Ed*pinv(Kd);        
 
-sys = idss(Ad,Bd,Cd,Dd,E_new,x0,Ts,...
+% sys = idss(Ad,Bd,Cd,Dd,E_new,x0,Ts,...
+%     'StateName','WaterLevel','InputName','Input','OutputName','deltaP_cp');
+
+sys = ss(Ad,Bd,Cd,Dd,Ts,...
     'StateName','WaterLevel','InputName','Input','OutputName','deltaP_cp');
 
 %%%%%%%%%%%%%%% Simulation %%%%%%%%%%%%%%% 
