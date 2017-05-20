@@ -63,11 +63,11 @@ f = U_bar_hp'*(Lambda_A+Lambda_C*Gamma)+d_hp'*(Lambda_B+Lambda_C*Psi)'+delta_p_0
 A = [-L_y; L_y; -Gamma; Gamma];
 b = [y1; y2; delta_p_wt_1; delta_p_wt_2];
 
-%CONSTRAINTS FOR Y
+%CONSTRAINTS only FOR Y
 % A = [-L_y; L_y];
 % b = [y1; y2];
 
-%CONSTRAINTS FOR X
+%CONSTRAINTS only FOR X
 % A = [-Gamma;Gamma];
 % b = [delta_p_wt_1; delta_p_wt_2];
 
