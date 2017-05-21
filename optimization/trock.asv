@@ -1,6 +1,6 @@
 
 % Complete the state-space system matrices for estimation
-[ M , N, As, Bs, Cs, Ds ] = mat_est;
+[ M , N, As, Bs, Cs, Ds, S, C1, C2] = mat_est;
 
 M_c = M;
 
@@ -8,9 +8,29 @@ N_c = [ N(:,5) N(:,6) ];
 
 Q_c =[ N(:,2) N(:,4)];
 
+C11 = [ C1(2,:); C1(4,:)];
+
+C22 = [C2(2,2); C2(2,4)];
+
+Ac = S* (M_c \ B_0)
+Bc = -S* (M_c \ N_c)
+Ec = S* (M_c \ Q_c)
+Cc = -C11* (M_c \ B_0)
+Dc = C11* (M_c \ N_c)
+Kc = C22 - C11* (M_c \ Q_c)
+
+Bcc = [Bc Ec];
+Dcc = [Dc Kc];
+
+sysc = ss(Ac,Bcc,Cc,Dcc);
+sysdd = c2d(sysc, Ts,'zoh');
+
+Ad = sysdd.A;
+Bd = sysdd.B
+
 sys = ss(As,Bs,Cs,Ds);
 
-Ts = 0.6557;  %Rethink this %
+Ts = 6.4385;  %Note: Rethink this %
 
 sysd = c2d(sys, Ts,'zoh');
 
@@ -26,22 +46,23 @@ sysd = c2d(sys, Ts,'zoh');
 % Dc = [ Ds(2,5) Ds(2,6); Ds(4,5) Ds(4,6) ];
 
 % State-Space matrices for control in discrete
-Ad = sysd.A;
+% Ad = sysd.A;
+% 
+% Bd = [ sysd.B(5) sysd.B(6) ];
+% 
+% Ed = [ sysd.B(2) sysd.B(4)] ;
+%  
+% Cd = [ sysd.C(2); sysd.C(4) ];
+% 
+% Dd = [ sysd.D(2,5) sysd.D(2,6); sysd.D(4,5) sysd.D(4,6) ];
+% 
+% Kd = [ sysd.D(2,2) sysd.D(2,4); sysd.D(4,2) sysd.D(4,4) ];
 
-Bd = [ sysd.B(5) sysd.B(6) ];
-
-Ed = [ sysd.B(2) sysd.B(4)] ;
- 
-Cd = [ sysd.C(2); sysd.C(4) ];
-
-Dd = [ sysd.D(2,5) sysd.D(2,6); sysd.D(4,5) sysd.D(4,6) ];
-
-Kd = [ sysd.D(2,2) sysd.D(2,4); sysd.D(4,2) sysd.D(4,4) ];
+co = ctrb(sysd);
+Controllability = rank(co);
 
 E_new = Ed*pinv(Kd);     
 
-WTconstant = (pi * (0.32)^2)/(1000*9.8);
-
-%S =  - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
+%WTconstant = (pi * (0.32)^2)/(1000*9.8);
 
 save('sysd.mat','Ad','Bd','E_new','Cd','Dd','Ts')

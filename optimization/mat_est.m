@@ -1,4 +1,4 @@
-function [ M , N, As, Bs, Cs, Ds ] = mat_est
+function [ M , N, As, Bs, Cs, Ds, S, C1, C2] = mat_est
 
 % Load the parameters saved from the estimation
 load('est_newtrock.mat')
@@ -47,19 +47,21 @@ C2 = [ linear_b_est(63)  linear_b_est(64) linear_b_est(65) linear_b_est(66) line
     linear_b_est(71)  linear_b_est(72) linear_b_est(73) linear_b_est(74) linear_b_est(75) linear_b_est(76) linear_b_est(77) linear_b_est(78);
     linear_b_est(79)  linear_b_est(80) linear_b_est(81) linear_b_est(82) linear_b_est(83) linear_b_est(84) linear_b_est(85) linear_b_est(86);
     linear_b_est(87)  linear_b_est(88) linear_b_est(89) linear_b_est(90) linear_b_est(91) linear_b_est(92) linear_b_est(93) linear_b_est(94)];
+
 WTconstant = (pi*0.32^2 * 10^5)/(1000*9.8);
 
 
 B2 =  B_0;
 
-H = - (1/WTconstant) * pinv(H_0) * H_1 * B_1';
+S =  (1/WTconstant) * pinv(H_0) * H_1 * B_1';
 
-As = - H * (M \ B2);
+As =  S * (M \ B2);
 
-Bs = - H * (M \ N);
+Bs =  -S * (M \ N);
 
-Cs =  [- C1 * ( M \ B2 ); 1];
+Cs =  -[ C1 * ( M \ B2 ); 1];
 
 Ds =  [C2 - C1 * ( M \ N ); zeros(1,8)];
+
 
 end
