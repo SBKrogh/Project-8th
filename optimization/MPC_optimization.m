@@ -1,4 +1,3 @@
-function y = MPC_optimization(u)
 %%
 %Solve a quadratic programming problem
 
@@ -10,10 +9,10 @@ function y = MPC_optimization(u)
 Matrix_op;
 trock;%Load system matrices
 load('Disturbance_Plot.mat');
-t = 0:Ts:Ts*(length(Data_OD)-1);
+t_1 = 0:3600:3600*(length(Data_OD)-1);
 
 
-delta_p_0 = u;      %small-signal initial WT pressure measurement
+delta_p_0 = 0.1;      %small-signal initial WT pressure measurement
 
 d_hp = 0.025*90*ones(48,1);      % Small signal deviation of the Valves OD
 U_bar_hp = 0.2*ones(48,1);      % Input pressure to ring pumps operating point
@@ -108,8 +107,4 @@ stairs([0:23], data(1:24))       % plot using + markers
 title('Energy price')
 % hold on 
 % plot(1000*(-f'\R))
-
-y = [ u_hp1 u_hp2 ];
-end
-
 
