@@ -10,20 +10,20 @@ Q_c =[ N(:,2) N(:,4)];
 
 C11 = [ C1(2,:); C1(4,:)];
 
-C22 = [C2(2,2); C2(2,4)];
+% C22 = [C2(2,2); C2(2,4)];
 
 Ac = S* (M_c \ B_0)
 Bc = -S* (M_c \ N_c)
 Ec = S* (M_c \ Q_c)
 Cc = -C11* (M_c \ B_0)
 Dc = C11* (M_c \ N_c)
-Kc = C22 - C11* (M_c \ Q_c)
+% Kc = C22 - C11* (M_c \ Q_c)
 Ds = [Ds(2,2) Ds(2,4) Ds(2,5) Ds(2,6);
     Ds(4,2) Ds(4,4) Ds(4,5) Ds(4,6)];
 Ts = 6.4385;  %Note: Rethink this %
 
 Bcc = [Bc Ec];
-Dcc = [Dc Kc];
+% Dcc = [Dc Kc];
 
 sysc = ss(Ac,Bcc,Cc,Ds);
 sysdd = c2d(sysc, Ts,'zoh');
@@ -32,8 +32,8 @@ Ad = sysdd.A;
 Bd = sysdd.B(1:2);
 Ed = sysdd.B(3:4);
 Cd = sysdd.C;
- Dd = sysdd.D(:,1:2);
- Kd = sysdd.D(:,3:4);
+ Dd = sysdd.D(:,3:4);
+ Kd = sysdd.D(:,1:2);
 % 
 % sys = ss(As,Bs,Cs,Ds);
 % sysd = c2d(sys, Ts,'zoh');
