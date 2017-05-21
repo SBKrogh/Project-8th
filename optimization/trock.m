@@ -12,11 +12,11 @@ C11 = [ C1(2,:); C1(4,:)];
 
 % C22 = [C2(2,2); C2(2,4)];
 
-Ac = S* (M_c \ B_0)
-Bc = -S* (M_c \ N_c)
-Ec = S* (M_c \ Q_c)
-Cc = -C11* (M_c \ B_0)
-Dc = C11* (M_c \ N_c)
+Ac = S* (M_c \ B_0);
+Bc = -S* (M_c \ N_c);
+Ec = S* (M_c \ Q_c);
+Cc = -C11* (M_c \ B_0);
+Dc = C11* (M_c \ N_c);
 % Kc = C22 - C11* (M_c \ Q_c)
 Ds = [Ds(2,2) Ds(2,4) Ds(2,5) Ds(2,6);
     Ds(4,2) Ds(4,4) Ds(4,5) Ds(4,6)];
