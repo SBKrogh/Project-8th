@@ -10,6 +10,7 @@
 Matrix_op;trock;%Load system matrices
 load('Disturbance_Plot.mat');
 t_1 = 0:3600:3600*(length(Data_OD)-1);
+t_h_old = 0;
 
 
 delta_p_0 = 0.1;      %small-signal initial WT pressure measurement
