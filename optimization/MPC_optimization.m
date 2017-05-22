@@ -5,9 +5,9 @@
 % delta_p_0 d_hp U_bar_hp q_bar_p_hp
 
 % Variabels that we use in the Matrix_op.m file
-% Lambda_A Lambda_B Lambda_C Gamma Psi Phi Theta Omega Pi 
-Matrix_op;
-trock;%Load system matrices
+% Lambda_A Lambda_B Lambda_C Gamma Psi Phi Theta Omega Pi
+ 
+Matrix_op;trock;%Load system matrices
 load('Disturbance_Plot.mat');
 t_1 = 0:3600:3600*(length(Data_OD)-1);
 
