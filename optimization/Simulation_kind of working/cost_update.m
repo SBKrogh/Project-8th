@@ -10,29 +10,29 @@ if isempty(i)
 end
 
 n = length(Lambda_1);
-Lambda_A = Lambda_1 * data(1+t_h);
+Lambda_A = Lambda_1 * data(t_h);
 
 for i = 1:Hp-1
-    Lambda_A(i + n: i + n + 1, i + n : i + n + 1) = Lambda_1 * data(i + 1+t_h);
+    Lambda_A(i + n: i + n + 1, i + n : i + n + 1) = Lambda_1 * data(i + t_h-1);
     n = n + 1;
 end
 
 n = length(Lambda_2);
 m = size(Lambda_2);
 m = m(1);
-Lambda_B = Lambda_2 * data(1+t_h);
+Lambda_B = Lambda_2 * data(t_h);
 
 for i = 1:Hp-1
-    Lambda_B(i + m: i + m + 1, 1 + i*n :  i*n +n ) = Lambda_2 * data(i + 1+t_h);
+    Lambda_B(i + m: i + m + 1, 1 + i*n :  i*n +n ) = Lambda_2 * data(i +t_h-1);
     m = m + 1;
 end
 
 m = size(Lambda_3);
 m = m(1);
-Lambda_C = Lambda_3 * data(1+t_h);
+Lambda_C = Lambda_3 * data(t_h);
 
 for i = 1:Hp-1
-    Lambda_C(i + m: i + m + 1,  i + 1 ) = Lambda_3 * data(i + 1+t_h);
+    Lambda_C(i + m: i + m + 1,  i + 1 ) = Lambda_3 * data(i +t_h-1);
     m = m + 1;
 end
 
