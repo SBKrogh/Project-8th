@@ -1,7 +1,7 @@
 function [ M , N, As, Bs, Cs, Ds, S, C1, C2] = mat_est
 
 % Load the parameters saved from the estimation
-linear_b_est = load('est_newtrock.mat')
+linear_b_est = load('est_newtrock.mat');
 linear_b_est = linear_b_est.linear_b_est;
 matrices;
 

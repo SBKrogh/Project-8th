@@ -66,4 +66,4 @@ E_new = Ed*pinv(Kd);
 
 %WTconstant = (pi * (0.32)^2)/(1000*9.8);
 
-save('sysd.mat','Ad','Bd','E_new','Cd','Dd','Ts')
+% save('sysd.mat','Ad','Bd','E_new','Cd','Dd','Ts')
