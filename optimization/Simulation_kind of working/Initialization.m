@@ -12,7 +12,7 @@ constant_dist = ones(24,1);
 
 % Load price-curve
 data = load('data.mat');
-data = data.data;
+data = data.data./10^6;
 
 % Load discrete state-space system matrix
 matrices, trock;
