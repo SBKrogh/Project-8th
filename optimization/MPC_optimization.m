@@ -13,11 +13,11 @@ t_1 = 0:3600:3600*(length(Data_OD)-1);
 t_h_old = 0;
 
 
-delta_p_0 = 0.1;      %small-signal initial WT pressure measurement
+delta_p_0 = 0.005;      %small-signal initial WT pressure measurement
 
-d_hp = 0.025*90*ones(48,1);      % Small signal deviation of the Valves OD
+d_hp = ones(48,1);      % Small signal deviation of the Valves OD
 U_bar_hp = 0.2*ones(48,1);      % Input pressure to ring pumps operating point
-q_bar_p_hp = 1.4*ones(48,1);    % Flow operating point of the ring pumps
+q_bar_p_hp = 0.45*ones(48,1);    % Flow operating point of the ring pumps
 
 %%%%%%%%%%%%%%%%%% General QP %%%%%%%%%%%%%%%%%%
 % 0.5*x'R*x+f'*x
@@ -48,41 +48,30 @@ delta_p_wt_1 = x_low -x_bar - Phi*delta_p_0 - Psi*d_hp;
 delta_p_wt_2 = x_high-x_bar - Phi*delta_p_0 - Psi*d_hp;
 %delta_p_wt_2(1,1) = 0.014;
 % input constraint 
-u_low = 0.05;
-u_high = 1;
+u_low = -0.15;
+u_high = 0.75;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%% Setting up the QP %%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 R = 2*(Lambda_A + Lambda_C*Gamma); 
-R1=(R+R')/2;
-R2=(R-R')/2;
+
 f = (U_bar_hp'*(Lambda_A+Lambda_C*Gamma)+d_hp'*(Lambda_B+Lambda_C*Psi)'+delta_p_0*(Lambda_C*Phi)'+q_bar_p_hp');
 
 %CONSTRAINTS FOR Y AND X
-A = [-L_y; L_y; -Gamma; Gamma];
-b = [y1; y2; delta_p_wt_1; delta_p_wt_2];
-
-%CONSTRAINTS only FOR Y
-% A = [-L_y; L_y];
-% b = [y1; y2];
-
-%CONSTRAINTS only FOR X
-% A = [-Gamma;Gamma];
-% b = [delta_p_wt_1; delta_p_wt_2];
+% A = [-L_y; L_y; -Gamma; Gamma];
+% b = [y1; y2; delta_p_wt_1; delta_p_wt_2];
 
 lb = u_low*ones(48,1);
 ub = u_high*ones(48,1);
 
 %trust-region-reflective
-%  options = optimoptions('fmincon','Algorithm','interior-point','Display','iter-detailed');
-% [u_hp,fval,exitflag,output,lambda] = quadprog(R1,f,[A],[b],[],[],[],[],[],options);
 options = optimoptions('fmincon','Display','iter','Algorithm','interior-point');
-u_hp = fmincon(@(x)((x')*R*x + f*x),zeros(size(ub)),A,b,[],[],lb,ub,[],options)
-%fval,lambda
-% u_hp,exitflag,output
-
+[u_hp,fval,exitflag,output] = quadprog(R,f,[],[],[],[],[],[],[],options)
+%options = optimoptions('fmincon','Display','iter','Algorithm','interior-point');
+%[u_hp,fval,exitflag] = fmincon(@(x)((x')*R*x + f*x),zeros(size(ub)),[],[],[],[],lb,ub,[],options);
+exitflag
 
 %FOR TESTING:
 controlsignal = u_hp;
@@ -98,13 +87,13 @@ u_hp2 = u_hp(2:2:length(u_hp));
 
 figure
 subplot(3,1,1)       % add first plot in 2 x 1 grid
-stairs([0:23], u_hp1)
+plot([0:23], u_hp1)
 title('u_{hp1}')
 subplot(3,1,2)       % add second plot in 2 x 1 grid
-stairs([0:23], u_hp2)       % plot using + markers
+plot([0:23], u_hp2)       % plot using + markers
 title('u_{hp2}')
 subplot(3,1,3)       % add second plot in 2 x 1 grid
-stairs([0:23], data(1:24))       % plot using + markers
+plot([0:23], data(1:24))       % plot using + markers
 title('Energy price')
 % hold on 
 % plot(1000*(-f'\R))
