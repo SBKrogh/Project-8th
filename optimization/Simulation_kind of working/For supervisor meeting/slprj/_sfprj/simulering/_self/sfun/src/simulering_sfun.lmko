@@ -1,5 +1,5 @@
 "simulering_sfun.obj"
-"c2_simulering.obj"
+"c1_simulering.obj"
 "simulering_sfun_registry.obj"
 "lccstub.obj"
 "simulering_sfun.def"
@@ -17,8 +17,4 @@
 "C:\Program Files\MATLAB\R2017a\extern\lib\win64\microsoft\libmwsl_simtarget_core.lib"
 "C:\Program Files\MATLAB\R2017a\extern\lib\win64\microsoft\libmwsl_simtarget_instrumentation.lib"
 "C:\Program Files\MATLAB\R2017a\lib\win64\libmwipp.lib"
--LC:\PROGRA~1\MATLAB\R2017a\extern\lib\win64\microsoft
-C:\PROGRA~1\MATLAB\R2017a\extern\lib\win64\microsoft\libmwblas.lib
-C:\PROGRA~1\MATLAB\R2017a\extern\lib\win64\microsoft\libmwblas.lib
-C:\PROGRA~1\MATLAB\R2017a\extern\lib\win64\microsoft\libmwlapack.lib
-C:\PROGRA~1\MATLAB\R2017a\extern\lib\win64\microsoft\libmwlapack.lib
+

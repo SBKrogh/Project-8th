@@ -1,4 +1,4 @@
-clear , clc, 
+clear all , clc, 
 % Sample Time
 Ts = 6.438500000000000;
 Ts_h = 3600;
