@@ -88,7 +88,7 @@ end
 %%
 m = size(Cd);
 m = m(1);
-Theta = Cd;
+Theta = zeros(48,24);
 
 for i = 1:Hp-1
     Theta(i + m: i + m + 1,  i + 1 ) = Cd;
