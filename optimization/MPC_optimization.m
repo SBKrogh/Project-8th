@@ -76,7 +76,7 @@ ub = u_high*ones(48,1);
 
 %trust-region-reflective
 options = optimoptions('quadprog','Display','iter','Algorithm','interior-point-convex');
-[u_hp,fval,exitflag,output] = quadprog(R,f,[A],[b],[],[],[lb],[ub],[],options);
+[u_hp,fval,exitflag,output] = quadprog(R,f,[],[],[],[],[],[],[],options);
 % options = optimoptions('fmincon','Display','iter','Algorithm','interior-point');
 % [u_hp,fval,exitflag] = fmincon(@(x)((x')*R*x + f*x),zeros(size(ub)),[A],[b],[],[],lb,ub,[],options);
 exitflag
@@ -96,12 +96,15 @@ u_hp2 = u_hp(2:2:length(u_hp));
 figure
 subplot(3,1,1)       % add first plot in 2 x 1 grid
 plot([0:23], u_hp1)
+grid on
 title('u_{hp1}')
 subplot(3,1,2)       % add second plot in 2 x 1 grid
 plot([0:23], u_hp2)       % plot using + markers
+grid on
 title('u_{hp2}')
 subplot(3,1,3)       % add second plot in 2 x 1 grid
 plot([0:23], data(1:24))       % plot using + markers
+grid on
 title('Energy price')
 % hold on 
 % plot(1000*(-f'\R))
