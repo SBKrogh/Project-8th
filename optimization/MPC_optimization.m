@@ -48,14 +48,18 @@ delta_p_wt_1 = x_low -x_bar - Phi*delta_p_0 - Psi*d_hp;
 delta_p_wt_2 = x_high -x_bar - Phi*delta_p_0 - Psi*d_hp;
 %delta_p_wt_2(1,1) = 0.014;
 % input constraint 
-u_low = -0.15;
+u_low = [-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;
+        -0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;
+        -0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;
+        -0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ];    
+
 u_high = 0.95;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%% Setting up the QP %%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-R = 2*(Lambda_A + Lambda_C*Gamma); 
+R = (Lambda_A + Lambda_C*Gamma); 
 
 f = (U_bar_hp'*(Lambda_A+Lambda_C*Gamma)+d_hp'*(Lambda_B+Lambda_C*Psi)'+delta_p_0*(Lambda_C*Phi)'+q_bar_p_hp');
 
@@ -71,12 +75,12 @@ b = [y1; y2; delta_p_wt_1; delta_p_wt_2];
 % A = [-Gamma; Gamma];
 % b = [delta_p_wt_1; delta_p_wt_2];
 
-lb = u_low*ones(48,1);
+lb = u_low;%*ones(48,1);
 ub = u_high*ones(48,1);
 
 %trust-region-reflective
 options = optimoptions('quadprog','Display','iter','Algorithm','interior-point-convex');
-[u_hp,fval,exitflag,output] = quadprog(R,f,[],[],[],[],[],[],[],options);
+[u_hp,fval,exitflag,output] = quadprog(R,f,[],[],[],[],[lb],[ub],[],options);
 % options = optimoptions('fmincon','Display','iter','Algorithm','interior-point');
 % [u_hp,fval,exitflag] = fmincon(@(x)((x')*R*x + f*x),zeros(size(ub)),[A],[b],[],[],lb,ub,[],options);
 exitflag
@@ -94,16 +98,15 @@ u_hp2 = u_hp(2:2:length(u_hp));
 
 
 figure
-subplot(3,1,1)       % add first plot in 2 x 1 grid
-plot([0:23], u_hp1)
+subplot(2,1,1)       % add first plot in 2 x 1 grid
+stairs([0:23], u_hp1+0.2)
 grid on
-title('u_{hp1}')
-subplot(3,1,2)       % add second plot in 2 x 1 grid
-plot([0:23], u_hp2)       % plot using + markers
-grid on
-title('u_{hp2}')
-subplot(3,1,3)       % add second plot in 2 x 1 grid
-plot([0:23], data(1:24))       % plot using + markers
+title('Input signal to pumps')
+hold on
+stairs([0:23], u_hp2+0.2)       % plot using + markers
+legend('u_hp1','u_hp2')
+subplot(2,1,2)       % add second plot in 2 x 1 grid
+stairs([0:23], data(1:24))       % plot using + markers
 grid on
 title('Energy price')
 % hold on 
