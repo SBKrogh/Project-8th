@@ -1,6 +1,6 @@
 clear , clc, 
 % Sample Time
-Ts = 6.438500000000000;
+Ts = 87.5440;
 Ts_h = 3600;
 
 % Load end-users consumption

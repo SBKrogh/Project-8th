@@ -44,8 +44,8 @@ x_low = 0.055*ones(24,1);
 x_high = 0.16*ones(24,1);
 x_bar = 0.127*ones(24,1);
 
-delta_p_wt_1 = x_low -x_bar - Phi*delta_p_0 - Psi*d_hp;
-delta_p_wt_2 = x_high -x_bar - Phi*delta_p_0 - Psi*d_hp;
+delta_p_wt_1 = x_low -x_bar - Phi*delta_p_0 - Psi*d_hp + 0.3;
+delta_p_wt_2 = x_high -x_bar - Phi*delta_p_0 - Psi*d_hp + 0.;
 %delta_p_wt_2(1,1) = 0.014;
 % input constraint 
 u_low = [-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;-0.17; -0.15 ;
@@ -72,8 +72,8 @@ b = [y1; y2; delta_p_wt_1; delta_p_wt_2];
 % b = [y1; y2];
 
 %CONSTRAINTS FOR X
-% A = [-Gamma; Gamma];
-% b = [delta_p_wt_1; delta_p_wt_2];
+A = [-Gamma; Gamma];
+b = [delta_p_wt_1; delta_p_wt_2];
 
 lb = u_low;%*ones(48,1);
 ub = u_high*ones(48,1);

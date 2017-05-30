@@ -1,10 +1,10 @@
-function [ M , N, A_c, B_c, C_c, D_c ] = mat_est
+function [ M , N_c, Q_c, A_c, B_c, C_c, D_c ] = mat_est
 
 % Load the parameters saved from the estimation
 load('M_n.mat')
 load('C_D')
 matrices;
-pipe_param;
+% pipe_param;
 
 A = diag([linear_b_est(1) linear_b_est(2) linear_b_est(3) linear_b_est(4) linear_b_est(5) linear_b_est(6) linear_b_est(7)...
     linear_b_est(8) 0 linear_b_est(9) 0 0 linear_b_est(10) linear_b_est(11) linear_b_est(12) linear_b_est(13)...
@@ -49,7 +49,7 @@ C2 = [ est_C_D(33)  est_C_D(34) est_C_D(35) est_C_D(36) est_C_D(37) est_C_D(38) 
     est_C_D(49)  est_C_D(50) est_C_D(51) est_C_D(52) est_C_D(53) est_C_D(54) est_C_D(55) est_C_D(56);
     est_C_D(57)  est_C_D(58) est_C_D(59) est_C_D(60) est_C_D(61) est_C_D(62) est_C_D(63) est_C_D(64)];
 
-WTconstant = (pipe.e26.area * 10^5)/(1000*9.8);
+WTconstant = ((0.32^2 * pi) * 10^5)/(1000*9.8);
 % 
 % 
 S =  (1/WTconstant) * pinv(H_0) * H_1 * B_1';
@@ -77,7 +77,7 @@ D_s(2,1) = - D_s(2,1);
 
 C_c =  [- C11 * ( M \ B_0 )];
 
-K_s =  [C22 - C11 * ( M \ Q_c ); zeros(1,2)];
+K_s =  [C22 - C11 * ( M \ Q_c )];
 
 B_c = [B_s E_s];
 D_c = [D_s K_s];
