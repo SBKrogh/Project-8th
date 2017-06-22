@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.26)  21 JUN 2017 11:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.5.26)  22 JUN 2017 13:00
 entering extended mode
 **./AAUsidebartheme.tex
 (AAUsidebartheme.tex
@@ -1716,7 +1716,7 @@ Package pdftex.def Info: AAUgraphics/aau_logo_new_circle.pdf used on input line
 (pdftex.def)             Requested size: 40.49973pt x 41.0137pt.
  [2
 
- <./AAUgraphics/aau_logo_new_circle.pdf>] (Sections/introduction.tex
+ <./AAUgraphics/aau_logo_new_circle.pdf>] (Sections/1_introduction.tex
 Overfull \hbox (1.05998pt too wide) has occurred while \output is active
 [][][] [][]
  []
@@ -1749,11 +1749,11 @@ Overfull \hbox (1.05998pt too wide) has occurred while \output is active
 File: AAUgraphics/aau_logo_new_circle.pdf Graphic file (type pdf)
 <use AAUgraphics/aau_logo_new_circle.pdf>
 Package pdftex.def Info: AAUgraphics/aau_logo_new_circle.pdf used on input line
- 20.
+ 18.
 (pdftex.def)             Requested size: 40.49973pt x 41.0137pt.
  [3
 
-]
+] (Tikz/sys_model_overview.tex)
 Overfull \hbox (1.05998pt too wide) has occurred while \output is active
 [][][] [][]
  []
@@ -1790,7 +1790,7 @@ Package pdftex.def Info: AAUgraphics/aau_logo_new_circle.pdf used on input line
 (pdftex.def)             Requested size: 40.49973pt x 41.0137pt.
  [4
 
-]) (Sections/System.tex
+]) (Sections/2_System.tex
 Overfull \hbox (1.05998pt too wide) has occurred while \output is active
 [][][] [][]
  []
@@ -1901,7 +1901,7 @@ Package pdftex.def Info: AAUgraphics/aau_logo_new_circle.pdf used on input line
 (pdftex.def)             Requested size: 40.49973pt x 41.0137pt.
  [7
 
-]) (Sections/Control.tex
+]) (Sections/3_Control.tex
 Overfull \hbox (1.05998pt too wide) has occurred while \output is active
 [][][] [][]
  []
@@ -1975,7 +1975,7 @@ Package pdftex.def Info: AAUgraphics/aau_logo_new_circle.pdf used on input line
 (pdftex.def)             Requested size: 40.49973pt x 41.0137pt.
  [9
 
-]) (Sections/Results.tex
+]) (Sections/4_control.tex
 Overfull \hbox (1.05998pt too wide) has occurred while \output is active
 [][][] [][]
  []
@@ -2086,7 +2086,8 @@ Package pdftex.def Info: AAUgraphics/aau_logo_new_circle.pdf used on input line
 (pdftex.def)             Requested size: 40.49973pt x 41.0137pt.
  [12
 
-]) (Sections/discuss_conclude.tex
+])
+(Sections/5_discuss_conclude.tex
 Overfull \hbox (1.05998pt too wide) has occurred while \output is active
 [][][] [][]
  []
@@ -2176,25 +2177,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
 (tikz_magi.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
-Package rerunfilecheck Info: Checksums for `AAUsidebartheme.out':
-(rerunfilecheck)             Before: 1E9F3DF6E1F5D77642D6DB039CEBDD25;415
-(rerunfilecheck)             After:  30543C7A81026A0B142C0D0BAF92DE27;420.
+Package rerunfilecheck Info: File `AAUsidebartheme.out' has not changed.
+(rerunfilecheck)             Checksum: 30543C7A81026A0B142C0D0BAF92DE27;420.
  ) 
 Here is how much of TeX's memory you used:
- 41955 strings out of 493328
- 1044023 string characters out of 3139124
- 1345822 words of memory out of 5000000
- 44635 multiletter control sequences out of 15000+200000
- 34839 words of font info for 49 fonts, out of 3000000 for 9000
+ 42036 strings out of 493328
+ 1045612 string characters out of 3139124
+ 1349920 words of memory out of 5000000
+ 44709 multiletter control sequences out of 15000+200000
+ 37210 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,21n,123p,800b,1133s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on AAUsidebartheme.pdf (14 pages, 150410 bytes).
+/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
+rw/helvetic/uhvro8a.pfb>
+Output written on AAUsidebartheme.pdf (14 pages, 159713 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
