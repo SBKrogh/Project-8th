@@ -1,0 +1,5809 @@
+Model {
+  Name			  "wss_system_"
+  Version		  7.9
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.497"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "UTF-8"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Aug 22 14:25:34 2008"
+  Creator		  "pppc"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "pppc"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun May 21 13:23:07 2017"
+  RTWModifiedTimeStamp	  417366730
+  ModelVersionFormat	  "1.%<AutoIncrement:497>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "external"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  10000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.12.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.12.0"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.05"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.12.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "10e6"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.12.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.12.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "none"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.12.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.12.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.12.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.12.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "lnxxx.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw USER_SRCS=\"comedi_lib.c\""
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "lnxxx_unix.tmf"
+	  Description		  "Linux Near Real-Time Target"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "lnxxx_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomLibrary		  "/usr/lib/libcomedi.a /usr/lib/x86_64-linux-gnu/libm.a"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.12.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.STFCustomTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.12.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant off
+	      ParMdlRefBuildCompliant off
+	      CompOptLevelCompliant   off
+	      ConcurrentExecutionCompliant off
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      SystemTargetFile	      "lnxxx.tlc"
+	      DialogCategory	      0
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"ComediSupport"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"MySqlSupport"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"ExtMode"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"ExtModeMexFile"
+		Value			"ext_comm"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"ExtModeMexArgs"
+		Value			"'127.0.0.1'"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"ExtModeStaticAlloc"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"int32"
+		Name			"ExtModeStaticAllocSize"
+		Value			1000000
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"ExtModeTesting"
+		Value			off
+	      }
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      ExtraOptions	      "-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 "
+      CurrentDlgPage	      "Data Import//Export"
+      ConfigPrmDlgPosition     [ 82, 24, 1132, 1138 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Lucida Bright"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Lucida Bright"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Lucida Bright"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DiscreteIntegrator
+      IntegratorMethod	      "Integration: Forward Euler"
+      gainval		      "1.0"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      InitialConditionMode    "State and output"
+      SampleTime	      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      IgnoreLimit	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "Array"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToFile
+      Filename		      "untitled.mat"
+      MatrixName	      "ans"
+      SaveFormat	      "Array"
+      Decimation	      "1"
+      SampleTime	      "-1"
+    }
+  }
+  System {
+    Name		    "wss_system_"
+    Location		    [0, 75, 1920, 1200]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "1030"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      SID		      "244"
+      Position		      [595, 180, 625, 210]
+      ZOrder		      -5
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant11"
+      SID		      "297"
+      Position		      [410, 630, 440, 660]
+      ZOrder		      -5
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant12"
+      SID		      "307"
+      Position		      [410, 680, 440, 710]
+      ZOrder		      -5
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant13"
+      SID		      "657"
+      Position		      [410, 730, 440, 760]
+      ZOrder		      -5
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant6"
+      SID		      "274"
+      Position		      [410, 380, 440, 410]
+      ZOrder		      -5
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant8"
+      SID		      "959"
+      Position		      [275, 430, 305, 460]
+      ZOrder		      -5
+      Value		      "0.7"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant9"
+      SID		      "961"
+      Position		      [215, 530, 245, 560]
+      ZOrder		      -5
+      Value		      "0.7"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Ctrl PRZ1"
+      SID		      "1018"
+      Ports		      [2, 1]
+      Position		      [590, 225, 630, 260]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Ctrl PRZ1"
+	Location		[1, 427, 1919, 1142]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "r"
+	  SID			  "1019"
+	  Position		  [75, 33, 105, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  SID			  "1020"
+	  Position		  [75, 93, 105, 107]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  SID			  "1021"
+	  Ports			  [2, 1]
+	  Position		  [145, 32, 175, 63]
+	  ZOrder		  -2
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  SID			  "1022"
+	  Ports			  [2, 1]
+	  Position		  [405, 57, 435, 88]
+	  ZOrder		  -2
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Discrete-Time\nIntegrator"
+	  SID			  "1023"
+	  Ports			  [1, 1]
+	  Position		  [305, 34, 340, 66]
+	  ZOrder		  -10
+	  gainval		  "2.0"
+	  SampleTime		  "0.05"
+	  ICPrevOutput		  "DiscIntNeverNeededParam"
+	  ICPrevScaledInput	  "DiscIntNeverNeededParam"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "1024"
+	  Position		  [235, 35, 265, 65]
+	  ZOrder		  -11
+	  Gain			  "1.39"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "1025"
+	  Position		  [235, 115, 265, 145]
+	  ZOrder		  -11
+	  Gain			  "1.39"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "1026"
+	  Position		  [515, 54, 540, 66]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -15]
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Discrete-Time\nIntegrator"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 15]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "r"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -45]
+	  DstBlock		  "Add1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, 80]
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Discrete-Time\nIntegrator"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Ctrl PRZ2"
+      SID		      "882"
+      Ports		      [2, 1]
+      Position		      [590, 275, 630, 310]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Ctrl PRZ2"
+	Location		[1, 390, 1919, 1105]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "r"
+	  SID			  "883"
+	  Position		  [75, 33, 105, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  SID			  "884"
+	  Position		  [75, 93, 105, 107]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  SID			  "885"
+	  Ports			  [2, 1]
+	  Position		  [145, 32, 175, 63]
+	  ZOrder		  -2
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  SID			  "910"
+	  Ports			  [2, 1]
+	  Position		  [395, 77, 425, 108]
+	  ZOrder		  -2
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Discrete-Time\nIntegrator"
+	  SID			  "886"
+	  Ports			  [1, 1]
+	  Position		  [305, 34, 340, 66]
+	  ZOrder		  -10
+	  SampleTime		  "0.05"
+	  ICPrevOutput		  "DiscIntNeverNeededParam"
+	  ICPrevScaledInput	  "DiscIntNeverNeededParam"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "887"
+	  Position		  [230, 35, 260, 65]
+	  ZOrder		  -11
+	  Gain			  "5.89"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "909"
+	  Position		  [230, 110, 260, 140]
+	  ZOrder		  -11
+	  Gain			  "5.89"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "888"
+	  Position		  [485, 84, 510, 96]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Discrete-Time\nIntegrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 75]
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -45]
+	  DstBlock		  "Add1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "r"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, -25]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Discrete-Time\nIntegrator"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 40; 15, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -5]
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Ctrl PRZ3"
+      SID		      "889"
+      Ports		      [2, 1]
+      Position		      [590, 325, 630, 360]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Ctrl PRZ3"
+	Location		[1, 484, 1919, 1199]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "r"
+	  SID			  "890"
+	  Position		  [75, 33, 105, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  SID			  "891"
+	  Position		  [75, 93, 105, 107]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  SID			  "892"
+	  Ports			  [2, 1]
+	  Position		  [145, 32, 175, 63]
+	  ZOrder		  -2
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  SID			  "911"
+	  Ports			  [2, 1]
+	  Position		  [400, 92, 430, 123]
+	  ZOrder		  -2
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Discrete-Time\nIntegrator"
+	  SID			  "893"
+	  Ports			  [1, 1]
+	  Position		  [305, 34, 340, 66]
+	  ZOrder		  -10
+	  SampleTime		  "0.05"
+	  ICPrevOutput		  "DiscIntNeverNeededParam"
+	  ICPrevScaledInput	  "DiscIntNeverNeededParam"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "894"
+	  Position		  [235, 35, 265, 65]
+	  ZOrder		  -11
+	  Gain			  "2.57"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "912"
+	  Position		  [235, 100, 265, 130]
+	  ZOrder		  -11
+	  Gain			  "2.57"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "895"
+	  Position		  [490, 89, 515, 101]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "r"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -45]
+	  DstBlock		  "Add1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Discrete-Time\nIntegrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -15]
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Discrete-Time\nIntegrator"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 50]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Ctrl PRZ4"
+      SID		      "839"
+      Ports		      [2, 1]
+      Position		      [590, 125, 630, 160]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Ctrl PRZ4"
+	Location		[1, 427, 1919, 1142]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "r"
+	  SID			  "840"
+	  Position		  [75, 33, 105, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  SID			  "841"
+	  Position		  [75, 93, 105, 107]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  SID			  "842"
+	  Ports			  [2, 1]
+	  Position		  [145, 32, 175, 63]
+	  ZOrder		  -2
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  SID			  "899"
+	  Ports			  [2, 1]
+	  Position		  [405, 57, 435, 88]
+	  ZOrder		  -2
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DiscreteIntegrator
+	  Name			  "Discrete-Time\nIntegrator"
+	  SID			  "844"
+	  Ports			  [1, 1]
+	  Position		  [305, 34, 340, 66]
+	  ZOrder		  -10
+	  gainval		  "2.0"
+	  SampleTime		  "0.05"
+	  ICPrevOutput		  "DiscIntNeverNeededParam"
+	  ICPrevScaledInput	  "DiscIntNeverNeededParam"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "845"
+	  Position		  [235, 35, 265, 65]
+	  ZOrder		  -11
+	  Gain			  "1.39"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain1"
+	  SID			  "898"
+	  Position		  [235, 115, 265, 145]
+	  ZOrder		  -11
+	  Gain			  "1.39"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "847"
+	  Position		  [515, 54, 540, 66]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Discrete-Time\nIntegrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 80]
+	    DstBlock		    "Gain1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -45]
+	  DstBlock		  "Add1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "r"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Discrete-Time\nIntegrator"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 15]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain1"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -15]
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      SID		      "923"
+      Ports		      [4, 1]
+      Position		      [1155, 17, 1195, 103]
+      ZOrder		      -16
+      ShowName		      off
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      SID		      "793"
+      Ports		      [4, 1]
+      Position		      [1235, 762, 1270, 953]
+      ZOrder		      -16
+      ShowName		      off
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux3"
+      SID		      "928"
+      Ports		      [4, 1]
+      Position		      [455, 12, 495, 98]
+      ZOrder		      -16
+      ShowName		      off
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PMA_press"
+      SID		      "697"
+      Ports		      [4, 1]
+      Position		      [1060, 128, 1160, 277]
+      ZOrder		      -17
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"PMA_press"
+	Location		[1003, 175, 1709, 1139]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "c20+c21"
+	  SID			  "698"
+	  Position		  [110, 103, 140, 117]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c24"
+	  SID			  "700"
+	  Position		  [110, 193, 140, 207]
+	  ZOrder		  -1
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c27+c28"
+	  SID			  "708"
+	  Position		  [110, 288, 140, 302]
+	  ZOrder		  -1
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c31"
+	  SID			  "702"
+	  Position		  [110, 378, 140, 392]
+	  ZOrder		  -1
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value4"
+	  SID			  "772"
+	  Ports			  [1, 1]
+	  Position		  [215, 91, 280, 129]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value5"
+	  SID			  "773"
+	  Ports			  [1, 1]
+	  Position		  [215, 181, 280, 219]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value6"
+	  SID			  "774"
+	  Ports			  [1, 1]
+	  Position		  [215, 276, 280, 314]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value8"
+	  SID			  "776"
+	  Ports			  [1, 1]
+	  Position		  [215, 366, 280, 404]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  SID			  "709"
+	  Ports			  [4, 1]
+	  Position		  [360, 127, 395, 318]
+	  ZOrder		  -16
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PMA_press"
+	  SID			  "699"
+	  Position		  [445, 218, 475, 232]
+	  ZOrder		  -2
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "c20+c21"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c27+c28"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c24"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c31"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "PMA_press"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value4"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 45]
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value5"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value6"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -50]
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value8"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -95]
+	  DstBlock		  "Mux2"
+	  DstPort		  4
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "PMA_pressures"
+      SID		      "250"
+      Ports		      [1]
+      Position		      [1255, 189, 1285, 221]
+      ZOrder		      -3
+      Floating		      off
+      Location		      [1917, 77, 3195, 534]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "on"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      TimeRange		      "500"
+      YMin		      "0"
+      YMax		      "0.175"
+      SaveName		      "Outputs"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer"
+      SID		      "786"
+      Ports		      [0, 1]
+      Position		      [80, 228, 130, 282]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 30 45 60 75 90 105 120 135 150 165]"
+      e			      "[0.8 1.2 1 2.1 2.8 1.4 2 1.5 1.5 1.5 0.8]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer1"
+      SID		      "957"
+      Ports		      [0, 1]
+      Position		      [105, 427, 145, 463]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 300 600 900 1200 1500 1800 2100 2400 2700 3000 3300 3600 3900 4200 4500 4800 5100 5400]"
+      e			      "[0.7 0.75 0.65 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer10"
+      SID		      "1010"
+      Ports		      [0, 1]
+      Position		      [345, 117, 385, 153]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 15]"
+      e			      "[0.15 0.3] "
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer11"
+      SID		      "1029"
+      Ports		      [0, 1]
+      Position		      [150, 117, 190, 153]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 120 240 360 480 600 720 840 960 1080 1200 1320 1440 1560 1680 1800 1920 2040 2160]"
+      e			      "[0.2 0.215 0.19 0.2 0.215 0.19 0.2 0.215 0.19 0.2 0.215 0.19 0.2 0.215 0.19 0.2 0.2 0.2 0.2]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer12"
+      SID		      "1030"
+      Ports		      [0, 1]
+      Position		      [345, 217, 385, 253]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 30]"
+      e			      "[0.15 0.3] "
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer2"
+      SID		      "972"
+      Ports		      [0, 1]
+      Position		      [180, 282, 220, 318]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 50 75 100 125 150 175 200 225 250 275 300 325 350 375 400 425 450 475]"
+      e			      "[0.2 0.22 0.2 0.22 0.18 0.2 0.22 0.18 0.2 0.22 0.18 0.2 0.22 0.18 0.2 0.2 0.22 0.18 0.2]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer3"
+      SID		      "921"
+      Ports		      [0, 1]
+      Position		      [165, 127, 205, 163]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 120 240 360 480 600 720 840 960 1080 1200 1320 1440 1560 1680 1800 1920 2040 2160]"
+      e			      "[0.2 0.215 0.19 0.2 0.215 0.19 0.2 0.215 0.19 0.2 0.215 0.19 0.2 0.215 0.19 0.2 0.2 0.2 0.2]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer4"
+      SID		      "1027"
+      Ports		      [0, 1]
+      Position		      [345, 267, 385, 303]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 45]"
+      e			      "[0.15 0.3] "
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer5"
+      SID		      "1028"
+      Ports		      [0, 1]
+      Position		      [345, 317, 385, 353]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 60]"
+      e			      "[0.15 0.3] "
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer6"
+      SID		      "998"
+      Ports		      [0, 1]
+      Position		      [180, 207, 220, 243]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 1800 3600]"
+      e			      "[0.2 0.18 0.2] "
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer7"
+      SID		      "1004"
+      Ports		      [0, 1]
+      Position		      [160, 577, 200, 613]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 23400 25200 27000 28800]"
+      e			      "[0.7 0.79 0.7 0.61 0.7] "
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer8"
+      SID		      "1008"
+      Ports		      [0, 1]
+      Position		      [235, 477, 275, 513]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 16200 18000 19800 21600]"
+      e			      "[0.7 0.81 0.7 0.59 0.7] "
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Timer9"
+      SID		      "1009"
+      Ports		      [0, 1]
+      Position		      [270, 217, 310, 253]
+      ZOrder		      -14
+      LibraryVersion	      "1.648"
+      FontName		      "Verdana"
+      FontSize		      11
+      SourceBlock	      "powerlib_extras/Control \nBlocks/Timer"
+      SourceType	      "Timer"
+      t			      "[0 9000 10800 12600 14400]"
+      e			      "[0.2 0.213 0.2 0.18 0.2] "
+    }
+    Block {
+      BlockType		      ToFile
+      Name		      "To File"
+      SID		      "833"
+      Ports		      [1]
+      Position		      [1270, 570, 1410, 610]
+      ZOrder		      -6
+      Filename		      "ring.mat"
+      MatrixName	      "ring_pressure"
+    }
+    Block {
+      BlockType		      ToFile
+      Name		      "To File1"
+      SID		      "834"
+      Ports		      [1]
+      Position		      [1375, 440, 1515, 480]
+      ZOrder		      -6
+      Filename		      "pump.mat"
+      MatrixName	      "pump_pressure"
+    }
+    Block {
+      BlockType		      ToFile
+      Name		      "To File2"
+      SID		      "835"
+      Ports		      [1]
+      Position		      [1350, 780, 1490, 820]
+      ZOrder		      -6
+      Filename		      "valve.mat"
+      MatrixName	      "valve_OD"
+    }
+    Block {
+      BlockType		      ToFile
+      Name		      "To File3"
+      SID		      "836"
+      Ports		      [1]
+      Position		      [1415, 230, 1555, 270]
+      ZOrder		      -6
+      Filename		      "wt.mat"
+      MatrixName	      "wt_pressure"
+    }
+    Block {
+      BlockType		      ToFile
+      Name		      "To File4"
+      SID		      "837"
+      Ports		      [1]
+      Position		      [1255, 130, 1395, 170]
+      ZOrder		      -6
+      Filename		      "pma.mat"
+      MatrixName	      "pma_pressure"
+    }
+    Block {
+      BlockType		      ToFile
+      Name		      "To File5"
+      SID		      "922"
+      Ports		      [1]
+      Position		      [1290, 40, 1430, 80]
+      ZOrder		      -6
+      Filename		      "pump_real.mat"
+      MatrixName	      "pump_pressure_r"
+      SampleTime	      "0.05"
+    }
+    Block {
+      BlockType		      ToFile
+      Name		      "To File6"
+      SID		      "927"
+      Ports		      [1]
+      Position		      [1540, 20, 1680, 60]
+      ZOrder		      -6
+      Filename		      "pump_ref.mat"
+      MatrixName	      "pump_pressure_ref"
+      SampleTime	      "0.05"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "WT_press"
+      SID		      "807"
+      Ports		      [1, 1]
+      Position		      [1195, 276, 1335, 364]
+      ZOrder		      -17
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"WT_press"
+	Location		[1158, 180, 1864, 1144]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "c34+c35"
+	  SID			  "808"
+	  Position		  [110, 103, 140, 117]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value4"
+	  SID			  "812"
+	  Ports			  [1, 1]
+	  Position		  [215, 91, 280, 129]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "WT_press"
+	  SID			  "817"
+	  Position		  [435, 103, 465, 117]
+	  ZOrder		  -2
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value4"
+	  SrcPort		  1
+	  DstBlock		  "WT_press"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c34+c35"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value4"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "WT_pressure"
+      SID		      "818"
+      Ports		      [1]
+      Position		      [1415, 304, 1445, 336]
+      ZOrder		      -3
+      Floating		      off
+      Location		      [1917, 565, 3195, 1022]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "on"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      LegendLocations	      "0.89182     0.87144    0.080203    0.043764"
+      TimeRange		      "500"
+      YMin		      "0.065"
+      YMax		      "0.13"
+      SaveName		      "Outputs4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Water Supply System"
+      SID		      "255"
+      Ports		      [16, 22]
+      Position		      [745, 105, 920, 930]
+      ZOrder		      -27
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Water Supply System"
+	Location		[12, 76, 1340, 1026]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pump Dh c2"
+	  SID			  "257"
+	  Position		  [40, 43, 70, 57]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pump c6"
+	  SID			  "262"
+	  Position		  [40, 98, 70, 112]
+	  ZOrder		  -1
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pump Dh c16"
+	  SID			  "263"
+	  Position		  [40, 153, 70, 167]
+	  ZOrder		  -1
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pump Dh c18"
+	  SID			  "266"
+	  Position		  [40, 208, 70, 222]
+	  ZOrder		  -1
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pump Dh c25"
+	  SID			  "269"
+	  Position		  [40, 263, 70, 277]
+	  ZOrder		  -1
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pump Dh c32"
+	  SID			  "272"
+	  Position		  [40, 318, 70, 332]
+	  ZOrder		  -1
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Valve c20"
+	  SID			  "295"
+	  Position		  [40, 443, 70, 457]
+	  ZOrder		  -1
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Valve c24"
+	  SID			  "299"
+	  Position		  [40, 473, 70, 487]
+	  ZOrder		  -1
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Valve c27"
+	  SID			  "258"
+	  Position		  [40, 503, 70, 517]
+	  ZOrder		  -1
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Valve c31"
+	  SID			  "275"
+	  Position		  [40, 533, 70, 547]
+	  ZOrder		  -1
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Valve c34"
+	  SID			  "292"
+	  Position		  [40, 563, 70, 577]
+	  ZOrder		  -1
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Valve c38"
+	  SID			  "277"
+	  Position		  [40, 593, 70, 607]
+	  ZOrder		  -1
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Mag.Valve c23-c24"
+	  SID			  "626"
+	  Position		  [665, 268, 695, 282]
+	  ZOrder		  -1
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Mag.Valve c9-c10"
+	  SID			  "627"
+	  Position		  [665, 308, 695, 322]
+	  ZOrder		  -1
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Mag.Valve c28-c29"
+	  SID			  "628"
+	  Position		  [665, 348, 695, 362]
+	  ZOrder		  -1
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Mag.Valve c34-c35"
+	  SID			  "629"
+	  Position		  [665, 388, 695, 402]
+	  ZOrder		  -1
+	  Port			  "16"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "End-user pres."
+	  SID			  "340"
+	  Ports			  [0, 6]
+	  Position		  [330, 18, 415, 202]
+	  ZOrder		  -17
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "End-user pres."
+	    Location		    [12, 76, 1340, 1026]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 ADC2"
+	      SID		      "328"
+	      Ports		      [0, 1]
+	      Position		      [25, 282, 140, 328]
+	      ZOrder		      -1
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi0"
+	      chan		      "2"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 ADC3"
+	      SID		      "330"
+	      Ports		      [0, 1]
+	      Position		      [25, 22, 140, 68]
+	      ZOrder		      -2
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi0"
+	      chan		      "3"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 ADC4"
+	      SID		      "332"
+	      Ports		      [0, 1]
+	      Position		      [25, 87, 140, 133]
+	      ZOrder		      -3
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi0"
+	      chan		      "4"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 ADC4"
+	      SID		      "317"
+	      Ports		      [0, 1]
+	      Position		      [25, 152, 140, 198]
+	      ZOrder		      -4
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi2"
+	      chan		      "4"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 ADC5"
+	      SID		      "319"
+	      Ports		      [0, 1]
+	      Position		      [25, 217, 140, 263]
+	      ZOrder		      -5
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi2"
+	      chan		      "5"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 ADC6"
+	      SID		      "321"
+	      Ports		      [0, 1]
+	      Position		      [25, 347, 140, 393]
+	      ZOrder		      -6
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi2"
+	      chan		      "6"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      SID		      "348"
+	      Position		      [205, 30, 235, 60]
+	      ZOrder		      -11
+	      Gain		      "0.0356"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain1"
+	      SID		      "349"
+	      Position		      [205, 95, 235, 125]
+	      ZOrder		      -11
+	      Gain		      "0.0356"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      SID		      "350"
+	      Position		      [205, 160, 235, 190]
+	      ZOrder		      -11
+	      Gain		      "0.0356"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      SID		      "351"
+	      Position		      [205, 225, 235, 255]
+	      ZOrder		      -11
+	      Gain		      "0.0356"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain4"
+	      SID		      "352"
+	      Position		      [205, 290, 235, 320]
+	      ZOrder		      -11
+	      Gain		      "0.0356"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain5"
+	      SID		      "353"
+	      Position		      [205, 355, 235, 385]
+	      ZOrder		      -11
+	      Gain		      "0.0356"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c20+c21"
+	      SID		      "341"
+	      Position		      [340, 38, 370, 52]
+	      ZOrder		      -17
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c24"
+	      SID		      "342"
+	      Position		      [340, 103, 370, 117]
+	      ZOrder		      -18
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c27+c28"
+	      SID		      "343"
+	      Position		      [340, 168, 370, 182]
+	      ZOrder		      -19
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c31"
+	      SID		      "344"
+	      Position		      [340, 233, 370, 247]
+	      ZOrder		      -20
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c34+c35"
+	      SID		      "345"
+	      Position		      [340, 298, 370, 312]
+	      ZOrder		      -21
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c38"
+	      SID		      "346"
+	      Position		      [340, 363, 370, 377]
+	      ZOrder		      -22
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Comedi0 ADC3"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "c20+c21"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi0 ADC4"
+	      SrcPort		      1
+	      DstBlock		      "Gain1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain1"
+	      SrcPort		      1
+	      DstBlock		      "c24"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi2 ADC4"
+	      SrcPort		      1
+	      DstBlock		      "Gain2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      DstBlock		      "c27+c28"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi2 ADC5"
+	      SrcPort		      1
+	      DstBlock		      "Gain3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      DstBlock		      "c31"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi0 ADC2"
+	      SrcPort		      1
+	      DstBlock		      "Gain4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain4"
+	      SrcPort		      1
+	      DstBlock		      "c34+c35"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi2 ADC6"
+	      SrcPort		      1
+	      DstBlock		      "Gain5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain5"
+	      SrcPort		      1
+	      DstBlock		      "c38"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Mag Valves"
+	  SID			  "632"
+	  Ports			  [4]
+	  Position		  [825, 250, 910, 420]
+	  ZOrder		  -18
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Mag Valves"
+	    Location		    [12, 147, 360, 814]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c23-c24"
+	      SID		      "633"
+	      Position		      [25, 43, 55, 57]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c9-c10"
+	      SID		      "634"
+	      Position		      [25, 108, 55, 122]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c28-c29"
+	      SID		      "635"
+	      Position		      [25, 173, 55, 187]
+	      ZOrder		      -1
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c34-c35"
+	      SID		      "636"
+	      Position		      [25, 243, 55, 257]
+	      ZOrder		      -1
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DO0"
+	      SID		      "651"
+	      Ports		      [1]
+	      Position		      [145, 27, 265, 73]
+	      ZOrder		      -5
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DO"
+	      SourceType	      "COMEDI_DIO_WRITE"
+	      dev		      "comedi0"
+	      chan		      "0"
+	      threshold		      "0.5"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DO1"
+	      SID		      "652"
+	      Ports		      [1]
+	      Position		      [145, 92, 265, 138]
+	      ZOrder		      -6
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DO"
+	      SourceType	      "COMEDI_DIO_WRITE"
+	      dev		      "comedi0"
+	      chan		      "1"
+	      threshold		      "0.5"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DO2"
+	      SID		      "653"
+	      Ports		      [1]
+	      Position		      [145, 157, 265, 203]
+	      ZOrder		      -7
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DO"
+	      SourceType	      "COMEDI_DIO_WRITE"
+	      dev		      "comedi0"
+	      chan		      "2"
+	      threshold		      "0.5"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DO3"
+	      SID		      "654"
+	      Ports		      [1]
+	      Position		      [145, 227, 265, 273]
+	      ZOrder		      -8
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DO"
+	      SourceType	      "COMEDI_DIO_WRITE"
+	      dev		      "comedi0"
+	      chan		      "3"
+	      threshold		      "0.5"
+	    }
+	    Line {
+	      SrcBlock		      "c23-c24"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DO0"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c9-c10"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DO1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c28-c29"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DO2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c34-c35"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DO3"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Pump Power"
+	  SID			  "591"
+	  Ports			  [0, 6]
+	  Position		  [630, 25, 715, 205]
+	  ZOrder		  -19
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Pump Power"
+	    Location		    [12, 45, 1340, 995]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi1 ADC0"
+	      SID		      "622"
+	      Ports		      [0, 1]
+	      Position		      [25, 27, 140, 73]
+	      ZOrder		      -1
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi1"
+	      chan		      "0"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi1 ADC1"
+	      SID		      "599"
+	      Ports		      [0, 1]
+	      Position		      [25, 92, 140, 138]
+	      ZOrder		      -2
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi1"
+	      chan		      "1"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi1 ADC2"
+	      SID		      "597"
+	      Ports		      [0, 1]
+	      Position		      [25, 157, 140, 203]
+	      ZOrder		      -3
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi1"
+	      chan		      "2"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi1 ADC3"
+	      SID		      "600"
+	      Ports		      [0, 1]
+	      Position		      [25, 222, 140, 268]
+	      ZOrder		      -4
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi1"
+	      chan		      "3"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi1 ADC4"
+	      SID		      "598"
+	      Ports		      [0, 1]
+	      Position		      [25, 287, 140, 333]
+	      ZOrder		      -5
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi1"
+	      chan		      "4"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi1 ADC5"
+	      SID		      "601"
+	      Ports		      [0, 1]
+	      Position		      [25, 352, 140, 398]
+	      ZOrder		      -6
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi1"
+	      chan		      "5"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P c2"
+	      SID		      "623"
+	      Position		      [345, 43, 375, 57]
+	      ZOrder		      -7
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P c6"
+	      SID		      "613"
+	      Position		      [345, 108, 375, 122]
+	      ZOrder		      -8
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P c16"
+	      SID		      "616"
+	      Position		      [345, 173, 375, 187]
+	      ZOrder		      -9
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P c18"
+	      SID		      "614"
+	      Position		      [345, 238, 375, 252]
+	      ZOrder		      -10
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P c25"
+	      SID		      "615"
+	      Position		      [345, 303, 375, 317]
+	      ZOrder		      -11
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P c32"
+	      SID		      "612"
+	      Position		      [345, 368, 375, 382]
+	      ZOrder		      -12
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Comedi1 ADC5"
+	      SrcPort		      1
+	      DstBlock		      "P c32"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi1 ADC1"
+	      SrcPort		      1
+	      DstBlock		      "P c6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi1 ADC3"
+	      SrcPort		      1
+	      DstBlock		      "P c18"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi1 ADC4"
+	      SrcPort		      1
+	      DstBlock		      "P c25"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi1 ADC2"
+	      SrcPort		      1
+	      DstBlock		      "P c16"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi1 ADC0"
+	      SrcPort		      1
+	      DstBlock		      "P c2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Pump diff. pres."
+	  SID			  "382"
+	  Ports			  [0, 5]
+	  Position		  [330, 223, 415, 387]
+	  ZOrder		  -20
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Pump diff. pres."
+	    Location		    [12, 45, 1340, 995]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "392"
+	      Ports		      [2, 1]
+	      Position		      [245, 32, 275, 63]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add1"
+	      SID		      "395"
+	      Ports		      [2, 1]
+	      Position		      [245, 97, 275, 128]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add2"
+	      SID		      "398"
+	      Ports		      [2, 1]
+	      Position		      [245, 162, 275, 193]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add3"
+	      SID		      "401"
+	      Ports		      [2, 1]
+	      Position		      [245, 227, 275, 258]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add4"
+	      SID		      "404"
+	      Ports		      [2, 1]
+	      Position		      [245, 292, 275, 323]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 ADC5"
+	      SID		      "334"
+	      Ports		      [0, 1]
+	      Position		      [25, 287, 140, 333]
+	      ZOrder		      -7
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi0"
+	      chan		      "5"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 ADC6"
+	      SID		      "336"
+	      Ports		      [0, 1]
+	      Position		      [25, 222, 140, 268]
+	      ZOrder		      -8
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi0"
+	      chan		      "6"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 ADC7"
+	      SID		      "338"
+	      Ports		      [0, 1]
+	      Position		      [25, 92, 140, 138]
+	      ZOrder		      -9
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi0"
+	      chan		      "7"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 ADC3"
+	      SID		      "315"
+	      Ports		      [0, 1]
+	      Position		      [25, 157, 140, 203]
+	      ZOrder		      -10
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi2"
+	      chan		      "3"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 ADC7"
+	      SID		      "245"
+	      Ports		      [0, 1]
+	      Position		      [25, 27, 140, 73]
+	      ZOrder		      -11
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi2"
+	      chan		      "7"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "394"
+	      Position		      [175, 20, 205, 50]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "396"
+	      Position		      [175, 85, 205, 115]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant2"
+	      SID		      "399"
+	      Position		      [175, 150, 205, 180]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant3"
+	      SID		      "402"
+	      Position		      [175, 215, 205, 245]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant4"
+	      SID		      "405"
+	      Position		      [175, 280, 205, 310]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      SID		      "393"
+	      Position		      [295, 35, 325, 65]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain1"
+	      SID		      "397"
+	      Position		      [295, 100, 325, 130]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      SID		      "400"
+	      Position		      [295, 165, 325, 195]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      SID		      "403"
+	      Position		      [295, 230, 325, 260]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain4"
+	      SID		      "406"
+	      Position		      [295, 295, 325, 325]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "diff c2"
+	      SID		      "383"
+	      Position		      [345, 43, 375, 57]
+	      ZOrder		      -22
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "diff c16"
+	      SID		      "384"
+	      Position		      [345, 108, 375, 122]
+	      ZOrder		      -23
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "diff c18"
+	      SID		      "385"
+	      Position		      [345, 173, 375, 187]
+	      ZOrder		      -24
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "diff c25"
+	      SID		      "386"
+	      Position		      [345, 238, 375, 252]
+	      ZOrder		      -25
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "diff c32"
+	      SID		      "387"
+	      Position		      [345, 303, 375, 317]
+	      ZOrder		      -26
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "diff c2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add1"
+	      SrcPort		      1
+	      DstBlock		      "Gain1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add2"
+	      SrcPort		      1
+	      DstBlock		      "Gain2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add3"
+	      SrcPort		      1
+	      DstBlock		      "Gain3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant4"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add4"
+	      SrcPort		      1
+	      DstBlock		      "Gain4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi2 ADC7"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Comedi0 ADC7"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Comedi2 ADC3"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Comedi0 ADC6"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add3"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Comedi0 ADC5"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add4"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain1"
+	      SrcPort		      1
+	      DstBlock		      "diff c16"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      DstBlock		      "diff c18"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      DstBlock		      "diff c25"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain4"
+	      SrcPort		      1
+	      DstBlock		      "diff c32"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Pump rel. pres."
+	  SID			  "483"
+	  Ports			  [0, 5]
+	  Position		  [330, 447, 415, 603]
+	  ZOrder		  -21
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Pump rel. pres."
+	    Location		    [12, 45, 1340, 995]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "489"
+	      Ports		      [2, 1]
+	      Position		      [255, 32, 285, 63]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add1"
+	      SID		      "492"
+	      Ports		      [2, 1]
+	      Position		      [255, 97, 285, 128]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add2"
+	      SID		      "495"
+	      Ports		      [2, 1]
+	      Position		      [255, 162, 285, 193]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add3"
+	      SID		      "498"
+	      Ports		      [2, 1]
+	      Position		      [255, 227, 285, 258]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add4"
+	      SID		      "501"
+	      Ports		      [2, 1]
+	      Position		      [255, 292, 285, 323]
+	      ZOrder		      -2
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 ADC0"
+	      SID		      "323"
+	      Ports		      [0, 1]
+	      Position		      [25, 287, 140, 333]
+	      ZOrder		      -7
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi0"
+	      chan		      "0"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 ADC1"
+	      SID		      "326"
+	      Ports		      [0, 1]
+	      Position		      [25, 92, 140, 138]
+	      ZOrder		      -8
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi0"
+	      chan		      "1"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 ADC0"
+	      SID		      "308"
+	      Ports		      [0, 1]
+	      Position		      [25, 27, 140, 73]
+	      ZOrder		      -9
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi2"
+	      chan		      "0"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 ADC1"
+	      SID		      "310"
+	      Ports		      [0, 1]
+	      Position		      [25, 157, 140, 203]
+	      ZOrder		      -10
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi2"
+	      chan		      "1"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 ADC2"
+	      SID		      "312"
+	      Ports		      [0, 1]
+	      Position		      [25, 222, 140, 268]
+	      ZOrder		      -11
+	      BackgroundColor	      "yellow"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi ADC"
+	      SourceType	      "COMEDI_DATA_READ"
+	      dev		      "comedi2"
+	      chan		      "2"
+	      range		      "0"
+	      aref		      "ground"
+	      dt		      "-1"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "490"
+	      Position		      [185, 20, 215, 50]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "493"
+	      Position		      [185, 85, 215, 115]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant2"
+	      SID		      "496"
+	      Position		      [185, 150, 215, 180]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant3"
+	      SID		      "499"
+	      Position		      [185, 215, 215, 245]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant4"
+	      SID		      "502"
+	      Position		      [185, 280, 215, 310]
+	      ZOrder		      -5
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      SID		      "491"
+	      Position		      [305, 35, 335, 65]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain1"
+	      SID		      "494"
+	      Position		      [305, 100, 335, 130]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      SID		      "497"
+	      Position		      [305, 165, 335, 195]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      SID		      "500"
+	      Position		      [305, 230, 335, 260]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain4"
+	      SID		      "503"
+	      Position		      [305, 295, 335, 325]
+	      ZOrder		      -11
+	      Gain		      "1/4"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c2"
+	      SID		      "484"
+	      Position		      [355, 43, 385, 57]
+	      ZOrder		      -22
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c16"
+	      SID		      "485"
+	      Position		      [355, 108, 385, 122]
+	      ZOrder		      -23
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c18"
+	      SID		      "486"
+	      Position		      [355, 173, 385, 187]
+	      ZOrder		      -24
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c25"
+	      SID		      "487"
+	      Position		      [355, 238, 385, 252]
+	      ZOrder		      -25
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "c32"
+	      SID		      "488"
+	      Position		      [355, 303, 385, 317]
+	      ZOrder		      -26
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi2 ADC0"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "c2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add1"
+	      SrcPort		      1
+	      DstBlock		      "Gain1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add2"
+	      SrcPort		      1
+	      DstBlock		      "Gain2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add3"
+	      SrcPort		      1
+	      DstBlock		      "Gain3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant4"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "Add4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add4"
+	      SrcPort		      1
+	      DstBlock		      "Gain4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi0 ADC1"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain1"
+	      SrcPort		      1
+	      DstBlock		      "c16"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi2 ADC1"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      DstBlock		      "c18"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi2 ADC2"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add3"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      DstBlock		      "c25"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Comedi0 ADC0"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 20; 70, 0]
+	      DstBlock		      "Add4"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Gain4"
+	      SrcPort		      1
+	      DstBlock		      "c32"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Pumps"
+	  SID			  "285"
+	  Ports			  [6]
+	  Position		  [200, 17, 285, 358]
+	  ZOrder		  -22
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Pumps"
+	    Location		    [386, 99, 659, 781]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c2"
+	      SID		      "286"
+	      Position		      [25, 43, 55, 57]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c6"
+	      SID		      "287"
+	      Position		      [25, 108, 55, 122]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c16"
+	      SID		      "288"
+	      Position		      [25, 178, 55, 192]
+	      ZOrder		      -3
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c18"
+	      SID		      "289"
+	      Position		      [25, 248, 55, 262]
+	      ZOrder		      -4
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c25"
+	      SID		      "290"
+	      Position		      [25, 318, 55, 332]
+	      ZOrder		      -5
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c32"
+	      SID		      "291"
+	      Position		      [25, 388, 55, 402]
+	      ZOrder		      -6
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DAC4"
+	      SID		      "270"
+	      Ports		      [1]
+	      Position		      [80, 300, 200, 350]
+	      ZOrder		      -7
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi0"
+	      chan		      "4"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DAC5"
+	      SID		      "273"
+	      Ports		      [1]
+	      Position		      [80, 370, 200, 420]
+	      ZOrder		      -8
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi0"
+	      chan		      "5"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 DAC0"
+	      SID		      "243"
+	      Ports		      [1]
+	      Position		      [80, 25, 200, 75]
+	      ZOrder		      -9
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi2"
+	      chan		      "0"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 DAC1"
+	      SID		      "261"
+	      Ports		      [1]
+	      Position		      [80, 90, 200, 140]
+	      ZOrder		      -10
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi2"
+	      chan		      "1"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 DAC2"
+	      SID		      "264"
+	      Ports		      [1]
+	      Position		      [80, 160, 200, 210]
+	      ZOrder		      -11
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi2"
+	      chan		      "2"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 DAC3"
+	      SID		      "267"
+	      Ports		      [1]
+	      Position		      [80, 230, 200, 280]
+	      ZOrder		      -12
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi2"
+	      chan		      "3"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Line {
+	      SrcBlock		      "c2"
+	      SrcPort		      1
+	      DstBlock		      "Comedi2 DAC0"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c6"
+	      SrcPort		      1
+	      DstBlock		      "Comedi2 DAC1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c16"
+	      SrcPort		      1
+	      DstBlock		      "Comedi2 DAC2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c18"
+	      SrcPort		      1
+	      DstBlock		      "Comedi2 DAC3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c25"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DAC4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c32"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DAC5"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Valves"
+	  SID			  "300"
+	  Ports			  [6]
+	  Position		  [200, 440, 285, 610]
+	  ZOrder		  -23
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Valves"
+	    Location		    [12, 147, 360, 814]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c20"
+	      SID		      "301"
+	      Position		      [25, 43, 55, 57]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c24"
+	      SID		      "302"
+	      Position		      [25, 108, 55, 122]
+	      ZOrder		      -1
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c27"
+	      SID		      "303"
+	      Position		      [25, 173, 55, 187]
+	      ZOrder		      -1
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c31"
+	      SID		      "304"
+	      Position		      [25, 243, 55, 257]
+	      ZOrder		      -1
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c34"
+	      SID		      "305"
+	      Position		      [25, 308, 55, 322]
+	      ZOrder		      -1
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "c38"
+	      SID		      "306"
+	      Position		      [25, 373, 55, 387]
+	      ZOrder		      -1
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DAC0"
+	      SID		      "293"
+	      Ports		      [1]
+	      Position		      [155, 290, 275, 340]
+	      ZOrder		      -7
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi0"
+	      chan		      "0"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DAC1"
+	      SID		      "298"
+	      Ports		      [1]
+	      Position		      [155, 90, 275, 140]
+	      ZOrder		      -8
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi0"
+	      chan		      "1"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi0 DAC2"
+	      SID		      "296"
+	      Ports		      [1]
+	      Position		      [155, 25, 275, 75]
+	      ZOrder		      -9
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi0"
+	      chan		      "2"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2\n DAC6"
+	      SID		      "278"
+	      Ports		      [1]
+	      Position		      [155, 355, 275, 405]
+	      ZOrder		      -10
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi2"
+	      chan		      "6"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 DAC4"
+	      SID		      "241"
+	      Ports		      [1]
+	      Position		      [155, 155, 275, 205]
+	      ZOrder		      -11
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi2"
+	      chan		      "4"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Comedi2 DAC5"
+	      SID		      "276"
+	      Ports		      [1]
+	      Position		      [155, 225, 275, 275]
+	      ZOrder		      -12
+	      BackgroundColor	      "darkGreen"
+	      LibraryVersion	      "1.30"
+	      SourceBlock	      "comedi_lib/Comedi DAC"
+	      SourceType	      "COMEDI_DATA_WRITE"
+	      dev		      "comedi2"
+	      chan		      "5"
+	      range		      "0"
+	      aref		      "ground"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain"
+	      SID		      "436"
+	      Position		      [90, 35, 120, 65]
+	      ZOrder		      -11
+	      Gain		      "5"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain1"
+	      SID		      "437"
+	      Position		      [90, 100, 120, 130]
+	      ZOrder		      -11
+	      Gain		      "5"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain2"
+	      SID		      "438"
+	      Position		      [90, 165, 120, 195]
+	      ZOrder		      -11
+	      Gain		      "5"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain3"
+	      SID		      "439"
+	      Position		      [90, 235, 120, 265]
+	      ZOrder		      -11
+	      Gain		      "5"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain4"
+	      SID		      "440"
+	      Position		      [90, 300, 120, 330]
+	      ZOrder		      -11
+	      Gain		      "5"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain5"
+	      SID		      "441"
+	      Position		      [90, 365, 120, 395]
+	      ZOrder		      -11
+	      Gain		      "5"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Line {
+	      SrcBlock		      "c20"
+	      SrcPort		      1
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DAC2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c24"
+	      SrcPort		      1
+	      DstBlock		      "Gain1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain1"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DAC1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c27"
+	      SrcPort		      1
+	      DstBlock		      "Gain2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain2"
+	      SrcPort		      1
+	      DstBlock		      "Comedi2 DAC4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c31"
+	      SrcPort		      1
+	      DstBlock		      "Gain3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain3"
+	      SrcPort		      1
+	      DstBlock		      "Comedi2 DAC5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c34"
+	      SrcPort		      1
+	      DstBlock		      "Gain4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain4"
+	      SrcPort		      1
+	      DstBlock		      "Comedi0 DAC0"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "c38"
+	      SrcPort		      1
+	      DstBlock		      "Gain5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain5"
+	      SrcPort		      1
+	      DstBlock		      "Comedi2\n DAC6"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p c20+c21"
+	  SID			  "331"
+	  Position		  [555, 28, 585, 42]
+	  ZOrder		  -26
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p c24"
+	  SID			  "333"
+	  Position		  [555, 58, 585, 72]
+	  ZOrder		  -26
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p c27+c28"
+	  SID			  "318"
+	  Position		  [555, 88, 585, 102]
+	  ZOrder		  -26
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p c31"
+	  SID			  "320"
+	  Position		  [555, 118, 585, 132]
+	  ZOrder		  -26
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p c34+c35"
+	  SID			  "329"
+	  Position		  [555, 148, 585, 162]
+	  ZOrder		  -26
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p c38"
+	  SID			  "322"
+	  Position		  [555, 178, 585, 192]
+	  ZOrder		  -26
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "diff p c2"
+	  SID			  "256"
+	  Position		  [555, 238, 585, 252]
+	  ZOrder		  -26
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "diff p c16"
+	  SID			  "339"
+	  Position		  [555, 268, 585, 282]
+	  ZOrder		  -26
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "diff p c18"
+	  SID			  "316"
+	  Position		  [555, 298, 585, 312]
+	  ZOrder		  -26
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "diff p c25"
+	  SID			  "337"
+	  Position		  [555, 328, 585, 342]
+	  ZOrder		  -26
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "diff p c32"
+	  SID			  "335"
+	  Position		  [555, 358, 585, 372]
+	  ZOrder		  -26
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rel p c2"
+	  SID			  "309"
+	  Position		  [555, 458, 585, 472]
+	  ZOrder		  -26
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rel p c16"
+	  SID			  "327"
+	  Position		  [555, 488, 585, 502]
+	  ZOrder		  -26
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rel p c18"
+	  SID			  "311"
+	  Position		  [555, 518, 585, 532]
+	  ZOrder		  -26
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rel p c25"
+	  SID			  "313"
+	  Position		  [555, 548, 585, 562]
+	  ZOrder		  -26
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rel p c32"
+	  SID			  "324"
+	  Position		  [555, 578, 585, 592]
+	  ZOrder		  -26
+	  Port			  "16"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "P c2"
+	  SID			  "617"
+	  Position		  [855, 33, 885, 47]
+	  ZOrder		  -26
+	  Port			  "17"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "P c6"
+	  SID			  "618"
+	  Position		  [855, 63, 885, 77]
+	  ZOrder		  -26
+	  Port			  "18"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "P c16"
+	  SID			  "619"
+	  Position		  [855, 93, 885, 107]
+	  ZOrder		  -26
+	  Port			  "19"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "P c18"
+	  SID			  "620"
+	  Position		  [855, 123, 885, 137]
+	  ZOrder		  -26
+	  Port			  "20"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "P c25"
+	  SID			  "621"
+	  Position		  [855, 153, 885, 167]
+	  ZOrder		  -26
+	  Port			  "21"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "P c32"
+	  SID			  "624"
+	  Position		  [855, 183, 885, 197]
+	  ZOrder		  -26
+	  Port			  "22"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Pump diff. pres."
+	  SrcPort		  1
+	  DstBlock		  "diff p c2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Valve c20"
+	  SrcPort		  1
+	  DstBlock		  "Valves"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Valve c24"
+	  SrcPort		  1
+	  DstBlock		  "Valves"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Valve c27"
+	  SrcPort		  1
+	  DstBlock		  "Valves"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Valve c31"
+	  SrcPort		  1
+	  DstBlock		  "Valves"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Valve c34"
+	  SrcPort		  1
+	  DstBlock		  "Valves"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Valve c38"
+	  SrcPort		  1
+	  DstBlock		  "Valves"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Pump rel. pres."
+	  SrcPort		  1
+	  DstBlock		  "rel p c2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump rel. pres."
+	  SrcPort		  3
+	  DstBlock		  "rel p c18"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump rel. pres."
+	  SrcPort		  4
+	  DstBlock		  "rel p c25"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump diff. pres."
+	  SrcPort		  3
+	  DstBlock		  "diff p c18"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "End-user pres."
+	  SrcPort		  3
+	  DstBlock		  "p c27+c28"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "End-user pres."
+	  SrcPort		  4
+	  DstBlock		  "p c31"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "End-user pres."
+	  SrcPort		  6
+	  DstBlock		  "p c38"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump rel. pres."
+	  SrcPort		  5
+	  DstBlock		  "rel p c32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump rel. pres."
+	  SrcPort		  2
+	  DstBlock		  "rel p c16"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "End-user pres."
+	  SrcPort		  5
+	  DstBlock		  "p c34+c35"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "End-user pres."
+	  SrcPort		  1
+	  DstBlock		  "p c20+c21"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "End-user pres."
+	  SrcPort		  2
+	  DstBlock		  "p c24"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump diff. pres."
+	  SrcPort		  5
+	  DstBlock		  "diff p c32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump diff. pres."
+	  SrcPort		  4
+	  DstBlock		  "diff p c25"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump diff. pres."
+	  SrcPort		  2
+	  DstBlock		  "diff p c16"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump Dh c2"
+	  SrcPort		  1
+	  DstBlock		  "Pumps"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump c6"
+	  SrcPort		  1
+	  DstBlock		  "Pumps"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Pump Dh c16"
+	  SrcPort		  1
+	  DstBlock		  "Pumps"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Pump Dh c18"
+	  SrcPort		  1
+	  DstBlock		  "Pumps"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Pump Dh c25"
+	  SrcPort		  1
+	  DstBlock		  "Pumps"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Pump Dh c32"
+	  SrcPort		  1
+	  DstBlock		  "Pumps"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Pump Power"
+	  SrcPort		  1
+	  DstBlock		  "P c2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump Power"
+	  SrcPort		  2
+	  DstBlock		  "P c6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump Power"
+	  SrcPort		  3
+	  DstBlock		  "P c16"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump Power"
+	  SrcPort		  4
+	  DstBlock		  "P c18"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump Power"
+	  SrcPort		  5
+	  DstBlock		  "P c25"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pump Power"
+	  SrcPort		  6
+	  DstBlock		  "P c32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mag.Valve c23-c24"
+	  SrcPort		  1
+	  DstBlock		  "Mag Valves"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mag.Valve c9-c10"
+	  SrcPort		  1
+	  DstBlock		  "Mag Valves"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mag.Valve c28-c29"
+	  SrcPort		  1
+	  DstBlock		  "Mag Valves"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Mag.Valve c34-c35"
+	  SrcPort		  1
+	  DstBlock		  "Mag Valves"
+	  DstPort		  4
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "diff p1"
+      SID		      "826"
+      Ports		      [1]
+      Position		      [1270, 484, 1300, 516]
+      ZOrder		      -3
+      Floating		      off
+      Location		      [1917, 77, 3195, 534]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "on"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      LegendLocations	      "0.87774     0.77106    0.094288     0.14633"
+      TimeRange		      "40"
+      YMin		      "-0.025"
+      YMax		      "0.425"
+      SaveName		      "Outputs5"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "opn_deg"
+      SID		      "794"
+      Ports		      [1]
+      Position		      [1320, 844, 1350, 876]
+      ZOrder		      -3
+      Floating		      off
+      Location		      [133, 402, 1411, 859]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "on"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      LegendLocations	      "0.88243     0.77106    0.084898     0.14633"
+      TimeRange		      "500"
+      YMin		      "0.675"
+      YMax		      "0.85"
+      SaveName		      "Outputs3"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "pump_diff"
+      SID		      "710"
+      Ports		      [4, 1]
+      Position		      [1065, 338, 1165, 487]
+      ZOrder		      -17
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"pump_diff"
+	Location		[373, 344, 871, 844]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "diff c2"
+	  SID			  "711"
+	  Position		  [110, 103, 140, 117]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "diff c16"
+	  SID			  "712"
+	  Position		  [110, 193, 140, 207]
+	  ZOrder		  -1
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "diff c18"
+	  SID			  "713"
+	  Position		  [110, 288, 140, 302]
+	  ZOrder		  -1
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "diff c25"
+	  SID			  "714"
+	  Position		  [110, 378, 140, 392]
+	  ZOrder		  -1
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value1"
+	  SID			  "778"
+	  Ports			  [1, 1]
+	  Position		  [215, 181, 280, 219]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value2"
+	  SID			  "779"
+	  Ports			  [1, 1]
+	  Position		  [215, 276, 280, 314]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value3"
+	  SID			  "780"
+	  Ports			  [1, 1]
+	  Position		  [215, 366, 280, 404]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value4"
+	  SID			  "777"
+	  Ports			  [1, 1]
+	  Position		  [215, 91, 280, 129]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  SID			  "719"
+	  Ports			  [4, 1]
+	  Position		  [360, 132, 395, 323]
+	  ZOrder		  -16
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "diff_p"
+	  SID			  "720"
+	  Position		  [445, 223, 475, 237]
+	  ZOrder		  -2
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value3"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  DstBlock		  "Mux2"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value2"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -45]
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value1"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 5]
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value4"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 50]
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "diff_p"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "diff c25"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "diff c16"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "diff c18"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "diff c2"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value4"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ring_press"
+      SID		      "721"
+      Ports		      [4, 1]
+      Position		      [1060, 513, 1160, 662]
+      ZOrder		      -17
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"ring_press"
+	Location		[218, 216, 716, 716]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "c2"
+	  SID			  "722"
+	  Position		  [110, 103, 140, 117]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c16"
+	  SID			  "723"
+	  Position		  [110, 193, 140, 207]
+	  ZOrder		  -1
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c18"
+	  SID			  "724"
+	  Position		  [110, 288, 140, 302]
+	  ZOrder		  -1
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "c25"
+	  SID			  "725"
+	  Position		  [110, 378, 140, 392]
+	  ZOrder		  -1
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value1"
+	  SID			  "782"
+	  Ports			  [1, 1]
+	  Position		  [215, 181, 280, 219]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value2"
+	  SID			  "783"
+	  Ports			  [1, 1]
+	  Position		  [215, 276, 280, 314]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value3"
+	  SID			  "784"
+	  Ports			  [1, 1]
+	  Position		  [215, 366, 280, 404]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Discrete \nMean value4"
+	  SID			  "781"
+	  Ports			  [1, 1]
+	  Position		  [215, 91, 280, 129]
+	  ZOrder		  -7
+	  LibraryVersion	  "1.648"
+	  FontName		  "Verdana"
+	  FontSize		  11
+	  SourceBlock		  "powerlib_extras/Discrete\nMeasurements/Discrete \nMean value"
+	  SourceType		  "Discrete Mean value"
+	  Freq			  "0.2"
+	  Vinit			  "0"
+	  Ts			  "0.05"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  SID			  "730"
+	  Ports			  [4, 1]
+	  Position		  [360, 132, 395, 323]
+	  ZOrder		  -16
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ring_press"
+	  SID			  "731"
+	  Position		  [445, 223, 475, 237]
+	  ZOrder		  -2
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "c2"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c18"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c16"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c25"
+	  SrcPort		  1
+	  DstBlock		  "Discrete \nMean value3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "ring_press"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value4"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 50]
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value1"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 5]
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value2"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -45]
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Discrete \nMean value3"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  DstBlock		  "Mux2"
+	  DstPort		  4
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      DstBlock		      "Water Supply System"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Constant11"
+      SrcPort		      1
+      DstBlock		      "Water Supply System"
+      DstPort		      11
+    }
+    Line {
+      SrcBlock		      "Constant12"
+      SrcPort		      1
+      DstBlock		      "Water Supply System"
+      DstPort		      12
+    }
+    Line {
+      SrcBlock		      "Constant6"
+      SrcPort		      1
+      DstBlock		      "Water Supply System"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Constant13"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			13
+      }
+      Branch {
+	Points			[0, 50]
+	Branch {
+	  DstBlock		  "Water Supply System"
+	  DstPort		  14
+	}
+	Branch {
+	  Points		  [0, 50]
+	  Branch {
+	    DstBlock		    "Water Supply System"
+	    DstPort		    15
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "Water Supply System"
+	    DstPort		    16
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      1
+      DstBlock		      "PMA_press"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      2
+      DstBlock		      "PMA_press"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      3
+      DstBlock		      "PMA_press"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      4
+      DstBlock		      "PMA_press"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "PMA_press"
+      SrcPort		      1
+      Points		      [25, 0]
+      Branch {
+	DstBlock		"PMA_pressures"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -55]
+	DstBlock		"To File4"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "ring_press"
+      SrcPort		      1
+      DstBlock		      "To File"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      7
+      Points		      [25, 0]
+      Branch {
+	DstBlock		"pump_diff"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -280; -380, 0; 0, 70]
+	DstBlock		"Ctrl PRZ4"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      8
+      Points		      [40, 0]
+      Branch {
+	DstBlock		"pump_diff"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -330; -410, 0; 0, 185]
+	DstBlock		"Ctrl PRZ1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      10
+      Points		      [80, 0]
+      Branch {
+	DstBlock		"pump_diff"
+	DstPort			4
+      }
+      Branch {
+	Points			[0, -440; -485, 0; 0, 325]
+	DstBlock		"Ctrl PRZ3"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      12
+      DstBlock		      "ring_press"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      13
+      DstBlock		      "ring_press"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      14
+      DstBlock		      "ring_press"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      15
+      DstBlock		      "ring_press"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      9
+      Points		      [60, 0]
+      Branch {
+	DstBlock		"pump_diff"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, -385; -445, 0; 0, 255]
+	DstBlock		"Ctrl PRZ2"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	DstBlock		"opn_deg"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -60]
+	DstBlock		"To File2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Constant8"
+      SrcPort		      1
+      Points		      [65, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			7
+      }
+      Branch {
+	Points			[0, 345]
+	DstBlock		"Mux2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Timer8"
+      SrcPort		      1
+      Points		      [70, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			8
+      }
+      Branch {
+	Points			[0, 340]
+	DstBlock		"Mux2"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Constant9"
+      SrcPort		      1
+      Points		      [65, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			9
+      }
+      Branch {
+	Points			[0, 335]
+	DstBlock		"Mux2"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Timer7"
+      SrcPort		      1
+      Points		      [45, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			10
+      }
+      Branch {
+	Points			[0, 330]
+	DstBlock		"Mux2"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "Water Supply System"
+      SrcPort		      5
+      Points		      [95, 0; 0, 30]
+      DstBlock		      "WT_press"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "WT_press"
+      SrcPort		      1
+      Points		      [25, 0]
+      Branch {
+	DstBlock		"WT_pressure"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -70]
+	DstBlock		"To File3"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "pump_diff"
+      SrcPort		      1
+      Points		      [30, 0; 0, 45]
+      Branch {
+	Points			[0, 40]
+	DstBlock		"diff p1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"To File1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Ctrl PRZ3"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			5
+      }
+      Branch {
+	Points			[0, -255]
+	DstBlock		"Mux1"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "Ctrl PRZ2"
+      SrcPort		      1
+      Points		      [50, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			4
+      }
+      Branch {
+	Points			[0, -225]
+	DstBlock		"Mux1"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Ctrl PRZ1"
+      SrcPort		      1
+      Points		      [70, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, -195]
+	DstBlock		"Mux1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Timer4"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	DstBlock		"Ctrl PRZ2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -220]
+	DstBlock		"Mux3"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Timer5"
+      SrcPort		      1
+      Points		      [50, 0]
+      Branch {
+	DstBlock		"Ctrl PRZ3"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Mux3"
+	DstPort			4
+      }
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "Ctrl PRZ4"
+      SrcPort		      1
+      Points		      [85, 0]
+      Branch {
+	DstBlock		"Water Supply System"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -115]
+	DstBlock		"Mux1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Timer10"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	DstBlock		"Ctrl PRZ4"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -110]
+	DstBlock		"Mux3"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      DstBlock		      "To File5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux3"
+      SrcPort		      1
+      Points		      [15, 0; 0, -45; 1010, 0]
+      DstBlock		      "To File6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Timer12"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Ctrl PRZ1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -190]
+	DstBlock		"Mux3"
+	DstPort			2
+      }
+    }
+    Annotation {
+      SID		      "803"
+      Position		      [1654, 608]
+    }
+  }
+}
