@@ -1,4 +1,4 @@
-\section{System decription}
+\section{Modelling}
 %%%%%%%%%%%% MID WAY AGENDA %%%%%%%%%%%%%%
 %\begin{frame}<beamer>
 %\frametitle{Ralf Victor Lømand Ravgård Christiansen}
@@ -12,26 +12,33 @@
 
 %%%%%%%%%%%%%%%%%System Blokke%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{System description}
+\subsection{Hydraulic Modelling}
 
-\begin{frame}{System decription}{System description}
-%\begin{figure}[H]
-%\centering
-%\input{Tikz/gensetblock.tex} 
-%\end{figure}
+\begin{frame}{Modelling}{Hydraulic Modelling}
 \begin{itemize}
-	\item<1->  
-	\item<1-> Write something awesome!
+	\item<1-> Two-terminal components 
 	\begin{itemize}
-		\item
+		\item<1-> Pipes 
+		\item<1-> Pumps
+		\item<1-> Valves
+		\item<1-> Water tower
 	\end{itemize}
-	\item<1-> 
+	\item<1-> Modelled as pressure drop across each component
 \end{itemize}
+
+	\begin{itemize}
+		\item<2-> Complete component model
+	\end{itemize}
+
+\begin{equation}<2->
+\label{CompleteModel}
+\Delta p_k = \underbrace{\lambda_k (q_k) + \zeta_k + J_k \dot{q_k}}_\text{Pipe} + \underbrace{\mu_k (q_k, OD)}_\text{Valve} - \underbrace{\alpha_k(\omega_k,q_k)}_\text{Pump} + \underbrace{\Delta p_{wt,k}}_\text{Water tower}
+\end{equation}
 
 \end{frame}
 
 
-\begin{frame}{System decription}{System description}
+\begin{frame}{Modelling}{Hydraulic Modelling}
 \begin{itemize}
 	\item<1-> 
 \end{itemize}	
@@ -41,9 +48,9 @@
 % \end{figure}
 \end{frame}
 
-\subsection{System description}
+\subsection{Graph representation}
 
-\begin{frame}{System decription}{System description}
+\begin{frame}{Modelling}{Graph representation}
 \begin{itemize}
 	\item<1->    
 	\item<1->    
