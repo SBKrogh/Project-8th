@@ -1,0 +1,33 @@
+\begin{tikzpicture} [scale=0.67,transform shape]
+
+\draw  (6,1) rectangle (8,0);
+\node at (7,0.5) {Sys};
+
+\draw  (-4.5,1) rectangle (-2.5,0);
+\node at (-3.5,0.5) {MPC};
+
+\draw  (2.5,1) rectangle (4.5,0);
+\node at (3.5,0.5) {Pump};
+
+\draw  (-1,1) rectangle (1,0);
+\node at (0,0.5) {PI};
+
+\draw[-triangle 60] (8,0.25) -- (9.5,0.25);
+\draw[-triangle 60] (8,0.75) -- (9.5,0.75);
+\draw[-triangle 60] (4.5,0.5) -- (6,0.5);
+\draw[-triangle 60] (1,0.25) -- (2.5,0.25);
+\draw[-triangle 60] (-2.5,0.5) -- (-1,0.5);
+%\draw[-triangle 60] (-5.5,0.5) -- (-4.5,0.5);
+
+\draw[-triangle 60] (5.25,0.5) -- (5.25,-1) -- (0,-1) -- (0,0);
+\draw[-triangle 60] (8.5,0.75) -- (8.5,2) -- (1.75,2) -- (1.75,0.75) -- (2.5,0.75);
+\draw[-triangle 60] (8.5,0.25) -- (8.5,-1.5) -- (-3.5,-1.5) -- (-3.5,0);
+
+%\node at (-5.5,1) {$CP_{ref}$};
+\node at (-1.75,1) {$u[k]$};
+\node at (5.25,1) {$\Delta p[k]$};
+\node at (1.75,0) {\large{$\omega[k]$}};
+\node at (9.1,0) {${\Delta p_{wt}[k]}$};
+\node at (9,1) {$q[k]$};
+
+\end{tikzpicture}%
