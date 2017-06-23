@@ -1,68 +1,51 @@
-\section{Modelling}
+
 %%%%%%%%%%%% MID WAY AGENDA %%%%%%%%%%%%%%
-%\begin{frame}<beamer>
-%\frametitle{Ralf Victor Lømand Ravgård Christiansen}
-%\tableofcontents[currentsection]
-%\end{frame}
+% \begin{frame}<beamer>
+% \frametitle{Ignacio Trojaola Bolinaga}
+% \tableofcontents[currentsection]
+% \end{frame}
 %%%%%%%%%%%% MID WAY AGENDA %%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%Implementering%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Parameter identification}
 
-%%%%%%%%%%%%%%%%%System Blokke%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Hydraulic Modelling}
-
-\begin{frame}{Modelling}{Hydraulic Modelling}
+\begin{frame}{Modelling}{Parameter identification}
 \begin{itemize}
-	\item<1-> Two-terminal components 
-	\begin{itemize}
-		\item<1-> Pipes 
-		\item<1-> Pumps
-		\item<1-> Valves
-		\item<1-> Water tower
-	\end{itemize}
-	\item<1-> Modelled as pressure drop across each component
+	\item<1-> Nonlinear parameter identification
+	\item<1-> Linearization of the model 
+	\item<1-> Linear parameter identification
 \end{itemize}
-
-	\begin{itemize}
-		\item<2-> Complete component model
-	\end{itemize}
-\onslide<2->{
-\begin{equation}
-\label{CompleteModel}
-\Delta p_k = \underbrace{\lambda_k (q_k) + \zeta_k + J_k \dot{q_k}}_\text{Pipe} + \underbrace{\mu_k (q_k, OD)}_\text{Valve} - \underbrace{\alpha_k(\omega_k,q_k)}_\text{Pump} + \underbrace{\Delta p_{wt,k}}_\text{Water tower}
-\end{equation}}
-
 \end{frame}
 
+\subsection{State-space model for control}
 
-\begin{frame}{Modelling}{Hydraulic Modelling}
+\begin{frame}{Modelling}{State-space model for control}
 \begin{itemize}
 	\item<1-> 
-\end{itemize}	
-% \begin{figure}[H]
-% \centering
-% \input{Tikz/power_step_genset.tex} 
-% \end{figure}
-\end{frame}
-
-\subsection{Graph representation}
-
-\begin{frame}{Modelling}{Graph representation}
-\begin{itemize}
-	\item<1->    
-	\item<1->    
+	\item<1-> 
+	\item<1-> 
 \end{itemize}
-% \begin{figure}[H]
-% \centering
-% \input{Tikz/power_step_inv.tex} 
-% \end{figure}
 \end{frame}
 
+\subsection{Verification of model}
 
+\begin{frame}{Modelling}{Verification of model}
+\begin{itemize}
+	\item<1-> Compared model to real system
+	\begin{itemize}
+		\item<1-> Time constant 
+		\item<1-> Behavior then applying a non-zero input
+	\end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item<1-> The model behave as expected
+\end{itemize}
 
+\begin{figure}[H]
+   \centering
+    \input{Tikz/input_simulation.tex}
+\end{figure}
+
+\end{frame}
 
 
 
