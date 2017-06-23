@@ -1,4 +1,4 @@
-\section{Optimization}
+\section{Controller}
 %%%%%%%%%%%% MID WAY AGENDA %%%%%%%%%%%%%%
 % \begin{frame}<beamer>
 % \frametitle{Simon Bjerre Krogh}
@@ -8,33 +8,27 @@
 
 % the license
 
-\begin{frame}{Optimization}{Control problem}
+\subsection{Control problem}
+
+\begin{frame}{Controller}{Control problem}
 \begin{itemize}
-	\item<1-> Constraints  
-	\begin{itemize}
-	\item<1-> Consumer pressure requirements
-	\item<1-> Minimizing the total running cost 
-	\item<1-> Performance constraints on the pumps
-	\end{itemize}
+	\item<1-> Setting up a a general control problem 
+	\item<1-> Taking constraints into account  
+	 \begin{itemize}
+	 \item<1-> Consumer pressure requirements
+	 \item<1-> Minimizing the total running cost 
+	 \item<1-> Performance constraints on the pumps
+	 \end{itemize}
 \end{itemize}
 
-\begin{itemize}
-	\item<2-> Model predictive control 
-	\begin{itemize}
-	\item<2-> Take constraints into account	
-	\item<2-> Take future prediction into account 
-	\item<2-> Minimize the running cost of the system
-	\item<3->[] \vspace{0.5cm}
+\onslide<1->{  \vspace{0.5cm}
 
 	\begin{figure}[H]
 	\centering
 	\input{Tikz/control_structure.tex} 
 	%\caption{Cascade control structure with MPC and PI controllers.}
 	%\label{fig:control_structure}
-	\end{figure}
-	\end{itemize}
-\end{itemize}
-
+	\end{figure}}
 
 % \begin{figure}[H]
 % \centering
@@ -46,9 +40,17 @@
 \end{frame}
 
 
+\subsection{Model predictive control}
 
-
-\begin{frame}{Optimization}{Model predictive control}
+\begin{frame}{Controller}{Model predictive control}
+\begin{itemize}
+	\item<1-> Model predictive control 
+	 	\begin{itemize}
+	 	\item<1-> Take constraints into account	
+	 	\item<1-> Take future prediction into account 
+	 	\item<1-> Minimize the running cost of the system
+	 	\end{itemize}
+\end{itemize}
 
 \begin{figure}[H]
 \centering
@@ -56,7 +58,24 @@
 %\caption{The block of MPC algorithm \cite{Camacho2007}.}
 %\label{mpc_structure}
 \end{figure}
-
-
 \end{frame}
 
+\begin{frame}{Controller}{Model predictive control}
+\begin{itemize}
+	\item<1-> Reformulation of the objective function 
+	 	\begin{itemize}
+	 	\item<1-> Formulating as a standard optimization problem 
+	 	\end{itemize}
+	\item<1-> Reformulation of the constraints 
+	 	\begin{itemize}
+	 	\item<1-> All constraints depend on the control input 
+	 	\item<1-> Set up as a linear matrix inequality 
+	 	\end{itemize}
+	\item<1-> Convexity 
+	 	\begin{itemize}
+	 	\item<1-> Ensuring convexity 
+	 	\item<1-> 
+	 	\end{itemize}
+\end{itemize}
+
+\end{frame}
