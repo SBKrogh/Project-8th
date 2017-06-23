@@ -1,53 +1,61 @@
 \section{Optimization}
 %%%%%%%%%%%% MID WAY AGENDA %%%%%%%%%%%%%%
-%\begin{frame}<beamer>
-%\frametitle{Simon Bjerre Krogh}
-%\tableofcontents[currentsection]
-%\end{frame}
+\begin{frame}<beamer>
+\frametitle{Simon Bjerre Krogh}
+\tableofcontents[currentsection]
+\end{frame}
 
 
 % the license
 
-
-\begin{frame}{Optimization}{}
+\begin{frame}{Optimization}{Control problem}
 \begin{itemize}
-	\item<1-> 
-	\item<1-> Write something awesome!
+	\item<1-> Constraints  
 	\begin{itemize}
-		\item<1-> 
-	\end{itemize}
-	\item<1->  Write something awesome!
-	\begin{itemize}
-		\item<1-> 
-		\item<1-> 
+	\item<1-> Consumer pressure requirements
+	\item<1-> Minimizing the total running cost 
+	\item<1-> Performance constraints on the pumps
 	\end{itemize}
 \end{itemize}
+
+\begin{itemize}
+	\item<2-> Model predictive control 
+	\begin{itemize}
+	\item<2-> Take constraints into account	
+	\item<2-> Take future prediction into account 
+	\item<2-> Minimize the running cost of the system
+	\item<3->[] \vspace{0.5cm}
+
+	\begin{figure}[H]
+	\centering
+	\input{Tikz/control_structure.tex} 
+	%\caption{Cascade control structure with MPC and PI controllers.}
+	%\label{fig:control_structure}
+	\end{figure}
+	\end{itemize}
+\end{itemize}
+
+
 % \begin{figure}[H]
 % \centering
-% \input{Tikz/system_block.tex} 
+% \input{Tikz/control_structure.tex} 
+% %\caption{Cascade control structure with MPC and PI controllers.}
+% %\label{fig:control_structure}
 % \end{figure}
+
 \end{frame}
 
 
 
 
-\begin{frame}{Optimization}{}
-\begin{itemize}
-		\item<1-> Write something awesome!
-	\begin{itemize}
-		\item<1-> 
-		\item<1-> 
-	\end{itemize}
-		\item<1-> Write something awesome!
-	\begin{itemize}
-		\item<1-> 
-		\item<1-> 
-	\end{itemize}
-\end{itemize}
-% \begin{figure}[H]
-% \centering
-% \input{Tikz/controlstructure.tex} 
-% \end{figure}
+\begin{frame}{Optimization}{Model predictive control}
+
+\begin{figure}[H]
+\centering
+\input{Tikz/MPC_diagram.tex} 
+%\caption{The block of MPC algorithm \cite{Camacho2007}.}
+%\label{mpc_structure}
+\end{figure}
 
 
 \end{frame}
