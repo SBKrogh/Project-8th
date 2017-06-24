@@ -105,15 +105,68 @@
 
 
 \subsection{Linear parameter estimation}
-
 \begin{frame}{Modelling}{Linear parameter estimation}
 \begin{itemize}
-	\item<1-> Shown input
-	\item<1-> Shown final results.
+	\item<1-> Differential pressure 
+	\begin{itemize}
+		\item<1->[] 
+			\begin{figure}[H]
+			\centering
+			\input{Tikz/est_deltap_data_final.tex} 
+			\end{figure}	
+	\end{itemize}	
+\end{itemize}
+
+\begin{itemize}
+	\item<2-> Valve opening degree
+	\begin{itemize}
+		\item<2->[] 
+			\begin{figure}[H]
+			\centering
+			\input{Tikz/est_OD_data_final.tex} 
+			\end{figure}	
+	\end{itemize}	
 \end{itemize}
 \end{frame}
 
+\subsection{Linear parameter estimation}
+\begin{frame}{Modelling}{Linear parameter estimation}
+\begin{itemize}
+	\item<1-> PMA 1 - Node 10
+	\begin{itemize}
+		\item<1->[] 
+			\begin{figure}[H]
+			\centering
+			\input{Tikz/Node10_estimation_2.tex} 
+			\end{figure}	
+	\end{itemize}	
+\end{itemize}
 
+\begin{itemize}
+	\item<2-> PMA 2 - Node 15
+	\begin{itemize}
+		\item<2->[] 
+			\begin{figure}[H]
+			\centering
+			\input{Tikz/Node15_estimation_2.tex} 
+			\end{figure}	
+	\end{itemize}	
+\end{itemize}
+\end{frame}
+
+\subsection{Linear parameter estimation}
+\begin{frame}{Modelling}{Linear parameter estimation}
+\begin{itemize}
+	\item<1-> Water tower
+	\begin{itemize}
+		\item<1->[] 
+			\begin{figure}[H]
+			\centering
+			\input{Tikz/WT_estimation_2.tex} 
+			\end{figure}	
+	\end{itemize}	
+\end{itemize}
+\end{frame}
 
 
 \subsection{State-space model for control}
@@ -121,7 +174,23 @@
 \begin{frame}{Modelling}{State-space model for control}
 \begin{itemize}
 	\item<1-> Discretization 
-	\item<1-> Setting up on standard state-space fomrm
+	\begin{itemize}
+		\item<1-> Forward euler
+	\end{itemize}	
+\end{itemize}
+
+\begin{itemize}
+	\item<2-> Discrete, linearized state-space model 
+	\begin{itemize}
+		\item<2->[]
+		\begin{equation}
+		\Delta p_{wt}[k+1] \approx A_d \Delta \hat{p}_{wt}[k]  + \pmb{B_d} \pmb{\hat{u}}[k] + \pmb{E_d} \pmb{\hat{d}}[k] 
+		\end{equation}
+		\item<2->[]
+		\begin{equation}
+ 		\pmb{\hat{y}}[k] = \pmb{C_d} \Delta \hat{p}_{WT}[k] + \pmb{D_d} \pmb{\hat{u}}[k] + \pmb{K_d} \pmb{\hat{d}}[k]
+		\end{equation}
+	\end{itemize}	
 \end{itemize}
 \end{frame}
 
@@ -129,14 +198,30 @@
 
 \begin{frame}{Modelling}{Verification of model}
 \begin{itemize}
-	\item<1-> Compared model to real system
+	\item<1-> Compare water tower dynamics
 	\begin{itemize}
-		\item<1-> Time constant 
-		\item<1-> Behavior then applying a non-zero input
+	\item<1-> Model
+	\item<1-> Measurement
 	\end{itemize}
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\input{Tikz/simulation_time_constant.tex}
+\end{figure}
+
+
+\end{frame}
+
+\subsection{Verification of model}
+
+\begin{frame}{Modelling}{Verification of model}
 \begin{itemize}
-	\item<1-> The model behave as expected
+	\item<1-> Model behavior
+	\begin{itemize}
+		\item<1-> Differential pressure
+		\item<1-> Valve opening degree
+	\end{itemize}	
 \end{itemize}
 
 \begin{figure}[H]

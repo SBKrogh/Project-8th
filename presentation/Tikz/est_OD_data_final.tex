@@ -1,0 +1,59 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=3.8in,
+height=0.8in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmin=0,
+xmax=500,
+xlabel style={font=\color{white!15!black}},
+xlabel={Time [min]},
+ymin=-15,
+ymax=15,
+ylabel style={font=\color{white!15!black}},
+ylabel={Degrees},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+0	5.6843418860808e-12\\
+269.750833333333	5.6843418860808e-12\\
+269.7625	11.0000000000057\\
+299.750833333333	11.0000000000057\\
+299.7625	5.6843418860808e-12\\
+329.750833333333	5.6843418860808e-12\\
+329.7625	-10.9999999999943\\
+359.750833333333	-10.9999999999943\\
+359.7625	5.6843418860808e-12\\
+478.333333333333	5.6843418860808e-12\\
+};
+%\addlegendentry{C24}
+
+\addplot [color=mycolor2]
+  table[row sep=crcr]{%
+0	5.6843418860808e-12\\
+389.750833333333	5.6843418860808e-12\\
+389.7625	9.00000000000568\\
+419.750833333333	9.00000000000568\\
+419.7625	5.6843418860808e-12\\
+449.750833333333	5.6843418860808e-12\\
+449.7625	-8.99999999999432\\
+478.333333333333	-8.99999999999432\\
+};
+%\addlegendentry{C31}
+
+\end{axis}
+\end{tikzpicture}%
