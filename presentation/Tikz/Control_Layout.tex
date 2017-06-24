@@ -2,23 +2,21 @@
 
 \draw  (10,2) rectangle (6,0);
 \node at (8,1) {Model};
-\node at (9.7,1.7) {y};
-\node at (9.7, 0.3) {x};
-\node at (6.3, 1.7) {d};
-\node at (6.3, 0.3) {u};
+\node at (9.7,1.7) {$\hat{y}$};
+\node at (9.7, 0.3) {$\hat{x}$};
+\node at (6.3, 1.7) {$\hat{d}$};
+\node at (6.3, 0.3) {$\hat{u}$};
 \draw[-triangle 60] (10, 1.7) -- (11, 1.7);
 
 \draw[-triangle 60] (10, 0.3) -- (11, 0.3) -- (11,-3) -- (9,-3);
 
-
-
 \draw  (9,-2) rectangle (7,-4);
 \node at (8,-3) {MPC};
-\node at (6.5,-2.55) {$\pmb{U_{Hp}}$};
+\node at (6.5,-2.55) {$\pmb{\hat{U}_{Hp}}$};
 \draw  (7,-3) -- (6,-3);
 \draw (6,-3.3) rectangle (4,-2.7);
-\draw (8.3,-2) rectangle (7.7,-2.5);
-\node at (8, -2.2) {$T_s$};
+\draw (8.5,2) rectangle (7.9,1.5);
+\node at (8.2,1.8) {$T_s$};
 
 \draw  (5.8,-3.3) -- (5.8,-2.7);
 \draw  (5.6,-3.3) -- (5.6,-2.7);
@@ -31,13 +29,13 @@
 \draw  (4.2,-3.3) -- (4.2,-2.7);
 \fill[ForestGreen] (4.18,-3.29) rectangle(4.01,-2.71);
 \draw[-triangle 60] (4, -3) -- (3, -3) -- (3,0.3) -- (6,0.3);
-\node at (3.9,-1.5) {$\pmb{U_{Hp}}(1,1)$};
+\node at (3.9,-1.5) {$\pmb{\hat{U}_{Hp}}(1,1)$};
 \draw[-triangle 60] (5,1.7)--(6,1.7);
 
  
- 	\draw (0,1.7) -- (4.3,1.7);
- 	\node [font=\tiny] at (4.3,1.5) {t};
-    \draw (0,2.4)node[left,font=\tiny] {$OD$} -- (0,1.0);
+    \draw (0,1.7) -- (4.3,1.7);
+    \node [font=\large] at (4.3,1.5) {t};
+    \draw (0,2.4)node[left,font=\large] {$\hat{OD}$} -- (0,1.0);
     % \draw (0.2,-1)node[left,font=\tiny] {$y=-1$} -- (11.8,-1); 
     % \foreach \x in {0,0.5,...,12}{
     % \draw (\x,-0.2)node [below,font=\tiny,] {\x} -- (\x,0.2) ;

@@ -6,11 +6,15 @@
 %\end{frame}
 %%%%%%%%%%%% MID WAY AGENDA %%%%%%%%%%%%%%
 
-\begin{frame}{Implementation}{Simulink implementation}
-
+\begin{frame}{Implementation}{Simulink}
 \begin{itemize}
-	\item<1-> Using the linear estimated model 
-	\item<1-> User consumption is seen as a disturbance  
+\item<1-> MPC control strategy for 24 hours
+\item<1-> At each hour:
+	 	\begin{itemize}
+	 	\item<1-> Iterate $\hat{d}[k]$ and $c_p [k]$
+	 	\item<1-> Measurement on the states 
+	 	\item<1-> Apply control input $\pmb{\hat{U}_{Hp}}(1,1)$
+	 	\end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
@@ -36,6 +40,12 @@
 % \centering
 % \includegraphics[width=1\textwidth]{Sections/Billeder/result_1030_1050}
 % \end{figure}
+
+\begin{figure}[H]
+   \centering
+    \input{Tikz/MPC_simulation.tex}
+\end{figure}
+
 \end{frame}
 
 
