@@ -1,0 +1,47 @@
+Slide 1: 
+My name is Nicolaj
+We are group 830, consisting of Daniel, Ignacio, Kris, Simon and me. 
+
+I will start this presentation by going through the agenda, then giving a introduction to the idea of the project. 
+
+Slide 2: 
+Water distribution networks is a necessary infrastructure that can be found all over the world. 
+Water distribution networks requires a lot of energy, in the U.S. alone 4% of the national energy consumption is used on moving and treating water or wastewater.
+
+Due to the later years focus on renewable energy, the available energy and thereby the prices of electricity is fluctuating. Furthermore the user preferences result in fluctuations. 
+
+Slide 3: 
+This fluctuation in available power and electricity prices can be utilized by introduction a water tower. Then a lot of power is available, the wind i blowing a lot, the WTN can be controlled to fill the water tower, so water is stored for a later time then less power is available. 
+
+This requires a advance controller that ensure satisfying performance. 
+
+slide 4: 
+The leads to "Problem formulation"
+
+Slide 5: 
+For the purpose of this project a test setup have be available at the university. This test setup is a 1:20 downscaled version of a real water distribution system and a simplified version of it can be seen of this figure. 
+
+Here the PMA, PMA pumps, Main pumps, WT, Ground reservoir and interconnecting pipes can be seen. 
+
+Slide 6: 
+
+As mentioned the system consists of pipes, pumps, valves and the WT. A common thing for these components is that they all have to terminals (in/out). Therefore a model is derived of this components that describe the pressure drop across each component. 
+
+Slide 7: 
+
+The complete component model can be seen here. 
+
+Here it can be seen that the pips consists of a resistive term due to surface and form friction, a term due to elevation and an inertia term.  
+The valve depends on the flow and the opening degree of the valve
+The pump depend on the flow and the rotational speed. 
+The WT is a constant term.
+
+Slide 8: 
+
+Now that a model is made for all components, we need a way to describe how they are put together. 
+This is done using graph theory. Here its possible to describe which components connect to each other. 
+The graph is made to it describe pressure drop across edges 
+
+From the graph it is possible to make a spanning tree that describe the system but without cycles. The edges that are taken out for the graph to obtain this is called the cords. 
+
+From this we can use kirchhoffs laws to do calculations on the network. 
