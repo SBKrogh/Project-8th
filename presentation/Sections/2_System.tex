@@ -6,15 +6,115 @@
 % \end{frame}
 %%%%%%%%%%%% MID WAY AGENDA %%%%%%%%%%%%%%
 
-\subsection{Parameter identification}
+\subsection{Parameter estimation}
 
-\begin{frame}{Modelling}{Parameter identification}
+\begin{frame}{Modelling}{Parameter estimation}
 \begin{itemize}
-	\item<1-> Nonlinear parameter identification
-	\item<1-> Linearization of the model 
-	\item<1-> Linear parameter identification
+	\item<1-> Model accuracy
+	\begin{itemize} 
+		\item<1-> Estimate uncertain parameters 
+	\end{itemize}	 
+\end{itemize}
+
+\begin{itemize}
+	\item<2-> Known parameters:
+	\begin{itemize}
+		\item<2-> Valves
+		\item<2-> Pumps 
+		\item<2-> Water tower
+		\item<2-> Pipe dimension
+	\end{itemize}	
+\end{itemize}
+
+\begin{itemize}
+\item<3-> Uncertain parameters:
+	\begin{itemize}
+		\item<3-> Pipe resistance
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item<4->[]	
+\begin{figure}[H]
+	\centering
+	\input{Tikz/param_block.tex} 
+\end{figure}\vspace{-0.5cm}		
+\end{itemize}	
+\end{frame}
+
+
+
+\subsection{Nonlinear parameter estimation}
+
+\begin{frame}{Modelling}{Nonlinear parameter estimation}
+\begin{itemize}
+	\item<1-> Estimation outcomes: 	
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \input{Tikz/Node_10.tex}
+    \caption{Estimation comparison for node 10.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+   \input{Tikz/Node_15.tex}
+    \caption{Estimation comparison for node 15.}
+  \end{minipage}
+\end{figure}
+\end{frame}
+
+\subsection{Linear parameter estimation}
+
+\begin{frame}{Modelling}{Linear parameter estimation}
+\begin{itemize}
+	\item<1-> Model linearization
+	\begin{itemize}
+		\item<1-> Taylor expansion
+		\item<1-> Small signal model
+	\end{itemize}	
+\end{itemize}
+
+\begin{itemize}
+	\item<2-> Unknown parameters
+	\begin{itemize}
+		\item<2-> Pipe resistance
+		\item<2-> Chord flow operating point
+	\end{itemize}	
+\end{itemize}
+
+\begin{itemize}
+	\item<3-> Linearized state-space model
+	\begin{itemize}
+		\item<3-> Estimate matrices
+	\end{itemize}
+\end{itemize}	
+
+\begin{itemize}
+	\item<3->[]
+		\begin{equation}
+		\pmb{B}\pmb{J {B}}^T \pmb{\dot{\hat{z}}} = -\pmb{M_p} \pmb{\hat{z}} + \pmb{N_p} \pmb{\hat{u}} - \pmb{B_o} \Delta \hat{p}_{wt} 
+		\end{equation}
+	\item<3->[]
+		\begin{equation}
+		\pmb{\hat{y}} = \pmb{C_{p,1}} \pmb{\hat{z}}  + \pmb{C_{p,2}}\pmb{\hat{u}}  
+		\end{equation}	
 \end{itemize}
 \end{frame}
+
+
+\subsection{Linear parameter estimation}
+
+\begin{frame}{Modelling}{Linear parameter estimation}
+\begin{itemize}
+	\item<1-> Shown input
+	\item<1-> Shown final results.
+\end{itemize}
+\end{frame}
+
+
+
 
 \subsection{State-space model for control}
 
