@@ -1,0 +1,65 @@
+
+%\usepackage {tikz}
+%\usepackage{rotating}
+%\usepackage{amsmath}
+%\usetikzlibrary {positioning}
+
+
+%\usepackage {xcolor}
+%\begin{turn}{90}
+\begin{tikzpicture}[-latex ,auto ,node distance =4 cm and 8cm ,on grid ,
+semithick ,
+state/.style ={ draw,shape=circle}]
+
+\node[circle,fill,inner sep=3pt,label=below right:$n_4$] (A) at (0,0) {};
+\node[circle,fill,inner sep=3pt,label=right:$n_8$] (B) at (0,4) {};
+\node[circle,fill,inner sep=3pt,label=below right:$n_9$] (C) at (0,8) {};
+\path (A) edge  node[right] {$e_9 c_{18}$} (B);
+\path (B) edge  node[right] {$e_{10}c_{19}$} (C);
+\node[circle,fill,inner sep=3pt,label=right:$n_{10}$] (G) at (2,11) {};
+\node[circle,fill,inner sep=3pt,label=right:$n_{11}$] (H) at (-1,10) {};
+\node[circle,fill,inner sep=3pt,label=right:$n_{12}$] (I) at (-1,12) {};
+\path (C) edge  node[right] {$e_{14}c_{23}$} (G);
+\path (H) edge  node[right] {$e_{12}c_{21}$} (I);
+
+
+
+%
+\node[circle,fill,inner sep=3pt,label=below right:$n_5$] (D) at (8,0) {};
+\node[circle,fill,inner sep=3pt,label=right:$n_{13}$] (E) at (8,4) {};
+\node[circle,fill,inner sep=3pt,label=right:$n_{14}$] (F) at (8,8) {};
+\path (D) edge  node[right] {$e_{16}c_{25}$} (E);
+\path (E) edge  node[right] {$e_{17}c_{26}$} (F);
+\node[circle,fill,inner sep=3pt,label=right:$n_{15}$] (J) at (9,11) {};
+\node[circle,fill,inner sep=3pt,label=right:$n_{16}$] (K) at (7,10) {};
+\node[circle,fill,inner sep=3pt,label=right:$n_{17}$] (L) at (6,12) {};
+\path (F) edge  node[left] {$e_{18}c_{29}$} (K);
+\path (K) edge  node[left] {$e_{19}c_{28}$} (L);
+
+\node[circle,fill,inner sep=3pt,label=above:$n_{1}$] (M) at (4,14) {};
+
+\path (G) edge [bend right = -15] node[below left =0.15 cm] {$e_{15}c_{24}$} (M);
+\path (L) edge [bend left = -15] node[below left =0.15 cm] {$e_{20}c_{27}$} (M);
+\path (I) edge [bend right = -15] node[below =0.15 cm] {$e_{13}c_{20}$} (M);
+\path (J) edge [bend left = -15] node[below =0.15 cm] {$e_{22}c_{31}$} (M);
+
+
+\node[circle,fill,inner sep=3pt,label=above right :$n_{3}$] (N) at (-3,0) {};
+\node[circle,fill,inner sep=3pt,label= above right:$n_{2}$] (O) at (-8,2) {};
+\node[circle,fill,inner sep=3pt,label= above left :$n_{18}$] (P) at (-4,6) {};
+
+\path (P) edge [bend right = -50] node[below left =0.15 cm] {$e_{25}c_{33}$} (M);
+\path (M) edge [bend left = -50] node[below =0.15 cm] {$e_1c_2$} (O);
+\path (N) edge  node[right] {$e_{24}c_{32}$} (P);
+
+
+
+\node[circle,fill,inner sep=3pt,label=above right:$n_{6}$] (Q) at (11,0) {};
+\node[circle,fill,inner sep=3pt,label=above right :$n_{7}$] (R) at (14,6) {};
+\path (R) edge  node[below right ] {$e_7 c_{14}$} (Q);
+\path (M) edge [bend right = -40] node[below =0.15 cm] {$e_8 c_{16}$} (R);
+
+
+\end{tikzpicture}
+%\end{turn}
+%\end{sidewaysfigure}
