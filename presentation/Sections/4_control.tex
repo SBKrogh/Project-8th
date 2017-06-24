@@ -6,14 +6,14 @@
 %\end{frame}
 %%%%%%%%%%%% MID WAY AGENDA %%%%%%%%%%%%%%
 
-\begin{frame}{Implementation}{Simulink}
+\begin{frame}{Implementation method}{Simulink}
 \begin{itemize}
 \item<1-> MPC control strategy for 24 hours
 \item<1-> At each hour:
 	 	\begin{itemize}
-	 	\item<1-> Iterate $\hat{d}[k]$ and $c_p [k]$
+	 	\item<1-> Iterate $\hat{\pmb{d}}[k]$ and $c_p [k]$
 	 	\item<1-> Measurement on the states 
-	 	\item<1-> Apply control input $\pmb{\hat{U}_{Hp}}(1,1)$
+	 	\item<1-> Apply control input $\pmb{\hat{u}_{Hp}}(1,1)$
 	 	\end{itemize}
 \end{itemize}
 
@@ -25,25 +25,37 @@
 \end{frame}
 
 
+\section{MPC}
 
-% \begin{frame}{Implementation}{}
-% % \begin{figure}[H]
-% % \centering
-% % \includegraphics[width=1\textwidth]{Sections/Billeder/result_1020_4050}
-% % \end{figure}
-% \end{frame}
+\begin{frame}{MPC results}{For one iteration}
 
-\section{Results}
-
-\begin{frame}{Results}{New results}
-% \begin{figure}[H]
-% \centering
-% \includegraphics[width=1\textwidth]{Sections/Billeder/result_1030_1050}
-% \end{figure}
+\begin{itemize}
+	 	\item<1-> Softened constraints on $\hat{\pmb{\underline{u}}}_{Hp}$
+	 	\end{itemize}
 
 \begin{figure}[H]
    \centering
     \input{Tikz/MPC_simulation.tex}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Parameter identification}{New results}
+
+\begin{itemize}
+	 	\item<1-> Iterate $\hat{\pmb{d}}[k]$ and $c_p [k]$
+	 	\item<1-> Measurement on the states 
+	 	\end{itemize}
+
+\begin{figure}[H]
+   \centering
+    \input{Tikz/WT_figure.tex}
+\end{figure}
+
+\begin{figure}[H]
+   \centering
+    \input{Tikz/WT_figure1.tex}
 \end{figure}
 
 \end{frame}

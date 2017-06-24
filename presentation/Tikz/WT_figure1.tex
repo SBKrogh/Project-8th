@@ -1,0 +1,64 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+scaled y ticks = false,
+ y tick label style={/pgf/number format/fixed,
+/pgf/number format/1000 sep = \thinspace}, % Optional if you want to replace comma as the 1000 separator 
+width=3.8in,
+height=1in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmin=0,
+xmax=500,
+xlabel style={font=\color{white!15!black}},
+xlabel={Time [min]},
+ymin=-0.025,
+ymax=0.02,
+ylabel style={font=\color{white!15!black}},
+ylabel={Pressure [bar]},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+0	-0\\
+29.7508333333333	-0\\
+29.7516666666667	0.0149999999999864\\
+59.7508333333333	0.0149999999999864\\
+59.7516666666667	-0\\
+89.7508333333333	-0\\
+89.7516666666667	-0.0200000000000387\\
+119.750833333333	-0.0200000000000387\\
+119.751666666667	-0\\
+478.333333333333	-0\\
+};
+\addlegendentry{C2}
+
+\addplot [color=mycolor2]
+  table[row sep=crcr]{%
+0	-0\\
+149.750833333333	-0\\
+149.751666666667	0.0129999999999768\\
+179.750833333333	0.0129999999999768\\
+179.751666666667	-0\\
+209.750833333333	-0\\
+209.751666666667	-0.0200000000000387\\
+239.750833333333	-0.0200000000000387\\
+239.751666666667	-0\\
+478.333333333333	-0\\
+};
+\addlegendentry{C16}
+
+\end{axis}
+\end{tikzpicture}%

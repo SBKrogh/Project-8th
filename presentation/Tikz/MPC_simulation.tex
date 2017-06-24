@@ -9,85 +9,82 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=10.333in,
-height=1.836in,
-at={(1.733in,6.191in)},
+width=3.028in,
+height=0.55in,at={(1.011in,4.137in)},
 scale only axis,
 xmin=0,
 xmax=23,
-xlabel style={font=\color{white!15!black}},
-xlabel={T[hours]},
 ymin=-1,
 ymax=1,
-ylabel style={font=\color{white!15!black}},
-ylabel={P[bar]},
+ylabel={$\hat{P_1}[bar]$},
 axis background/.style={fill=white},
 title style={font=\bfseries},
-title={$\text{u}_{\text{hp1}}\text{[k=0]}$}
+%title={$\text{u}_{\text{hp1}}\text{[k=0]}$}
 ]
-\addplot[const plot, color=mycolor1, line width=1.3pt, forget plot] table[row sep=crcr] {%
-0	-0.433446931217235\\
+\addplot[const plot,color=mycolor1,solid,forget plot] plot table[row sep=crcr] {%
+0	-0.433446931217239\\
 1	-0.669999999998947\\
 2	-0.669999999997713\\
-3	-0.104236955958481\\
+3	-0.104236955958482\\
 4	0.749999999997401\\
 5	0.749999999998619\\
 6	0.727077455814283\\
 7	-0.669999999999055\\
 8	-0.66999999999925\\
-9	-0.395725243988168\\
+9	-0.395725243988171\\
 10	0.749999999988271\\
 11	0.749999999998319\\
 12	0.717572940373614\\
 13	-0.669999999998221\\
 14	-0.669999999999149\\
-15	-0.409583761852642\\
+15	-0.409583761852645\\
 16	0.548034702463677\\
 17	0.749999999998184\\
 18	0.74999999999883\\
-19	-0.576396407197265\\
+19	-0.576396407197271\\
 20	-0.669999999998877\\
-21	-0.425048538821508\\
-22	-0.0640667111129479\\
+21	-0.425048538821507\\
+22	-0.0640667111129486\\
 };
 \end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
 
 \begin{axis}[%
-width=10.333in,
-height=1.836in,
-at={(1.733in,3.576in)},
+width=3.028in,
+height=0.55in,
+at={(1.011in,2.39in)},
 scale only axis,
 xmin=0,
 xmax=23,
-xlabel style={font=\color{white!15!black}},
-xlabel={T[hours]},
 ymin=-1,
 ymax=1,
-ylabel style={font=\color{white!15!black}},
-ylabel={P[bar]},
+ylabel={$\hat{P_2}[bar]$},
 axis background/.style={fill=white},
 title style={font=\bfseries},
-title={$\text{u}_{\text{hp2}}\text{[k=0]}$}
+%title={$\text{u}_{\text{hp2}}\text{[k=0]}$}
 ]
-\addplot[const plot, color=mycolor1, line width=1.3pt, forget plot] table[row sep=crcr] {%
+\addplot[const plot,color=mycolor1,solid,forget plot] plot table[row sep=crcr] {%
 0	-0.649999999999008\\
 1	-0.649999999999539\\
 2	-0.649999999999527\\
 3	-0.64999999999887\\
 4	-0.649999999994262\\
-5	0.0667700518106744\\
+5	0.0667700518106753\\
 6	-0.649999999998485\\
 7	-0.649999999999511\\
 8	-0.649999999999588\\
 9	-0.649999999999157\\
 10	-0.649999999997306\\
-11	0.0160826405819199\\
+11	0.0160826405819198\\
 12	-0.649999999996155\\
 13	-0.64999999999941\\
 14	-0.64999999999958\\
 15	-0.649999999999219\\
 16	-0.649999999998156\\
-17	0.189015571020598\\
+17	0.189015571020597\\
 18	-0.649999999956971\\
 19	-0.649999999999335\\
 20	-0.649999999999555\\
@@ -95,25 +92,25 @@ title={$\text{u}_{\text{hp2}}\text{[k=0]}$}
 22	-0.649999999998207\\
 };
 \end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
 
 \begin{axis}[%
-width=10.333in,
-height=1.836in,
-at={(1.733in,0.96in)},
+width=3.028in,
+height=0.55in,
+at={(1.011in,0.642in)},
 scale only axis,
 xmin=0,
 xmax=23,
-xlabel style={font=\color{white!15!black}},
-xlabel={T[hours]},
+xlabel={Time[hours]},
 ymin=0,
-ymax=500,
-ylabel style={font=\color{white!15!black}},
+ymax=600,
 ylabel={Price[DKK]},
 axis background/.style={fill=white},
 title style={font=\bfseries},
-title={Electricity price}
 ]
-\addplot[const plot, color=red, line width=1.4pt, forget plot] table[row sep=crcr] {%
+\addplot[const plot,color=mycolor1,solid,forget plot] plot table[row sep=crcr] {%
 0	250\\
 1	418.857649358291\\
 2	430.978019589665\\
@@ -137,42 +134,6 @@ title={Electricity price}
 20	440.119567515206\\
 21	404.300699515516\\
 22	225.256624358491\\
-};
-\end{axis}
-
-\begin{axis}[%
-width=13.333in,
-height=8.729in,
-at={(0in,0in)},
-scale only axis,
-xmin=0,
-xmax=1,
-ymin=0,
-ymax=1,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left
-]
-\addplot [color=black, dotted, line width=1.4pt, forget plot]
-  table[row sep=crcr]{%
-0.12890625	0.741243436754177\\
-0.9046875	0.742243436754177\\
-};
-\addplot [color=black, dotted, line width=1.4pt, forget plot]
-  table[row sep=crcr]{%
-0.13125	0.893794749403341\\
-0.90546875	0.894988066825776\\
-};
-\addplot [color=black, dotted, line width=1.3pt, forget plot]
-  table[row sep=crcr]{%
-0.13046875	0.444107398568019\\
-0.90390625	0.445107398568019\\
-};
-\addplot [color=black, dotted, line width=1.3pt, forget plot]
-  table[row sep=crcr]{%
-0.1296875	0.594465393794749\\
-0.90390625	0.591885441527446\\
 };
 \end{axis}
 \end{tikzpicture}%
