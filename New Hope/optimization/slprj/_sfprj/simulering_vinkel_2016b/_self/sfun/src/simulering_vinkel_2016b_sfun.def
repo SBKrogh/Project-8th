@@ -1,0 +1,3 @@
+LIBRARY simulering_vinkel_2016b_sfun.mexw64
+EXPORTS
+mexFunction

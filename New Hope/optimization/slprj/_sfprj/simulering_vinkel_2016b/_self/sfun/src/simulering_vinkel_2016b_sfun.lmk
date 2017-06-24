@@ -1,0 +1,26 @@
+CC     = "F:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\bin\lcc64.exe"
+LD     = "F:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\bin\lcclnk64.exe"
+LIBCMD = "F:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\bin\lcclib64.exe"
+CFLAGS = -dll -noregistrylookup  -c -Zp8 -DLCC_WIN64 -DMATLAB_MEX_FILE -DMX_COMPAT_32 -nodeclspec 
+LDFLAGS = -s -dll -L"F:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\lib64" -entry LibMain -map sfun.map 
+LIBFLAGS = 
+
+OBJECTS = \
+	"simulering_vinkel_2016b_sfun.obj"\
+	"c2_simulering_vinkel_2016b.obj"\
+	"simulering_vinkel_2016b_sfun_registry.obj"\
+	"lccstub.obj"\
+
+INCLUDE_PATH= -I"F:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\include64"  -I"F:\Program Files\MATLAB\R2016b\extern\include"  -I"F:\Program Files\MATLAB\R2016b\simulink\include"  -I"F:\Program Files\MATLAB\R2016b\simulink\include\sf_runtime"  -I"F:\Program Files\MATLAB\R2016b\stateflow\c\mex\include"  -I"F:\Program Files\MATLAB\R2016b\rtw\c\src"  -I"C:\Users\CBalla\Desktop\New Hope\optimization\slprj\_sfprj\simulering_vinkel_2016b\_self\sfun\src" 
+ 
+
+simulering_vinkel_2016b_sfun.mexw64 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o simulering_vinkel_2016b_sfun.mexw64 @simulering_vinkel_2016b_sfun.lmko
+simulering_vinkel_2016b_sfun.obj :	"simulering_vinkel_2016b_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "simulering_vinkel_2016b_sfun.c"
+c2_simulering_vinkel_2016b.obj :	"c2_simulering_vinkel_2016b.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_simulering_vinkel_2016b.c"
+simulering_vinkel_2016b_sfun_registry.obj :	"simulering_vinkel_2016b_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "simulering_vinkel_2016b_sfun_registry.c"
+lccstub.obj :	"F:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "F:\Program Files\MATLAB\R2016b\sys\lcc64\lcc64\mex\lccstub.c"
