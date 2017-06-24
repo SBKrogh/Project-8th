@@ -97,11 +97,15 @@
 \end{frame}
 
 \begin{frame}{Controller}{Model predictive control}
+\begin{equation}
+	\Upsilon(\hat{u}_Hp) = \frac{1}{\eta}\bigg( \frac{1}{2} \hat{u}_{{Hp}}^{T} R \hat{u}_{Hp} + b \hat{u}_{Hp} + c \bigg)
+\end{equation}
 \begin{itemize}
 	\item<1-> Convexity 
 	 	\begin{itemize}
 	 	\item<1-> Ensuring convexity 
-	 	\item<1-> 
+	 	\item<1-> Hessian of $\Upsilon(\hat{u}_Hp) \ge 0$ 
+	 	\item<1-> $R \succeq 0$
 	 	\end{itemize}
 \end{itemize}
 \end{frame}
