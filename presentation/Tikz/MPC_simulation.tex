@@ -17,6 +17,8 @@ xmax=23,
 ymin=-1,
 ymax=1,
 ylabel={$\hat{P_1}[bar]$},
+%xmajorgrids,
+%ymajorgrids,
 axis background/.style={fill=white},
 title style={font=\bfseries},
 %title={$\text{u}_{\text{hp1}}\text{[k=0]}$}
@@ -46,6 +48,16 @@ title style={font=\bfseries},
 21	-0.425048538821507\\
 22	-0.0640667111129486\\
 };
+\addplot[const plot,color=red,dotted, thick] plot table[row sep=crcr] {%
+0	0.75\\
+24	0.75\\
+};
+
+\addplot[const plot,color=red,dotted, thick] plot table[row sep=crcr] {%
+0	-0.67\\
+24	-0.67\\
+};
+
 \end{axis}
 \end{tikzpicture}
 
@@ -61,6 +73,8 @@ xmin=0,
 xmax=23,
 ymin=-1,
 ymax=1,
+%xmajorgrids,
+%ymajorgrids,
 ylabel={$\hat{P_2}[bar]$},
 axis background/.style={fill=white},
 title style={font=\bfseries},
@@ -91,6 +105,15 @@ title style={font=\bfseries},
 21	-0.649999999999218\\
 22	-0.649999999998207\\
 };
+\addplot[const plot,color=red,dotted,thick] plot table[row sep=crcr] {%
+0	0.75\\
+24	0.75\\
+};
+
+\addplot[const plot,color=red,dotted,thick] plot table[row sep=crcr] {%
+0	-0.67\\
+24	-0.67\\
+};
 \end{axis}
 \end{tikzpicture}
 
@@ -106,6 +129,8 @@ xmax=23,
 xlabel={Time[hours]},
 ymin=0,
 ymax=600,
+%xmajorgrids,
+%ymajorgrids,
 ylabel={Price[DKK]},
 axis background/.style={fill=white},
 title style={font=\bfseries},
