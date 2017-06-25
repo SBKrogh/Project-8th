@@ -27,7 +27,7 @@
 
 \section{MPC}
 
-\begin{frame}{MPC results}{For one iteration}
+\begin{frame}{Implementation results}{For one iteration}
 
 \begin{itemize}
 	 	\item<1-> Softened constraints on $\hat{\pmb{\underline{u}}}_{Hp}$
@@ -41,11 +41,11 @@
 \end{frame}
 
 
-\begin{frame}{Parameter identification}{New results}
+\begin{frame}{Parameter identification results}{Wrong measurement data}
 
 \begin{itemize}
-	 	\item<1-> Iterate $\hat{\pmb{d}}[k]$ and $c_p [k]$
-	 	\item<1-> Measurement on the states 
+	 	\item<1-> Measurement data is not around the operating point
+	 	\item<1-> Steady state error in the model
 	 	\end{itemize}
 
 \begin{figure}[H]
@@ -65,18 +65,22 @@
 \begin{frame}{Discussion}{}
 
 \begin{itemize}
-	\item<1->The next step
+	\item<1->Linear/nonlinear model comparison
 	\begin{itemize}
-	 \item<1-> Solving implementation problems  
-	 \item<1-> Comparing the results with the real system
+	 \item<1-> Online linearization
+	 \item<1-> Operating points are constantly varied
+	 \item<1-> Precision is more reliable
+
 	\end{itemize}
 \end{itemize}
 
 \begin{itemize}
-\item<2-> Future research
+\item<2-> Considerations for the future
 	 \begin{itemize}
-	 \item<2-> Using a nonlinear model for parameter estimation 
-	 \item<2-> Adaptive control
+	 \item<2-> Long measurements, ensuring initial steady state condition
+	 \item<2-> Softening constraints
+	 \item<2-> Using the end-user pressure measurements
+	 \item<2-> Robust MPC
 	 \end{itemize}
 \end{itemize}
 

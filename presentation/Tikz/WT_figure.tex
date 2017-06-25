@@ -14,17 +14,16 @@ scaled y ticks = false,
  y tick label style={/pgf/number format/fixed,
 /pgf/number format/1000 sep = \thinspace}, % Optional if you want to replace comma as the 1000 separator 
 width=3.8in,
-height=1in,
+height=0.7in,
 at={(1.011in,0.642in)},
 scale only axis,
 xmin=0,
 xmax=500,
 xlabel style={font=\color{white!15!black}},
-xlabel={Time [min]},
 ymin=-0.005,
 ymax=0.01,
 ylabel style={font=\color{white!15!black}},
-ylabel={Pressure [bar]},
+ylabel={$\hat{p}$ [bar]},
 axis background/.style={fill=white},
 %title style={font=\bfseries},
 %title={Node WT},
@@ -1776,7 +1775,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 477.2325	-0.000173810943571492\\
 478.334166666667	-0.000176504592294765\\
 };
-\addlegendentry{Model: -63.37 \% fit}
+
 
 \end{axis}
 \end{tikzpicture}%
