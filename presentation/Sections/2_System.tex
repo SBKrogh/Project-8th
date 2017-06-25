@@ -44,7 +44,7 @@
 
 
 
-\subsection{Nonlinear parameter estimation}
+\subsubsection{Nonlinear parameter estimation}
 
 \begin{frame}{Modelling}{Nonlinear parameter estimation}
 \begin{itemize}
@@ -63,7 +63,7 @@
 \end{figure}
 \end{frame}
 
-\subsection{Linear parameter estimation}
+\subsubsection{Linear parameter estimation}
 
 \begin{frame}{Modelling}{Linear parameter estimation}
 \begin{itemize}
@@ -92,11 +92,11 @@
 \begin{itemize}
 	\item<3->[]
 		\begin{equation}
-		\pmb{B}\pmb{J {B}}^T \pmb{\dot{\hat{z}}} = -\pmb{M_p} \pmb{\hat{z}} + \pmb{N_p} \pmb{\hat{u}} - \pmb{B_o} \Delta \hat{p}_{wt} 
+		\Delta \dot{\hat{p}}_{wt} =  A_p \Delta \hat{p}_{wt}  + \pmb{B_p}\pmb{\hat{u}} 
 		\end{equation}
 	\item<3->[]
 		\begin{equation}
-		\pmb{\hat{y}} = \pmb{C_{p,1}} \pmb{\hat{z}}  + \pmb{C_{p,2}}\pmb{\hat{u}}  
+		\pmb{\hat{y}} = \pmb{C_{p}} \Delta \hat{p}_{wt} + \pmb{D_p} \pmb{\hat{u}}
 		\end{equation}	
 \end{itemize}
 \end{frame}
@@ -116,9 +116,9 @@
 \end{itemize}
 
 \begin{itemize}
-	\item<2-> Valve opening degree
+	\item<1-> Valve opening degree
 	\begin{itemize}
-		\item<2->[] 
+		\item<1->[] 
 			\begin{figure}[H]
 			\centering
 			\input{Tikz/est_OD_data_final.tex} 
@@ -130,7 +130,7 @@
 %\subsection{Linear parameter estimation}
 \begin{frame}{Modelling}{Linear parameter estimation}
 \begin{itemize}
-	\item<1-> PMA 1 - Node 10
+	\item<1-> PMA 1 - CP1
 	\begin{itemize}
 		\item<1->[] 
 			\begin{figure}[H]
@@ -141,7 +141,7 @@
 \end{itemize}
 
 \begin{itemize}
-	\item<2-> PMA 2 - Node 15
+	\item<2-> PMA 2 - CP2
 	\begin{itemize}
 		\item<2->[] 
 			\begin{figure}[H]
